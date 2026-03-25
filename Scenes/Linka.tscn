@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce8ebklcondor"]
+[gd_scene format=3 uid="uid://ce8ebklcondor"]
 
-[ext_resource type="Script" path="res://Scripts/LinkaDlaBubble.gd" id="1_057gv"]
-[ext_resource type="Texture2D" uid="uid://fmk61mlriyis" path="res://Assets/Sprites/Wedka dol-Sheet.png" id="2_a0ikb"]
+[ext_resource type="Script" uid="uid://deys4ppfqs151" path="res://Scripts/LinkaDlaBubble.gd" id="1_057gv"]
+[ext_resource type="Texture2D" uid="uid://ci11v22n3h0dm" path="res://Assets/Sprites/fishing_rod_down_sheet.png" id="2_a0ikb"]
+
 
 [sub_resource type="Animation" id="Animation_esf3c"]
 length = 0.001

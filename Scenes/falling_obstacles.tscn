@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://djf2mb8cp5bdf"]
+[gd_scene format=3 uid="uid://djf2mb8cp5bdf"]
 
-[ext_resource type="Script" path="res://Scripts/falling_obstacles.gd" id="1_dkba5"]
-[ext_resource type="Texture2D" uid="uid://bvoo1m4h8nbj3" path="res://Assets/Sprites/Interactive/kamiennaglowe.png" id="2_vhv77"]
-[ext_resource type="AudioStream" uid="uid://s2vqvohb1ppg" path="res://Assets/Sounds/Rock Falling.mp3" id="3_sktny"]
+[ext_resource type="Script" uid="uid://h15dssh2wpt2" path="res://Scripts/falling_obstacles.gd" id="1_dkba5"]
+[ext_resource type="Texture2D" uid="uid://q5oy7ujmlu6h" path="res://Assets/Sprites/Interactive/rock_falling.png" id="2_vhv77"]
+[ext_resource type="AudioStream" uid="uid://byjpf0x4ssyhi" path="res://Assets/Sounds/Rock Falling.mp3" id="3_sktny"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnb3r"]
 size = Vector2(45.5, 235.5)

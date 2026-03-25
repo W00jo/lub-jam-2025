@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://008pn0vyrnyc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Sprites/Enviroment/Animals/RybkiMalePomaranczowe.png" id="1_b1053"]
+[ext_resource type="Texture2D" uid="uid://dmkpn7471ueyj" path="res://Assets/Sprites/Enviroment/Animals/fishes_orange_sheet.png" id="1_b1053"]
 [ext_resource type="Script" uid="uid://bc726yc0b8cij" path="res://Scripts/assets_move_forward.gd" id="2_min8g"]
 
 

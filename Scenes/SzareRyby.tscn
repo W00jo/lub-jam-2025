@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://7juupnnmnluv"]
+[gd_scene format=3 uid="uid://7juupnnmnluv"]
 
-[ext_resource type="Texture2D" uid="uid://8qwyxgrfvvur" path="res://Assets/Sprites/Enviroment/Animals/Sprite-0007-Sheet.png" id="1_6kfxu"]
-[ext_resource type="Script" path="res://Scripts/szare_ryby.gd" id="2_dxc0q"]
+[ext_resource type="Texture2D" uid="uid://jvfyafvjg04x" path="res://Assets/Sprites/Enviroment/Animals/fishes_blue_sheet.png" id="1_6kfxu"]
+[ext_resource type="Script" uid="uid://mqibes2omfwy" path="res://Scripts/szare_ryby.gd" id="2_dxc0q"]
+
 
 [sub_resource type="Animation" id="Animation_oagfv"]
 length = 0.001

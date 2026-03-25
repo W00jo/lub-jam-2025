@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://brsj11mvkc6fj"]
+[gd_scene format=3 uid="uid://brsj11mvkc6fj"]
 
-[ext_resource type="Script" path="res://Scripts/side.gd" id="1_37gkk"]
-[ext_resource type="Texture2D" uid="uid://bveh0usq0id37" path="res://Assets/Sprites/Interactive/pianapaskudna-Sheet.png" id="2_uhlfs"]
+[ext_resource type="Script" uid="uid://pqrcr2pl0mqg" path="res://Scripts/side.gd" id="1_37gkk"]
+[ext_resource type="Texture2D" uid="uid://vkb2ei685ky6" path="res://Assets/Sprites/Interactive/bubble_wall.png" id="2_uhlfs"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hlsq4"]
 atlas = ExtResource("2_uhlfs")

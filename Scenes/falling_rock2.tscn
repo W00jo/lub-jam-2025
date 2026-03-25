@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfclists1idkv"]
+[gd_scene format=3 uid="uid://dfclists1idkv"]
 
-[ext_resource type="Script" path="res://Scripts/falling_rock.gd" id="1_cft5b"]
-[ext_resource type="Texture2D" uid="uid://ta1revbpcjlt" path="res://Assets/Sprites/Interactive/stalamit1.png" id="2_8opli"]
-[ext_resource type="AudioStream" uid="uid://cvxcstag6frl8" path="res://Assets/Sounds/Underwater rock cracking up soundeffect.mp3" id="3_jxpgp"]
+[ext_resource type="Script" uid="uid://483ql24i5gx7" path="res://Scripts/falling_rock.gd" id="1_cft5b"]
+[ext_resource type="Texture2D" uid="uid://doexcj0ro03pu" path="res://Assets/Sprites/Interactive/stalactice_1.png" id="2_8opli"]
+[ext_resource type="AudioStream" uid="uid://b63csh2eai25m" path="res://Assets/Sounds/Underwater rock cracking up soundeffect.mp3" id="3_jxpgp"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8exj8"]
 size = Vector2(126, 462)
