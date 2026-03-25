@@ -4,8 +4,9 @@ extends Control
 @onready var instr_canvas = get_tree().root.get_node('Game/InstructionLayer')
 
 func _input(event: InputEvent) -> void:
-	var keyboard_mouse_texture = load("res://Assets/Sprites/Background/meunu5.png")
-	var gamepad_texture = load("res://Assets/Sprites/Background/instrukcje_pad.png")
+	const keyboard_mouse_texture = preload("uid://djq73mdtccy1r")
+	const gamepad_texture = preload("uid://d1hv85sgt0q7x")
+
 	if game.INPUT_SCHEME == game.INPUT_SCHEMES.KEYBOARD_AND_MOUSE:
 		$ColorRect.set_texture(keyboard_mouse_texture)
 		$Ok.position.x = -334

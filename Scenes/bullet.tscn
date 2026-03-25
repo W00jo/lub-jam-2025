@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://kkijud1tom28"]
+[gd_scene format=3 uid="uid://kkijud1tom28"]
 
-[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_8klpg"]
-[ext_resource type="Texture2D" uid="uid://b08yljp8r5jl3" path="res://Assets/Sprites/Characters/Delphin/Lotka.png" id="2_np3wv"]
+[ext_resource type="Script" uid="uid://03wadgb6qhns" path="res://Scripts/bullet.gd" id="1_8klpg"]
+[ext_resource type="Texture2D" uid="uid://ckwtv6uovu1uo" path="res://Assets/Sprites/Characters/Dolphin/arrow.png" id="2_np3wv"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk670"]
 size = Vector2(28, 8)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://008pn0vyrnyc"]
+[gd_scene format=3 uid="uid://008pn0vyrnyc"]
 
-[ext_resource type="Texture2D" uid="uid://c32j7xrp75l8l" path="res://Assets/Sprites/Enviroment/Animals/RybkiMalePomaranczowe.png" id="1_b1053"]
-[ext_resource type="Script" path="res://Scripts/RybkiRuchDoPrzodu.gd" id="2_min8g"]
+[ext_resource type="Texture2D" path="res://Assets/Sprites/Enviroment/Animals/RybkiMalePomaranczowe.png" id="1_b1053"]
+[ext_resource type="Script" uid="uid://bc726yc0b8cij" path="res://Scripts/assets_move_forward.gd" id="2_min8g"]
+
 
 [sub_resource type="Animation" id="Animation_oagfv"]
 length = 0.001

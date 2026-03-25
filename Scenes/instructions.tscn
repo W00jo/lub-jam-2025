@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcyrah88k0iba"]
+[gd_scene format=3 uid="uid://bcyrah88k0iba"]
 
-[ext_resource type="Script" path="res://Scripts/instructions.gd" id="1_a56tp"]
-[ext_resource type="Texture2D" uid="uid://58t312q5y7on" path="res://Assets/Sprites/Background/meunu5.png" id="2_jdas8"]
+[ext_resource type="Script" uid="uid://dswu3u0w8ijqu" path="res://Scripts/instructions.gd" id="1_a56tp"]
+[ext_resource type="Texture2D" uid="uid://djq73mdtccy1r" path="res://Assets/Sprites/Background/instruction_keyboard.png" id="2_dxknu"]
 
-[node name="Instructions" type="Control"]
+[node name="Instructions" type="Control" unique_id=2042798164]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -16,7 +16,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_a56tp")
 
-[node name="ColorRect" type="TextureRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1794024409]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -29,9 +29,9 @@ offset_right = 480.0
 offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_jdas8")
+texture = ExtResource("2_dxknu")
 
-[node name="Ok" type="Button" parent="."]
+[node name="Ok" type="Button" parent="." unique_id=1701037427]
 layout_mode = 1
 anchors_preset = -1
 offset_left = -334.0

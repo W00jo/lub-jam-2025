@@ -1,11 +1,12 @@
-[gd_scene load_steps=39 format=3 uid="uid://gvfdf4fim2n0"]
+[gd_scene format=3 uid="uid://gvfdf4fim2n0"]
 
-[ext_resource type="Script" path="res://Scripts/delfin.gd" id="1_lv03r"]
-[ext_resource type="Texture2D" uid="uid://c7fsgblmjgcb2" path="res://Assets/Sprites/Characters/Delphin/Delfin_All_Sheets.png" id="2_cdavg"]
-[ext_resource type="Script" path="res://Scripts/dolphin_arm.gd" id="3_kua7p"]
-[ext_resource type="Texture2D" uid="uid://b4cixtihbxusj" path="res://Assets/Sprites/Characters/Delphin/Delfinsamareka20.png" id="4_b4p31"]
-[ext_resource type="AudioStream" uid="uid://y0xsq0tle7ax" path="res://Assets/Sounds/DelfinKukuSound.mp3" id="5_bbla4"]
-[ext_resource type="Texture2D" uid="uid://cn3eew1iyst5t" path="res://Assets/Sprites/Characters/dymek_mniam.png" id="6_bxs6p"]
+[ext_resource type="Script" uid="uid://cflyhu3fipggw" path="res://Scripts/delfin.gd" id="1_lv03r"]
+[ext_resource type="Texture2D" uid="uid://ctobu3nwnl2y7" path="res://Assets/Sprites/Characters/Dolphin/dolphine_sheet.png" id="2_cdavg"]
+[ext_resource type="Script" uid="uid://dpc77qu6t6j45" path="res://Scripts/dolphin_arm.gd" id="3_kua7p"]
+[ext_resource type="Texture2D" uid="uid://dxr3iadxo6ci8" path="res://Assets/Sprites/Characters/Dolphin/dolphine_arm.png" id="4_b4p31"]
+[ext_resource type="AudioStream" uid="uid://dgsjtb7jivtan" path="res://Assets/Sounds/DelfinKukuSound.mp3" id="5_bbla4"]
+[ext_resource type="Texture2D" uid="uid://bf38qj50xogrh" path="res://Assets/Sprites/Characters/speech_ballon_mniam.png" id="6_bxs6p"]
+
 
 [sub_resource type="Gradient" id="Gradient_kgtv5"]
 offsets = PackedFloat32Array(0, 0.002331, 0.588578)

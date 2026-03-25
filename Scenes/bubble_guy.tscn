@@ -1,9 +1,10 @@
-[gd_scene load_steps=56 format=3 uid="uid://31sgm2m6coed"]
+[gd_scene format=3 uid="uid://31sgm2m6coed"]
 
-[ext_resource type="Script" path="res://Scripts/bubble_guy.gd" id="1_v53aw"]
-[ext_resource type="Texture2D" uid="uid://be6a1lrdmrnno" path="res://Assets/Sprites/Characters/Bubble-Sheet.png" id="3_3im20"]
-[ext_resource type="AudioStream" uid="uid://vcy73tpgkaph" path="res://Assets/Sounds/BubblePopSound.mp3" id="3_yrydu"]
-[ext_resource type="Texture2D" uid="uid://dvy1t82bmuhla" path="res://Assets/Sprites/Characters/dymek_ew.png" id="4_bjscs"]
+[ext_resource type="Script" uid="uid://c1sxptfkjhol0" path="res://Scripts/bubble_guy.gd" id="1_v53aw"]
+[ext_resource type="Texture2D" uid="uid://ce70lhet7upwo" path="res://Assets/Sprites/Characters/bubble_sheet.png" id="3_3im20"]
+[ext_resource type="AudioStream" uid="uid://bf6oltcd07jdd" path="res://Assets/Sounds/BubblePopSound.mp3" id="3_yrydu"]
+[ext_resource type="Texture2D" uid="uid://bj344bfsr7h5o" path="res://Assets/Sprites/Characters/speech_ballon_ew.png" id="4_bjscs"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fln30"]
 radius = 59.357
