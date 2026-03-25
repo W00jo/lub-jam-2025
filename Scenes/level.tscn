@@ -1,12 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dycaivlgy07q"]
+[gd_scene format=3 uid="uid://dycaivlgy07q"]
 
-[ext_resource type="Script" path="res://Scripts/level.gd" id="1_qa8xk"]
+[ext_resource type="Script" uid="uid://kfx6hfmpu4ng" path="res://Scripts/level.gd" id="1_qa8xk"]
 [ext_resource type="PackedScene" uid="uid://hg7f7x82640v" path="res://Scenes/parallax_mapa1.tscn" id="2_j48kx"]
 [ext_resource type="PackedScene" uid="uid://bk7nkdcj7xens" path="res://Scenes/floors.tscn" id="4_8jxsa"]
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="5_dxn7b"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="6_2tptr"]
 [ext_resource type="PackedScene" uid="uid://yuv1d10akw2h" path="res://Scenes/collectible_bullet.tscn" id="7_0wplc"]
-[ext_resource type="Shader" path="res://game.gdshader" id="8_2f70e"]
+[ext_resource type="Shader" uid="uid://dbs0slpb7yx6l" path="res://game.gdshader" id="8_2f70e"]
 [ext_resource type="PackedScene" uid="uid://d3jkfuc0bhhh0" path="res://Scenes/stinky_bubble.tscn" id="8_b7ch7"]
 [ext_resource type="PackedScene" uid="uid://cphod0ydvo8ke" path="res://Scenes/shield_bubble.tscn" id="9_ghmt6"]
 [ext_resource type="PackedScene" uid="uid://brsj11mvkc6fj" path="res://Scenes/side.tscn" id="10_dtyab"]
@@ -15,94 +15,94 @@
 shader = ExtResource("8_2f70e")
 shader_parameter/intensity = 1.0
 
-[node name="Level0" type="Node2D"]
+[node name="Level0" type="Node2D" unique_id=188927186]
 process_mode = 1
 script = ExtResource("1_qa8xk")
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_j48kx")]
+[node name="ParallaxBackground" parent="." unique_id=2018645508 instance=ExtResource("2_j48kx")]
 
-[node name="Floors" parent="." instance=ExtResource("4_8jxsa")]
+[node name="Floors" parent="." unique_id=2067477129 instance=ExtResource("4_8jxsa")]
 collision_mask = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1866845073]
 position = Vector2(960, 540)
 
-[node name="CollectibleBullet" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet" parent="." unique_id=1056659637 instance=ExtResource("7_0wplc")]
 position = Vector2(1073, 540)
 
-[node name="CollectibleBullet2" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet2" parent="." unique_id=1930457876 instance=ExtResource("7_0wplc")]
 position = Vector2(2895, 200)
 
-[node name="CollectibleBullet3" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet3" parent="." unique_id=50850340 instance=ExtResource("7_0wplc")]
 position = Vector2(5991, 826)
 
-[node name="CollectibleBullet4" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet4" parent="." unique_id=1669958938 instance=ExtResource("7_0wplc")]
 position = Vector2(9098, 943)
 
-[node name="CollectibleBullet5" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet5" parent="." unique_id=712020072 instance=ExtResource("7_0wplc")]
 position = Vector2(11856, 327)
 
-[node name="CollectibleBullet6" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet6" parent="." unique_id=1257282967 instance=ExtResource("7_0wplc")]
 position = Vector2(14353, 729)
 
-[node name="CollectibleBullet7" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet7" parent="." unique_id=1397194827 instance=ExtResource("7_0wplc")]
 position = Vector2(15852, 172)
 
-[node name="CollectibleBullet8" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet8" parent="." unique_id=1211906421 instance=ExtResource("7_0wplc")]
 position = Vector2(18525, 551)
 
-[node name="CollectibleBullet9" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet9" parent="." unique_id=721842870 instance=ExtResource("7_0wplc")]
 position = Vector2(20612, 574)
 
-[node name="CollectibleBullet10" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet10" parent="." unique_id=1434529384 instance=ExtResource("7_0wplc")]
 position = Vector2(22071, 656)
 
-[node name="CollectibleBullet11" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet11" parent="." unique_id=1961937656 instance=ExtResource("7_0wplc")]
 position = Vector2(25120, 741)
 
-[node name="CollectibleBullet12" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet12" parent="." unique_id=1886608352 instance=ExtResource("7_0wplc")]
 position = Vector2(27733, 659)
 
-[node name="CollectibleBullet13" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet13" parent="." unique_id=1100469899 instance=ExtResource("7_0wplc")]
 position = Vector2(29826, 549)
 
-[node name="CollectibleBullet14" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet14" parent="." unique_id=1336320858 instance=ExtResource("7_0wplc")]
 position = Vector2(33030, 790)
 
-[node name="CollectibleBullet15" parent="." instance=ExtResource("7_0wplc")]
+[node name="CollectibleBullet15" parent="." unique_id=1007401028 instance=ExtResource("7_0wplc")]
 position = Vector2(34583, 948)
 
-[node name="ShieldBubble" parent="." instance=ExtResource("9_ghmt6")]
+[node name="ShieldBubble" parent="." unique_id=206720843 instance=ExtResource("9_ghmt6")]
 position = Vector2(3884, 319)
 
-[node name="StinkyBubble" parent="." instance=ExtResource("8_b7ch7")]
+[node name="StinkyBubble" parent="." unique_id=1745118559 instance=ExtResource("8_b7ch7")]
 position = Vector2(7316, 969)
 
-[node name="ShieldBubble3" parent="." instance=ExtResource("9_ghmt6")]
+[node name="ShieldBubble3" parent="." unique_id=1882218903 instance=ExtResource("9_ghmt6")]
 position = Vector2(10381, 560)
 
-[node name="StinkyBubble2" parent="." instance=ExtResource("8_b7ch7")]
+[node name="StinkyBubble2" parent="." unique_id=1767326909 instance=ExtResource("8_b7ch7")]
 position = Vector2(12763, 739)
 
-[node name="StinkyBubble5" parent="." instance=ExtResource("8_b7ch7")]
+[node name="StinkyBubble5" parent="." unique_id=919177387 instance=ExtResource("8_b7ch7")]
 position = Vector2(1749, 471)
 
-[node name="ShieldBubble4" parent="." instance=ExtResource("9_ghmt6")]
+[node name="ShieldBubble4" parent="." unique_id=40370348 instance=ExtResource("9_ghmt6")]
 position = Vector2(15132, 225)
 
-[node name="StinkyBubble3" parent="." instance=ExtResource("8_b7ch7")]
+[node name="StinkyBubble3" parent="." unique_id=1749397201 instance=ExtResource("8_b7ch7")]
 position = Vector2(20174, 937)
 
-[node name="ShieldBubble6" parent="." instance=ExtResource("9_ghmt6")]
+[node name="ShieldBubble6" parent="." unique_id=499799899 instance=ExtResource("9_ghmt6")]
 position = Vector2(26052, 686)
 
-[node name="ShieldBubble7" parent="." instance=ExtResource("9_ghmt6")]
+[node name="ShieldBubble7" parent="." unique_id=649944910 instance=ExtResource("9_ghmt6")]
 position = Vector2(30916, 227)
 
-[node name="StinkyBubble4" parent="." instance=ExtResource("8_b7ch7")]
+[node name="StinkyBubble4" parent="." unique_id=1909018363 instance=ExtResource("8_b7ch7")]
 position = Vector2(34823, 851)
 
-[node name="Shader" type="ColorRect" parent="."]
+[node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
 material = SubResource("ShaderMaterial_0bp2o")
 layout_direction = 3
 anchors_preset = 15
@@ -114,14 +114,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.215686, 0.435294, 0.752941, 0.443137)
 
-[node name="BubbleGuy" parent="." instance=ExtResource("5_dxn7b")]
+[node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("5_dxn7b")]
 position = Vector2(1537, 288)
 collision_mask = 15
 
-[node name="Delfin" parent="." instance=ExtResource("6_2tptr")]
+[node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("6_2tptr")]
 position = Vector2(737, 530)
 scale = Vector2(2, 2)
 collision_mask = 15
 
-[node name="Side" parent="." instance=ExtResource("10_dtyab")]
+[node name="Side" parent="." unique_id=1169848261 instance=ExtResource("10_dtyab")]
 z_index = 2

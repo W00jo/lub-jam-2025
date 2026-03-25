@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://dgsjtb7jivtan" path="res://Assets/Sounds/DelfinKukuSound.mp3" id="5_bbla4"]
 [ext_resource type="Texture2D" uid="uid://bf38qj50xogrh" path="res://Assets/Sprites/Characters/speech_ballon_mniam.png" id="6_bxs6p"]
 
-
 [sub_resource type="Gradient" id="Gradient_kgtv5"]
 offsets = PackedFloat32Array(0, 0.002331, 0.588578)
 colors = PackedColorArray(1, 1, 1, 0.768627, 1, 1, 1, 0, 1, 1, 1, 0)
@@ -188,14 +187,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_njhvm"]
 _data = {
-"Aim": SubResource("Animation_upye3"),
-"Get_DMG": SubResource("Animation_ag7nd"),
-"Get_Down": SubResource("Animation_us811"),
-"Get_UP": SubResource("Animation_di8x2"),
-"RESET": SubResource("Animation_ovqvi"),
-"Start_AIM": SubResource("Animation_q6oby"),
-"Stop_AIM": SubResource("Animation_gf82o"),
-"Swim": SubResource("Animation_pu0lw")
+&"Aim": SubResource("Animation_upye3"),
+&"Get_DMG": SubResource("Animation_ag7nd"),
+&"Get_Down": SubResource("Animation_us811"),
+&"Get_UP": SubResource("Animation_di8x2"),
+&"RESET": SubResource("Animation_ovqvi"),
+&"Start_AIM": SubResource("Animation_q6oby"),
+&"Stop_AIM": SubResource("Animation_gf82o"),
+&"Swim": SubResource("Animation_pu0lw")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6vmcs"]
@@ -289,54 +288,53 @@ states/Swim/position = Vector2(352, 100)
 transitions = ["Start", "Swim", SubResource("AnimationNodeStateMachineTransition_ytxin"), "Swim", "Get_UP", SubResource("AnimationNodeStateMachineTransition_x8p8u"), "Get_UP", "Start_AIM", SubResource("AnimationNodeStateMachineTransition_uqose"), "Start_AIM", "Aim", SubResource("AnimationNodeStateMachineTransition_8k7sr"), "Aim", "Stop_AIM", SubResource("AnimationNodeStateMachineTransition_decru"), "Stop_AIM", "Get_Down", SubResource("AnimationNodeStateMachineTransition_yee8i"), "Get_Down", "Swim", SubResource("AnimationNodeStateMachineTransition_du6hf"), "Swim", "Get_DMG", SubResource("AnimationNodeStateMachineTransition_q6cqd"), "Get_UP", "Get_DMG", SubResource("AnimationNodeStateMachineTransition_d4yyd"), "Start_AIM", "Get_DMG", SubResource("AnimationNodeStateMachineTransition_m53na"), "Aim", "Get_DMG", SubResource("AnimationNodeStateMachineTransition_8w805"), "Stop_AIM", "Get_DMG", SubResource("AnimationNodeStateMachineTransition_iqw8q"), "Get_Down", "Get_DMG", SubResource("AnimationNodeStateMachineTransition_t0vxj")]
 graph_offset = Vector2(1, -54)
 
-[node name="Dolphin" type="CharacterBody2D" groups=["Dolphin"]]
+[node name="Dolphin" type="CharacterBody2D" unique_id=8888247 groups=["Dolphin"]]
 collision_mask = 31
+motion_mode = 1
 script = ExtResource("1_lv03r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1571566880]
 texture = ExtResource("2_cdavg")
 hframes = 48
 vframes = 5
 
-[node name="DolphinArm" type="Node2D" parent="."]
+[node name="DolphinArm" type="Node2D" parent="." unique_id=1903723321]
 visible = false
 position = Vector2(-7, -6)
 script = ExtResource("3_kua7p")
 
-[node name="BulletSpawn" type="Marker2D" parent="DolphinArm"]
+[node name="BulletSpawn" type="Marker2D" parent="DolphinArm" unique_id=1869052966]
 position = Vector2(64, -18)
 
-[node name="Line2D" type="Line2D" parent="DolphinArm"]
+[node name="Line2D" type="Line2D" parent="DolphinArm" unique_id=1303424169]
 position = Vector2(29, -9)
 width = 5.0
 default_color = Color(1, 1, 1, 0.709804)
 gradient = SubResource("Gradient_kgtv5")
 
-[node name="Sprite2D" type="Sprite2D" parent="DolphinArm"]
+[node name="Sprite2D" type="Sprite2D" parent="DolphinArm" unique_id=1719841584]
 position = Vector2(5, 6)
 texture = ExtResource("4_b4p31")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1535888159]
 collision_layer = 129
 collision_mask = 129
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1818202295]
 position = Vector2(2, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ml5yh")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1307954731]
 position = Vector2(2, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ml5yh")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=13576886]
 process_mode = 3
-libraries = {
-"": SubResource("AnimationLibrary_njhvm")
-}
+libraries/ = SubResource("AnimationLibrary_njhvm")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1032933267]
 process_mode = 3
 tree_root = SubResource("AnimationNodeStateMachine_qpbqm")
 anim_player = NodePath("../AnimationPlayer")
@@ -344,10 +342,10 @@ parameters/conditions/Start_AIM = false
 parameters/conditions/Stop_AIM = false
 parameters/conditions/dead = false
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=439200920]
 stream = ExtResource("5_bbla4")
 
-[node name="DymekMniam" type="Sprite2D" parent="."]
+[node name="DymekMniam" type="Sprite2D" parent="." unique_id=99785541]
 position = Vector2(64, -38)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("6_bxs6p")

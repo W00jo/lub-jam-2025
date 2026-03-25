@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://bf6oltcd07jdd" path="res://Assets/Sounds/BubblePopSound.mp3" id="3_yrydu"]
 [ext_resource type="Texture2D" uid="uid://bj344bfsr7h5o" path="res://Assets/Sprites/Characters/speech_ballon_ew.png" id="4_bjscs"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_fln30"]
 radius = 59.357
 
@@ -220,17 +219,17 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gjj3l"]
 _data = {
-"Breaking_Bubble": SubResource("Animation_e8ub2"),
-"Death_Dart": SubResource("Animation_00yjh"),
-"Death_No_Air": SubResource("Animation_cntpl"),
-"Idle": SubResource("Animation_kl4sb"),
-"Idle_NoBubble": SubResource("Animation_68l1p"),
-"Idle_noBubbles_2": SubResource("Animation_rffrq"),
-"New_Bubble": SubResource("Animation_l4ce8"),
-"RESET": SubResource("Animation_2itcv"),
-"Swimming_Bubble": SubResource("Animation_5rdhp"),
-"Swimming_NoAir_1": SubResource("Animation_dfk3n"),
-"Swimming_NoAir_2": SubResource("Animation_cb83l")
+&"Breaking_Bubble": SubResource("Animation_e8ub2"),
+&"Death_Dart": SubResource("Animation_00yjh"),
+&"Death_No_Air": SubResource("Animation_cntpl"),
+&"Idle": SubResource("Animation_kl4sb"),
+&"Idle_NoBubble": SubResource("Animation_68l1p"),
+&"Idle_noBubbles_2": SubResource("Animation_rffrq"),
+&"New_Bubble": SubResource("Animation_l4ce8"),
+&"RESET": SubResource("Animation_2itcv"),
+&"Swimming_Bubble": SubResource("Animation_5rdhp"),
+&"Swimming_NoAir_1": SubResource("Animation_dfk3n"),
+&"Swimming_NoAir_2": SubResource("Animation_cb83l")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b0y71"]
@@ -393,42 +392,41 @@ states/Swimming_NoAir_2/position = Vector2(1064, 224)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_14yks"), "Idle", "Swimming_Bubble", SubResource("AnimationNodeStateMachineTransition_e7mj1"), "Swimming_Bubble", "Breaking_Bubble", SubResource("AnimationNodeStateMachineTransition_86ray"), "Idle", "Breaking_Bubble", SubResource("AnimationNodeStateMachineTransition_ebylw"), "Breaking_Bubble", "Idle_NoBubble", SubResource("AnimationNodeStateMachineTransition_7nbyq"), "Breaking_Bubble", "Swimming_NoAir_1", SubResource("AnimationNodeStateMachineTransition_bwavo"), "Idle_NoBubble", "Swimming_NoAir_1", SubResource("AnimationNodeStateMachineTransition_rxqro"), "Idle_NoBubble", "Idle_noBubbles_2", SubResource("AnimationNodeStateMachineTransition_0n24s"), "Swimming_Bubble", "Idle", SubResource("AnimationNodeStateMachineTransition_tr1xi"), "New_Bubble", "Idle", SubResource("AnimationNodeStateMachineTransition_opncu"), "New_Bubble", "Swimming_Bubble", SubResource("AnimationNodeStateMachineTransition_emkq4"), "Swimming_NoAir_1", "New_Bubble", SubResource("AnimationNodeStateMachineTransition_efgjt"), "Idle_noBubbles_2", "New_Bubble", SubResource("AnimationNodeStateMachineTransition_wihbq"), "Idle_noBubbles_2", "Swimming_NoAir_2", SubResource("AnimationNodeStateMachineTransition_mccmj"), "Swimming_NoAir_1", "Swimming_NoAir_2", SubResource("AnimationNodeStateMachineTransition_cmxwy"), "Swimming_NoAir_2", "New_Bubble", SubResource("AnimationNodeStateMachineTransition_ef62n"), "Idle_NoBubble", "New_Bubble", SubResource("AnimationNodeStateMachineTransition_arhkk"), "Swimming_NoAir_1", "Idle_NoBubble", SubResource("AnimationNodeStateMachineTransition_vfvif"), "Swimming_NoAir_2", "Idle_noBubbles_2", SubResource("AnimationNodeStateMachineTransition_wccvf"), "Idle_noBubbles_2", "Death_No_Air", SubResource("AnimationNodeStateMachineTransition_7lbv3"), "Swimming_NoAir_2", "Death_No_Air", SubResource("AnimationNodeStateMachineTransition_njkd4"), "Idle_NoBubble", "Death_Dart", SubResource("AnimationNodeStateMachineTransition_ctr4q"), "Idle_noBubbles_2", "Death_Dart", SubResource("AnimationNodeStateMachineTransition_pflv1"), "Swimming_NoAir_2", "Death_Dart", SubResource("AnimationNodeStateMachineTransition_kl5lm"), "Swimming_NoAir_1", "Death_Dart", SubResource("AnimationNodeStateMachineTransition_xw475")]
 graph_offset = Vector2(108, -52)
 
-[node name="BubbleGuy" type="CharacterBody2D" groups=["BubbleGuy"]]
+[node name="BubbleGuy" type="CharacterBody2D" unique_id=237256950 groups=["BubbleGuy"]]
 collision_mask = 31
+motion_mode = 1
 script = ExtResource("1_v53aw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=283782162]
 visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("CircleShape2D_fln30")
 
-[node name="Guy" type="Sprite2D" parent="."]
+[node name="Guy" type="Sprite2D" parent="." unique_id=1981737888]
 position = Vector2(-2.08594, -1.3)
 scale = Vector2(2.04062, 2.04062)
 texture = ExtResource("3_3im20")
 hframes = 60
 frame = 23
 
-[node name="ShieldArea" type="Area2D" parent="."]
+[node name="ShieldArea" type="Area2D" parent="." unique_id=250570261]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldArea" unique_id=580587799]
 shape = SubResource("CapsuleShape2D_2hfaa")
 
-[node name="BodyArea" type="Area2D" parent="."]
+[node name="BodyArea" type="Area2D" parent="." unique_id=774325353]
 visible = false
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BodyArea"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BodyArea" unique_id=869598320]
 position = Vector2(-1.5, -2)
 shape = SubResource("RectangleShape2D_3ys38")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1079017241]
 process_mode = 3
-libraries = {
-"": SubResource("AnimationLibrary_gjj3l")
-}
+libraries/ = SubResource("AnimationLibrary_gjj3l")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=758702366]
 process_mode = 3
 tree_root = SubResource("AnimationNodeStateMachine_pjbjo")
 anim_player = NodePath("../AnimationPlayer")
@@ -440,18 +438,18 @@ parameters/conditions/Get_Bubble = false
 parameters/conditions/Idle = false
 parameters/conditions/Swim = false
 
-[node name="ShortOnAir" type="Timer" parent="."]
+[node name="ShortOnAir" type="Timer" parent="." unique_id=942669739]
 wait_time = 7.0
 one_shot = true
 
-[node name="DieNoAir" type="Timer" parent="."]
+[node name="DieNoAir" type="Timer" parent="." unique_id=2137353962]
 wait_time = 7.0
 one_shot = true
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1178913011]
 stream = ExtResource("3_yrydu")
 
-[node name="DymekEw" type="Sprite2D" parent="."]
+[node name="DymekEw" type="Sprite2D" parent="." unique_id=1583876213]
 position = Vector2(57, -67)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("4_bjscs")

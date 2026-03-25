@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if ruch == true:
-		position.x -= 1
+		position.x -= 1 * delta
 	
 
 
