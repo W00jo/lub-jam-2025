@@ -3,23 +3,158 @@
 [ext_resource type="Script" uid="uid://cyrn2fkoclhes" path="res://Scripts/stinky_bubble.gd" id="1_2odtd"]
 [ext_resource type="Texture2D" uid="uid://dtrv3rrjjnai4" path="res://Assets/Sprites/Interactive/bubble_damage.png" id="1_wu72k"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alg4b"]
 size = Vector2(21, 24)
 
-[node name="StinkyBubble" type="Node2D" groups=["ShieldBubble", "StinkyBubble"]]
-modulate = Color(0.66974, 0.759638, 0.38395, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkb76"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv13s"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dikl"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqlpt"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mxp2"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy2dp"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5n0p"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hixti"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aatrj"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fohek"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghbh3"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gasy1"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svk18"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgj7t"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_begsw"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsyw0"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeevc"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(1024, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkcbm"]
+atlas = ExtResource("1_wu72k")
+region = Rect2(1088, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oruom"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkb76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv13s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dikl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqlpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mxp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy2dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5n0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hixti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aatrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fohek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghbh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gasy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svk18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgj7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_begsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsyw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeevc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkcbm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="StinkyBubble" type="Node2D" unique_id=1531711102 groups=["ShieldBubble", "StinkyBubble"]]
+modulate = Color(0.6627451, 1, 0.6156863, 1)
 scale = Vector2(4, 4)
 script = ExtResource("1_2odtd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wu72k")
-
-[node name="CollectionArea" type="Area2D" parent="."]
+[node name="stinky_bubble_area" type="Area2D" parent="." unique_id=1239575602]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectionArea"]
+[node name="stinky_bubble_area_collision" type="CollisionShape2D" parent="stinky_bubble_area" unique_id=1819998562]
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_alg4b")
 
-[connection signal="body_entered" from="CollectionArea" to="." method="_on_collection_area_body_entered"]
+[node name="stinky_bubble_sprite" type="AnimatedSprite2D" parent="." unique_id=2147462806]
+sprite_frames = SubResource("SpriteFrames_oruom")
+autoplay = "default"
+frame_progress = 0.65606064
+
+[connection signal="body_entered" from="stinky_bubble_area" to="." method="_on_collection_area_body_entered"]

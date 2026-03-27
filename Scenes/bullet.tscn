@@ -1,24 +1,22 @@
 [gd_scene format=3 uid="uid://kkijud1tom28"]
 
 [ext_resource type="Script" uid="uid://03wadgb6qhns" path="res://Scripts/bullet.gd" id="1_8klpg"]
-[ext_resource type="Texture2D" uid="uid://ckwtv6uovu1uo" path="res://Assets/Sprites/Characters/Dolphin/arrow.png" id="2_np3wv"]
-
+[ext_resource type="Texture2D" uid="uid://ciy0proe0cfcg" path="res://Assets/Sprites/Characters/Dolphin/dart.png" id="2_oduel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk670"]
 size = Vector2(28, 8)
 
-[node name="Bullet" type="Area2D" groups=["Bullet"]]
+[node name="bullet_sprite" type="Area2D" unique_id=2064778025 groups=["Bullet"]]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_8klpg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 0, 1)
-texture = ExtResource("2_np3wv")
+[node name="bullet_sprite" type="Sprite2D" parent="." unique_id=1034668328]
+texture = ExtResource("2_oduel")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="bullet_collision" type="CollisionShape2D" parent="." unique_id=1763303413]
 shape = SubResource("RectangleShape2D_jk670")
 
-[node name="LifeTime" type="Timer" parent="."]
+[node name="LifeTime" type="Timer" parent="." unique_id=1136521074]
 wait_time = 5.0
 
 [connection signal="timeout" from="LifeTime" to="." method="_on_life_time_timeout"]
