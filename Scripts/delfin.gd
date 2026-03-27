@@ -14,7 +14,7 @@ func _ready() -> void:
 	add_to_group("Dolphin")
 	#stinky_bubble.connect("stinky_mniam", on_stinky)
 
-func _process(delta):
+func _process(_delta):
 	if game.INPUT_SCHEME == game.INPUT_SCHEMES.KEYBOARD_AND_MOUSE:
 		var mouse_position = get_global_mouse_position()
 		if mouse_position.x > position.x:
@@ -28,7 +28,7 @@ func _process(delta):
 		elif Input.get_action_strength("aim_left"):
 			$Sprite2D.set_flip_h(true)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var speed = Global.dolphin_speed
 	var direction = Input.get_vector("DolphinLeft", "DolphinRight", "DolphinUp", "DolphinDown").normalized()
 	if direction:

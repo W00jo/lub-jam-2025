@@ -8,7 +8,7 @@ extends Node2D
 var aiming = false
 var canshoot :bool = false #Ochrona przed tym by delphin miał całą animacje znaim strzeli na myszce
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if game.INPUT_SCHEME == game.INPUT_SCHEMES.KEYBOARD_AND_MOUSE:
 		look_at(get_global_mouse_position())
 	elif game.INPUT_SCHEME == game.INPUT_SCHEMES.GAMEPAD:

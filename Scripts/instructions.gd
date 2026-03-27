@@ -3,7 +3,7 @@ extends Control
 @onready var game = get_tree().root.get_node('Game')
 @onready var instr_canvas = get_tree().root.get_node('Game/InstructionLayer')
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	const keyboard_mouse_texture = preload("uid://djq73mdtccy1r")
 	const gamepad_texture = preload("uid://d1hv85sgt0q7x")
 

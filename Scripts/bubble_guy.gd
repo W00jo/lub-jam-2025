@@ -17,7 +17,7 @@ func _ready() -> void:
 	anim_tree["parameters/conditions/Idle"] = true
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if go_up == false:
 		var speed = Global.guy_speed
 		var direction = Input.get_vector("BubbleLeft", "BubbleRight", "BubbleUp", "BubbleDown").normalized()
