@@ -6,9 +6,9 @@ extends Control
 
 func _ready() -> void:
 	if Global.dolphin_dead == true or Global.guy_saved == true:
-		win_texture.texture = load("res://Assets/Sprites/Menu/Bublin_chlop_won2.png")
+		win_texture.texture = preload("uid://b05n3hoxujrd7")
 	if Global.guy_dead == true:
-		win_texture.texture = load("res://Assets/Sprites/Menu/dolphin_won2.png")
+		win_texture.texture = preload("uid://kdoaqnl3fam5")
 	$Restart.grab_focus()
 
 func _on_exit_button_pressed() -> void:

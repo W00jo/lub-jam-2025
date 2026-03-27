@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0r23lm2xyl01"]
+[gd_scene format=3 uid="uid://c0r23lm2xyl01"]
 
 [ext_resource type="PackedScene" uid="uid://dycaivlgy07q" path="res://Scenes/level.tscn" id="1_1l20j"]
-[ext_resource type="Script" path="res://Scripts/game.gd" id="1_pfgtd"]
-[ext_resource type="Shader" path="res://game.gdshader" id="3_fdbou"]
+[ext_resource type="Script" uid="uid://d3d4805fvgj5r" path="res://Scripts/game.gd" id="1_pfgtd"]
+[ext_resource type="Shader" uid="uid://dbs0slpb7yx6l" path="res://game.gdshader" id="3_fdbou"]
 [ext_resource type="PackedScene" uid="uid://c10e4kd8e6o3g" path="res://Scenes/menu.tscn" id="10_2t82o"]
 [ext_resource type="PackedScene" uid="uid://bcyrah88k0iba" path="res://Scenes/instructions.tscn" id="11_8dwh7"]
 
@@ -10,21 +10,21 @@
 shader = ExtResource("3_fdbou")
 shader_parameter/intensity = 1.0
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" unique_id=1590009313]
 process_mode = 3
 script = ExtResource("1_pfgtd")
 
-[node name="Level" parent="." groups=["Level"] instance=ExtResource("1_1l20j")]
+[node name="Level" parent="." unique_id=1904854065 groups=["Level"] instance=ExtResource("1_1l20j")]
 
-[node name="MenuLayer" type="CanvasLayer" parent="."]
+[node name="MenuLayer" type="CanvasLayer" parent="." unique_id=381092461]
 process_mode = 3
 
-[node name="Menu" parent="MenuLayer" instance=ExtResource("10_2t82o")]
+[node name="Menu" parent="MenuLayer" unique_id=1957599350 instance=ExtResource("10_2t82o")]
 
-[node name="ShaderLayer" type="CanvasLayer" parent="."]
+[node name="ShaderLayer" type="CanvasLayer" parent="." unique_id=541458080]
 visible = false
 
-[node name="Shader" type="ColorRect" parent="ShaderLayer"]
+[node name="Shader" type="ColorRect" parent="ShaderLayer" unique_id=1988952435]
 visible = false
 material = SubResource("ShaderMaterial_13ts7")
 anchors_preset = 15
@@ -34,13 +34,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.215686, 0.435294, 0.752941, 0.443137)
 
-[node name="InstructionLayer" type="CanvasLayer" parent="."]
+[node name="InstructionLayer" type="CanvasLayer" parent="." unique_id=491684603]
 process_mode = 3
 visible = false
 
-[node name="Instructions" parent="InstructionLayer" instance=ExtResource("11_8dwh7")]
+[node name="Instructions" parent="InstructionLayer" unique_id=842561718 instance=ExtResource("11_8dwh7")]
 
-[node name="WinLayer" type="CanvasLayer" parent="."]
+[node name="WinLayer" type="CanvasLayer" parent="." unique_id=1002608202]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=57487589]
 autoplay = true

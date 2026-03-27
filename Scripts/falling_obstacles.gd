@@ -9,6 +9,7 @@ var has_landed: bool = false # Czy już dotknął "Floor"
 @onready var trigger_area = $TriggerArea
 @onready var collision_shape = $CollisionObstacle
 @onready var sfx = $SFX
+@onready var sprite: AnimatedSprite2D = $falling_obstacle_sprite
 
 func _ready():
 	# Killbox i Collision_Obstacle domyślnie są wyłączone
@@ -33,7 +34,7 @@ func _on_trigger_area_body_entered(body: Node2D) -> void:
 		is_falling = true
 		killbox.monitoring = true
 		sfx.play()
-
+		sprite.play("falling")
 
 func _on_killbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Floor"):
@@ -44,6 +45,7 @@ func _on_killbox_body_entered(body: Node2D) -> void:
 		print ("AUĆ")
 	
 func _disable_killbox():
+	sprite.play("down")
 	set_deferred("killbox.monitoring", false)
 	killbox.collision_layer = 0
 	killbox.collision_mask = 0

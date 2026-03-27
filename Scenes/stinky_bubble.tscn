@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://cyrn2fkoclhes" path="res://Scripts/stinky_bubble.gd" id="1_2odtd"]
 [ext_resource type="Texture2D" uid="uid://dtrv3rrjjnai4" path="res://Assets/Sprites/Interactive/bubble_damage.png" id="1_wu72k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_alg4b"]
-size = Vector2(21, 24)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_dkb76"]
 atlas = ExtResource("1_wu72k")
 region = Rect2(0, 0, 64, 64)
@@ -140,21 +137,22 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="StinkyBubble" type="Node2D" unique_id=1531711102 groups=["ShieldBubble", "StinkyBubble"]]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dkb76"]
+radius = 18.25
+height = 52.0
+
+[node name="StinkyBubble" type="Area2D" unique_id=956967720 groups=["ShieldBubble", "StinkyBubble"]]
 modulate = Color(0.6627451, 1, 0.6156863, 1)
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 script = ExtResource("1_2odtd")
-
-[node name="stinky_bubble_area" type="Area2D" parent="." unique_id=1239575602]
-collision_layer = 4
-
-[node name="stinky_bubble_area_collision" type="CollisionShape2D" parent="stinky_bubble_area" unique_id=1819998562]
-position = Vector2(-1.5, 0)
-shape = SubResource("RectangleShape2D_alg4b")
 
 [node name="stinky_bubble_sprite" type="AnimatedSprite2D" parent="." unique_id=2147462806]
 sprite_frames = SubResource("SpriteFrames_oruom")
 autoplay = "default"
-frame_progress = 0.65606064
+frame_progress = 0.57483083
 
-[connection signal="body_entered" from="stinky_bubble_area" to="." method="_on_collection_area_body_entered"]
+[node name="stinky_bubble_area_collision" type="CollisionShape2D" parent="." unique_id=1819998562]
+position = Vector2(-4.25, 1.5)
+shape = SubResource("CapsuleShape2D_dkb76")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

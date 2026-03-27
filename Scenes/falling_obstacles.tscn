@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://q5oy7ujmlu6h" path="res://Assets/Sprites/Interactive/rock_falling.png" id="2_vhv77"]
 [ext_resource type="AudioStream" uid="uid://byjpf0x4ssyhi" path="res://Assets/Sounds/Rock Falling.mp3" id="3_sktny"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnb3r"]
 size = Vector2(45.5, 235.5)
 
@@ -14,37 +13,156 @@ size = Vector2(156, 116)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pda8s"]
 size = Vector2(156, 96)
 
-[node name="FallingObstacles" type="StaticBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8jlt"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(1440, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i35o4"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmsfx"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjfa7"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_458sb"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7exwa"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqx6o"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lat8w"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl6bh"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0k7b"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itrwh"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(960, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgnld"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(1056, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a8dd"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(1152, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o170k"]
+atlas = ExtResource("2_vhv77")
+region = Rect2(1248, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2rqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8jlt")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i35o4")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmsfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjfa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_458sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7exwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqx6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lat8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl6bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0k7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itrwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgnld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a8dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o170k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="FallingObstacles" type="StaticBody2D" unique_id=739616163]
 collision_layer = 17
 collision_mask = 3
 script = ExtResource("1_dkba5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
-texture = ExtResource("2_vhv77")
-
-[node name="TriggerArea" type="Area2D" parent="."]
+[node name="TriggerArea" type="Area2D" parent="." unique_id=1872087470]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1470120091]
 position = Vector2(-710, 190)
 shape = SubResource("RectangleShape2D_dnb3r")
 
-[node name="Killbox" type="Area2D" parent="."]
+[node name="Killbox" type="Area2D" parent="." unique_id=1475220699]
 collision_layer = 8
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=1743983670]
 position = Vector2(-18, -38)
 shape = SubResource("RectangleShape2D_rsxb8")
 
-[node name="CollisionObstacle" type="CollisionShape2D" parent="."]
+[node name="CollisionObstacle" type="CollisionShape2D" parent="." unique_id=522945519]
 position = Vector2(-18, -48)
 shape = SubResource("RectangleShape2D_pda8s")
 
-[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1568282203]
 stream = ExtResource("3_sktny")
 volume_db = 1.0
+
+[node name="falling_obstacle_sprite" type="AnimatedSprite2D" parent="." unique_id=1282504258]
+position = Vector2(3.0000005, -1.0000005)
+scale = Vector2(2.7005208, 2.7005208)
+sprite_frames = SubResource("SpriteFrames_e2rqq")
+animation = &"idle"
+autoplay = "idle"
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
 [connection signal="body_entered" from="Killbox" to="." method="_on_killbox_body_entered"]

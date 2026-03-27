@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var collection_area = $CollectionArea
 
-func _on_collection_area_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("BubbleGuy"):
 		print("Wykryty chłop. Ewww :<")
 		var guy = get_tree().get_first_node_in_group("BubbleGuy")
