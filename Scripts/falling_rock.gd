@@ -4,7 +4,7 @@ extends Node2D
 
 var is_falling: bool = false # Jeśli aktualnie spada
 
-@onready var killbox = $Killbox
+@onready var killbox: Area2D = $kill_box
 @onready var trigger_area = $TriggerArea
 @onready var self_destruct_timer = $SelfDestructTimer # Żeby nie spadał nieskończoną ilość czasu
 @onready var sfx = $SFX
@@ -33,5 +33,4 @@ func _on_killbox_body_entered(body: Node2D) -> void:
 		
 # Funkcja znikająca kamień, po jego upadku
 func _on_self_destruct_timer_timeout() -> void:
-	print("Kaminia nima")
 	queue_free()

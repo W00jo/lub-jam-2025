@@ -6,7 +6,7 @@ var is_falling: bool = false # Jeśli aktualnie spada
 var has_landed: bool = false # Czy już dotknął "Floor"
 
 @onready var killbox = $Killbox
-@onready var trigger_area = $TriggerArea
+@onready var trigger_area: Area2D = $TriggerArea
 @onready var collision_shape = $CollisionObstacle
 @onready var sfx = $SFX
 @onready var sprite: AnimatedSprite2D = $falling_obstacle_sprite

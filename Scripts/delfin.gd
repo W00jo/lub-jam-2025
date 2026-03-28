@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var sfx = $SFX
 @onready var dolphin_sprite = $Sprite2D
 @onready var dymek = $DymekMniam
+@onready var dolphin_arm: Node2D = $DolphinArm
 var tween: Tween
 var tween_dymek: Tween
 
@@ -58,12 +59,14 @@ func on_stinky():
 func turn_pink():
 	print("should be pink")
 	dolphin_sprite.set_modulate(Color.DEEP_PINK)
-	Global.dolphin_speed = 420
+	dolphin_arm.set_modulate(Color.DEEP_PINK)
+	Global.dolphin_speed = 450
 	await get_tree().create_timer(4).timeout
 	tween = create_tween()
 	tween.tween_property(dolphin_sprite, "modulate" , Color.WHITE, 0.5)
 	await tween.finished
 	dolphin_sprite.set_modulate(Color.WHITE)
+	dolphin_arm.set_modulate(Color.WHITE)
 	Global.dolphin_speed = 370
 
 

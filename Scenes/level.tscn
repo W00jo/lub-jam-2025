@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://cphod0ydvo8ke" path="res://Scenes/shield_bubble.tscn" id="9_ghmt6"]
 [ext_resource type="PackedScene" uid="uid://brsj11mvkc6fj" path="res://Scenes/side.tscn" id="10_dtyab"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqgf2"]
+size = Vector2(338, 1215)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0bp2o"]
 shader = ExtResource("8_2f70e")
 shader_parameter/intensity = 1.0
@@ -106,8 +109,18 @@ position = Vector2(34823, 851)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1866845073]
 position = Vector2(960, 540)
 
+[node name="side_bubbles" parent="Camera2D" unique_id=1169848261 instance=ExtResource("10_dtyab")]
+z_index = 2
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up" type="Area2D" parent="Camera2D" unique_id=879184771]
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up_collision" type="CollisionShape2D" parent="Camera2D/camera_speed_up" unique_id=798272550]
+position = Vector2(1905, 539.5)
+shape = SubResource("RectangleShape2D_oqgf2")
+
 [node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
-visible = false
 material = SubResource("ShaderMaterial_0bp2o")
 layout_direction = 3
 anchors_preset = 15
@@ -128,5 +141,5 @@ position = Vector2(737, 530)
 scale = Vector2(2, 2)
 collision_mask = 15
 
-[node name="Side" parent="." unique_id=1169848261 instance=ExtResource("10_dtyab")]
-z_index = 2
+[connection signal="body_entered" from="Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_entered"]
+[connection signal="body_exited" from="Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_exited"]

@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://byjpf0x4ssyhi" path="res://Assets/Sounds/Rock Falling.mp3" id="3_sktny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnb3r"]
-size = Vector2(45.5, 235.5)
+size = Vector2(45.5, 951)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rsxb8"]
 size = Vector2(156, 116)
@@ -138,7 +138,7 @@ script = ExtResource("1_dkba5")
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1470120091]
-position = Vector2(-710, 190)
+position = Vector2(-568, 445.5)
 shape = SubResource("RectangleShape2D_dnb3r")
 
 [node name="Killbox" type="Area2D" parent="." unique_id=1475220699]

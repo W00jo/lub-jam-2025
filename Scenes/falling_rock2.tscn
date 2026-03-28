@@ -4,43 +4,39 @@
 [ext_resource type="Texture2D" uid="uid://doexcj0ro03pu" path="res://Assets/Sprites/Interactive/stalactice_1.png" id="2_8opli"]
 [ext_resource type="AudioStream" uid="uid://b63csh2eai25m" path="res://Assets/Sounds/Underwater rock cracking up soundeffect.mp3" id="3_jxpgp"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8exj8"]
 size = Vector2(126, 462)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3m7w"]
-size = Vector2(101, 180.5)
-
-[node name="FallingRock2" type="Node2D" groups=["FallingRock"]]
+[node name="FallingRock2" type="Node2D" unique_id=204301608 groups=["FallingRock"]]
 script = ExtResource("1_cft5b")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=832525031]
 position = Vector2(4, 29)
 scale = Vector2(4, 4)
 texture = ExtResource("2_8opli")
 
-[node name="TriggerArea" type="Area2D" parent="."]
+[node name="TriggerArea" type="Area2D" parent="." unique_id=1060151961]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1216584060]
 position = Vector2(0, 168)
 shape = SubResource("RectangleShape2D_8exj8")
 
-[node name="Killbox" type="Area2D" parent="." groups=["RockKillbox"]]
+[node name="kill_box" type="Area2D" parent="." unique_id=707692871 groups=["RockKillbox"]]
 collision_layer = 9
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+[node name="kill_box_collision" type="CollisionPolygon2D" parent="kill_box" unique_id=380043883]
 position = Vector2(-0.5, 22.75)
-shape = SubResource("RectangleShape2D_y3m7w")
+polygon = PackedVector2Array(-22.5, -76.75, -21.5, -24.75, -4.5, 100.25, 6.5, 110.25, 15.5, 97.25, 29.5, -5.75, 39.5, -75.75)
 
-[node name="SelfDestructTimer" type="Timer" parent="."]
+[node name="SelfDestructTimer" type="Timer" parent="." unique_id=1283045195]
 wait_time = 5.0
 one_shot = true
 
-[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=859374913]
 stream = ExtResource("3_jxpgp")
 volume_db = 1.0
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
-[connection signal="body_entered" from="Killbox" to="." method="_on_killbox_body_entered"]
+[connection signal="body_entered" from="kill_box" to="." method="_on_killbox_body_entered"]
 [connection signal="timeout" from="SelfDestructTimer" to="." method="_on_self_destruct_timer_timeout"]

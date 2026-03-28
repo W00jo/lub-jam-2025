@@ -77,10 +77,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nudqd"]
 size = Vector2(72, 1126)
 
-[node name="Side" type="Area2D" unique_id=1378341981]
+[node name="side_bubbles" type="Area2D" unique_id=1378341981]
 script = ExtResource("1_37gkk")
 
-[node name="Side" type="AnimatedSprite2D" parent="." unique_id=777686619]
+[node name="side_bubbles_sprite" type="AnimatedSprite2D" parent="." unique_id=777686619]
 position = Vector2(40, 540)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_xkbco")
@@ -88,7 +88,7 @@ autoplay = "default"
 frame_progress = 0.4649168
 speed_scale = 2.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=162970943]
+[node name="side_bubbles_collision" type="CollisionShape2D" parent="." unique_id=162970943]
 position = Vector2(-6, 544)
 shape = SubResource("RectangleShape2D_nudqd")
 
