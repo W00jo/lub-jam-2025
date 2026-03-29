@@ -1,11 +1,12 @@
 extends Control
 
 @onready var anim = $AnimationPlayer
-@onready var canvas = $CanvasLayer
+@onready var canvas: CanvasLayer = $bubble_flee_splashart
 @onready var instruction_layer = get_tree().root.get_node('Game/InstructionLayer')
 @onready var instructions = get_tree().root.get_node('Game/InstructionLayer/Instructions')
 @onready var shader_canvas = get_tree().root.get_node('Game/ShaderLayer')
 @onready var menu = get_tree().root.get_node('Game/MenuLayer')
+@onready var platform_ten_splashart: AnimatedSprite2D = $platform_ten_splashart/TextureRect2
 
 func _ready() -> void:
 	get_tree().paused = true
@@ -32,8 +33,7 @@ func remove_splash():
 	canvas.queue_free()
 
 func remove_conductors():
-	$CanvasLayer2.queue_free()
-
+	$platform_ten_splashart.queue_free()
 
 func _on_creditsy_pressed() -> void:
 	$Creditsy.visible = false
