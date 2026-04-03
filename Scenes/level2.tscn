@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://b8cumjm4mkugu"]
+
+[ext_resource type="Script" uid="uid://kfx6hfmpu4ng" path="res://Scripts/level.gd" id="1_vn2uo"]
+[ext_resource type="PackedScene" uid="uid://b6w3xqhli3ljk" path="res://Scenes/parallax_mapa2.tscn" id="2_vn2uo"]
+[ext_resource type="PackedScene" uid="uid://jypbwp40cbk7" path="res://Scenes/floors2.tscn" id="3_vn2uo"]
+[ext_resource type="PackedScene" uid="uid://yuv1d10akw2h" path="res://Scenes/collectible_bullet.tscn" id="4_vn460"]
+[ext_resource type="PackedScene" uid="uid://cphod0ydvo8ke" path="res://Scenes/shield_bubble.tscn" id="5_r8hce"]
+[ext_resource type="PackedScene" uid="uid://d3jkfuc0bhhh0" path="res://Scenes/stinky_bubble.tscn" id="6_ca0bt"]
+[ext_resource type="PackedScene" uid="uid://brsj11mvkc6fj" path="res://Scenes/side.tscn" id="7_yj6rp"]
+[ext_resource type="Shader" uid="uid://dbs0slpb7yx6l" path="res://game.gdshader" id="8_orbd0"]
+[ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="9_5flq6"]
+[ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="10_051s1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqgf2"]
+size = Vector2(338, 1215)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bp2o"]
+shader = ExtResource("8_orbd0")
+shader_parameter/intensity = 1.0
+
+[node name="Level2" type="Node2D" unique_id=188927186]
+process_mode = 1
+script = ExtResource("1_vn2uo")
+
+[node name="ParallaxBackground2" parent="." unique_id=734820219 instance=ExtResource("2_vn2uo")]
+
+[node name="Floors2" parent="." unique_id=2012169202 instance=ExtResource("3_vn2uo")]
+
+[node name="darts" type="Node2D" parent="." unique_id=1631039573]
+
+[node name="CollectibleBullet" parent="darts" unique_id=1056659637 instance=ExtResource("4_vn460")]
+position = Vector2(1073, 540)
+
+[node name="CollectibleBullet2" parent="darts" unique_id=1930457876 instance=ExtResource("4_vn460")]
+position = Vector2(2892, 585)
+
+[node name="CollectibleBullet3" parent="darts" unique_id=50850340 instance=ExtResource("4_vn460")]
+position = Vector2(5991, 826)
+
+[node name="CollectibleBullet4" parent="darts" unique_id=1669958938 instance=ExtResource("4_vn460")]
+position = Vector2(9098, 943)
+
+[node name="CollectibleBullet5" parent="darts" unique_id=712020072 instance=ExtResource("4_vn460")]
+position = Vector2(11856, 327)
+
+[node name="CollectibleBullet6" parent="darts" unique_id=1257282967 instance=ExtResource("4_vn460")]
+position = Vector2(14353, 729)
+
+[node name="CollectibleBullet7" parent="darts" unique_id=1397194827 instance=ExtResource("4_vn460")]
+position = Vector2(15852, 172)
+
+[node name="CollectibleBullet8" parent="darts" unique_id=1211906421 instance=ExtResource("4_vn460")]
+position = Vector2(18525, 551)
+
+[node name="CollectibleBullet9" parent="darts" unique_id=721842870 instance=ExtResource("4_vn460")]
+position = Vector2(20612, 574)
+
+[node name="CollectibleBullet10" parent="darts" unique_id=1434529384 instance=ExtResource("4_vn460")]
+position = Vector2(22071, 656)
+
+[node name="CollectibleBullet11" parent="darts" unique_id=1961937656 instance=ExtResource("4_vn460")]
+position = Vector2(25120, 741)
+
+[node name="CollectibleBullet12" parent="darts" unique_id=1886608352 instance=ExtResource("4_vn460")]
+position = Vector2(27733, 659)
+
+[node name="CollectibleBullet13" parent="darts" unique_id=1100469899 instance=ExtResource("4_vn460")]
+position = Vector2(29826, 549)
+
+[node name="CollectibleBullet14" parent="darts" unique_id=1336320858 instance=ExtResource("4_vn460")]
+position = Vector2(33030, 790)
+
+[node name="CollectibleBullet15" parent="darts" unique_id=1007401028 instance=ExtResource("4_vn460")]
+position = Vector2(34583, 948)
+
+[node name="stinky_bubbles" type="Node2D" parent="." unique_id=689855314]
+
+[node name="ShieldBubble" parent="stinky_bubbles" unique_id=206720843 instance=ExtResource("5_r8hce")]
+position = Vector2(1295, 416)
+
+[node name="StinkyBubble" parent="stinky_bubbles" unique_id=1745118559 instance=ExtResource("6_ca0bt")]
+position = Vector2(7316, 969)
+
+[node name="ShieldBubble3" parent="stinky_bubbles" unique_id=1882218903 instance=ExtResource("5_r8hce")]
+position = Vector2(10381, 560)
+
+[node name="StinkyBubble2" parent="stinky_bubbles" unique_id=1767326909 instance=ExtResource("6_ca0bt")]
+position = Vector2(12763, 739)
+
+[node name="StinkyBubble5" parent="stinky_bubbles" unique_id=919177387 instance=ExtResource("6_ca0bt")]
+position = Vector2(1428, 563)
+
+[node name="ShieldBubble4" parent="stinky_bubbles" unique_id=40370348 instance=ExtResource("5_r8hce")]
+position = Vector2(15132, 225)
+
+[node name="StinkyBubble3" parent="stinky_bubbles" unique_id=1749397201 instance=ExtResource("6_ca0bt")]
+position = Vector2(20174, 937)
+
+[node name="ShieldBubble6" parent="stinky_bubbles" unique_id=499799899 instance=ExtResource("5_r8hce")]
+position = Vector2(26052, 686)
+
+[node name="ShieldBubble7" parent="stinky_bubbles" unique_id=649944910 instance=ExtResource("5_r8hce")]
+position = Vector2(30916, 227)
+
+[node name="StinkyBubble4" parent="stinky_bubbles" unique_id=1909018363 instance=ExtResource("6_ca0bt")]
+position = Vector2(34823, 851)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1866845073]
+position = Vector2(2878, 540)
+limit_right = 40320
+
+[node name="side_bubbles" parent="Camera2D" unique_id=1169848261 instance=ExtResource("7_yj6rp")]
+modulate = Color(0.9599507, 0.9599507, 0.62418044, 1)
+z_index = 2
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up" type="Area2D" parent="Camera2D" unique_id=879184771]
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up_collision" type="CollisionShape2D" parent="Camera2D/camera_speed_up" unique_id=798272550]
+position = Vector2(1905, 539.5)
+shape = SubResource("RectangleShape2D_oqgf2")
+
+[node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
+material = SubResource("ShaderMaterial_0bp2o")
+layout_direction = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40322.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.48669803, 0.43853337, 0.26804268, 0.44313726)
+
+[node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("9_5flq6")]
+position = Vector2(3269, 799)
+collision_mask = 15
+
+[node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("10_051s1")]
+position = Vector2(2711, 136)
+scale = Vector2(2, 2)
+collision_mask = 15
+
+[connection signal="body_entered" from="Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_entered"]
+[connection signal="body_exited" from="Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_exited"]

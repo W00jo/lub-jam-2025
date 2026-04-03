@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dycaivlgy07q"]
 
 [ext_resource type="Script" uid="uid://kfx6hfmpu4ng" path="res://Scripts/level.gd" id="1_qa8xk"]
-[ext_resource type="PackedScene" uid="uid://hg7f7x82640v" path="res://Scenes/parallax_mapa1.tscn" id="2_j48kx"]
+[ext_resource type="PackedScene" uid="uid://hg7f7x82640v" path="res://Scenes/parallax_mapa.tscn" id="2_j48kx"]
 [ext_resource type="PackedScene" uid="uid://bk7nkdcj7xens" path="res://Scenes/floors.tscn" id="4_8jxsa"]
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="5_dxn7b"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="6_2tptr"]
@@ -18,7 +18,7 @@ size = Vector2(338, 1215)
 shader = ExtResource("8_2f70e")
 shader_parameter/intensity = 1.0
 
-[node name="Level0" type="Node2D" unique_id=188927186]
+[node name="Level1" type="Node2D" unique_id=188927186]
 process_mode = 1
 script = ExtResource("1_qa8xk")
 

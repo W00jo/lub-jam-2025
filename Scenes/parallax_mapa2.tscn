@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b6w3xqhli3ljk"]
+
+[ext_resource type="Texture2D" uid="uid://gaujy2r4ye6g" path="res://Assets/Sprites/Background/MorzeTlo.png" id="1_wqsv8"]
+[ext_resource type="Texture2D" uid="uid://bl17ckq5fcuow" path="res://Assets/Sprites/Background/parallax_long.png" id="2_q43qp"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=734820219]
+
+[node name="sea" type="ParallaxLayer" parent="." unique_id=1728995082]
+modulate = Color(0.6844523, 0.36921412, 0.53958696, 1)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="sea" unique_id=1009992397]
+position = Vector2(960, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("1_wqsv8")
+
+[node name="cave" type="ParallaxLayer" parent="." unique_id=72174661]
+modulate = Color(1, 0.8117647, 0.5411765, 1)
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(11520, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="cave" unique_id=1428146866]
+position = Vector2(5760, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("2_q43qp")

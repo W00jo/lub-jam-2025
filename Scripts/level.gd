@@ -9,7 +9,7 @@ var speed = 300
 
 func _ready() -> void:
 	var tween = get_tree().create_tween()     #Zwolnienie kamery na początku by odrazu nie zapierdalało
-	tween.tween_property(camera,"position", Vector2(1500,540),3).set_ease(Tween.EASE_IN)
+	tween.tween_property(camera,"position", camera.position + Vector2(200,0),3).set_ease(Tween.EASE_IN)
 
 func _process(delta: float) -> void:
 	camera.position += camera.transform.x * speed * speed_up * delta

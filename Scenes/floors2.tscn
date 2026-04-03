@@ -1,0 +1,1085 @@
+[gd_scene format=3 uid="uid://jypbwp40cbk7"]
+
+[ext_resource type="Texture2D" uid="uid://cie3l324q07gw" path="res://Assets/Sprites/Background/map_borders.png" id="1_lj180"]
+[ext_resource type="Texture2D" uid="uid://b20j270lvarr6" path="res://Assets/Sprites/Background/ship_outside.png" id="2_7hf0h"]
+[ext_resource type="Script" uid="uid://cvncghgyauvap" path="res://Scenes/ship_outside_reveal.gd" id="3_ageco"]
+[ext_resource type="Texture2D" uid="uid://b2y0cog3s60v6" path="res://Assets/Sprites/Enviroment/Plants/algae_1.png" id="4_sajma"]
+[ext_resource type="Texture2D" uid="uid://dbl2nmo3jmyfu" path="res://Assets/Sprites/Enviroment/chest.png" id="5_eviey"]
+[ext_resource type="Texture2D" uid="uid://ey4sllvropr8" path="res://Assets/Sprites/Enviroment/Animals/snail.png" id="6_auote"]
+[ext_resource type="Texture2D" uid="uid://dfq6y1uqg1735" path="res://Assets/Sprites/Enviroment/Animals/bones.png" id="7_td73l"]
+[ext_resource type="Texture2D" uid="uid://d1ba2u1d0h2ve" path="res://Assets/Sprites/Enviroment/Plants/algae_0.png" id="8_58idd"]
+[ext_resource type="Texture2D" uid="uid://b6bhrvgdc8r8w" path="res://Assets/Sprites/Enviroment/Plants/algae_2.png" id="9_unotf"]
+[ext_resource type="Texture2D" uid="uid://6ytabuk73x68" path="res://Assets/Sprites/Enviroment/Plants/algae_3.png" id="10_4usp4"]
+[ext_resource type="Texture2D" uid="uid://2lmj6gpdrgu4" path="res://Assets/Sprites/Enviroment/Plants/algae_4.png" id="11_35tmu"]
+[ext_resource type="Texture2D" uid="uid://bqujc8yst07fp" path="res://Assets/Sprites/Enviroment/Rocks/Kamien_.png" id="12_qgjke"]
+[ext_resource type="Texture2D" uid="uid://c6j0xrmpmycbe" path="res://Assets/Sprites/Enviroment/Plants/algae_purple.png" id="13_mrfmo"]
+[ext_resource type="Texture2D" uid="uid://cqnwdbyh5vagl" path="res://Assets/Sprites/Interactive/anchor.png" id="15_gv6u5"]
+[ext_resource type="PackedScene" uid="uid://djf2mb8cp5bdf" path="res://Scenes/falling_obstacles.tscn" id="16_3468c"]
+[ext_resource type="PackedScene" uid="uid://48io4jtiaj5t" path="res://Scenes/falling_rock.tscn" id="17_7lr10"]
+[ext_resource type="PackedScene" uid="uid://dfclists1idkv" path="res://Scenes/falling_rock2.tscn" id="18_321ha"]
+[ext_resource type="Texture2D" uid="uid://cs6xoduwdr4sy" path="res://Assets/Sprites/Enviroment/Boat/boat_sheet.png" id="19_gkdyq"]
+[ext_resource type="Script" uid="uid://bc726yc0b8cij" path="res://Scripts/assets_move_forward.gd" id="20_37ewp"]
+[ext_resource type="PackedScene" uid="uid://008pn0vyrnyc" path="res://Scenes/ZolteRybki.tscn" id="21_blnsp"]
+[ext_resource type="PackedScene" uid="uid://7juupnnmnluv" path="res://Scenes/SzareRyby.tscn" id="22_el51w"]
+[ext_resource type="PackedScene" uid="uid://ce8ebklcondor" path="res://Scenes/Linka.tscn" id="23_xvfcb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hp6e"]
+size = Vector2(44.787598, 1033)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u10ku"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(0, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08wls"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(120, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syyh6"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(240, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nukd"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(360, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_032cm"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(480, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hp6e"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(600, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t44ee"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(720, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7kj2"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(840, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_howja"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(960, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwlct"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1080, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq58g"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1200, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_per5f"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1320, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bilob"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1440, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv212"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1560, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo7a2"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1680, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7ilc"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1800, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c78as"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(1920, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_271fg"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2040, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a18bm"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2160, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3f11"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2280, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mx1x"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2400, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gco5o"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2520, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws7im"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2640, 0, 120, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8we0"]
+atlas = ExtResource("19_gkdyq")
+region = Rect2(2760, 0, 120, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1dwoq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u10ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08wls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syyh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nukd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_032cm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hp6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t44ee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7kj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_howja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwlct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq58g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_per5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bilob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv212")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo7a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7ilc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c78as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_271fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a18bm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3f11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mx1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gco5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws7im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8we0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syyh6"]
+size = Vector2(20, 483.43695)
+
+[node name="Floors" type="StaticBody2D" unique_id=2012169202 groups=["Floor"]]
+collision_mask = 17
+
+[node name="main" type="Sprite2D" parent="." unique_id=34297415]
+self_modulate = Color(1.2742168, 1.0518777, 0.35027462, 1)
+position = Vector2(20162, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("1_lj180")
+flip_h = true
+
+[node name="ship_outside" type="Sprite2D" parent="." unique_id=359835797]
+position = Vector2(10581, 539)
+scale = Vector2(4.0074077, 4.007408)
+texture = ExtResource("2_7hf0h")
+flip_h = true
+script = ExtResource("3_ageco")
+
+[node name="ship_area" type="Area2D" parent="ship_outside" unique_id=1191725237]
+
+[node name="ship_collision" type="CollisionShape2D" parent="ship_outside/ship_area" unique_id=44503545]
+position = Vector2(-199.69531, 116.035126)
+shape = SubResource("RectangleShape2D_0hp6e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=927919279]
+visible = false
+position = Vector2(40323, -2)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(0, 1, 0, 120, 26, 63, 64, 57, 320, 48, 1026, 103, 1423, 32, 1779, 84, 1970, 56, 2281, 51, 2960, 86, 3359, 27, 3708, 74, 4168, 42, 4861, 101, 5265, 25, 5658, 69, 5780, 29, 6695, 371, 7009, 427, 7327, 588, 7648, 581, 8072, 588, 8162, 557, 9011, 576, 9364, 542, 9846, 600, 10025, 564, 10161, 473, 10321, 416, 10686, 348, 11476, 33, 11549, 60, 11835, 47, 12559, 93, 12939, 30, 13271, 89, 13477, 61, 13757, 38, 14460, 99, 14893, 23, 15229, 85, 15402, 56, 15681, 46, 16297, 92, 16477, 91, 16765, 25, 16900, 24, 17163, 88, 17296, 34, 17752, 197, 18152, 349, 18500, 413, 18800, 567, 18951, 599, 19240, 571, 19571, 596, 19662, 545, 19749, 545, 19800, 451, 20252, 465, 20605, 452, 20744, 550, 20894, 555, 21349, 597, 21456, 594, 21612, 543, 22217, 561, 22704, 529, 23342, 577, 23591, 478, 23772, 385, 23962, 341, 24061, 382, 24172, 472, 24201, 390, 24236, 289, 24344, 245, 24665, 111, 24897, 20, 24956, 54, 25037, 30, 25339, 42, 25620, 50, 25900, 71, 26286, 32, 26474, 29, 26701, 67, 26884, 40, 27017, 73, 27128, 58, 27315, 26, 27574, 37, 27798, 72, 28033, 67, 28256, 50, 28434, 33, 28723, 39, 28810, 54, 28868, 37, 29853, 69, 29918, 51, 30127, 31, 30244, 18, 30357, 37, 30417, 38, 30501, 71, 30602, 66, 30692, 33, 30771, 27, 30843, 44, 31135, 161, 31598, 337, 31909, 402, 32226, 537, 32371, 589, 32515, 573, 32663, 558, 32990, 583, 33070, 552, 33168, 554, 33471, 561, 33802, 566, 34021, 548, 34295, 533, 34361, 553, 34578, 567, 34894, 580, 34988, 511, 35048, 445, 35080, 547, 35191, 555, 35253, 548, 35292, 530, 35355, 506, 35406, 521, 35450, 561, 35540, 566, 35634, 559, 35694, 527, 35737, 493, 35767, 441, 35830, 418, 35974, 503, 36069, 537, 36234, 533, 36441, 561, 36635, 558, 36799, 574, 36878, 542, 37091, 294, 37215, 18, 37229, -5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1678387110]
+visible = false
+position = Vector2(40324, 0)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(0, 1079, 2, 826, 355, 795, 478, 851, 1108, 811, 1599, 879, 1730, 842, 2289, 799, 2406, 851, 2991, 806, 3394, 871, 3593, 884, 3672, 846, 4208, 803, 4324, 866, 5010, 805, 5490, 867, 5593, 837, 5785, 837, 5896, 892, 6627, 1055, 6807, 1048, 7027, 1003, 7195, 1066, 7568, 1011, 7694, 1044, 8636, 1024, 9123, 1051, 9463, 1023, 9611, 1048, 9777, 1002, 10098, 1061, 10261, 1007, 10609, 1064, 10934, 1019, 11443, 899, 11488, 829, 11874, 802, 11975, 865, 12665, 814, 13149, 879, 13281, 824, 13798, 801, 13909, 848, 14607, 810, 15081, 875, 15182, 838, 15722, 798, 15839, 856, 16324, 809, 16692, 837, 17009, 885, 17091, 831, 17308, 828, 17381, 893, 18136, 1070, 18481, 1004, 18658, 1049, 19010, 1016, 19178, 1037, 19526, 1047, 19787, 1026, 20303, 1036, 20609, 1055, 20991, 1019, 21135, 1036, 21282, 1040, 21624, 1042, 21788, 1041, 22106, 1022, 22263, 1031, 22679, 1048, 22995, 1023, 23048, 1053, 23082, 1041, 23219, 1023, 23358, 1039, 23503, 1065, 23624, 1041, 23722, 1031, 23838, 1033, 23941, 1061, 24251, 1057, 24434, 1011, 24661, 961, 24864, 917, 24938, 854, 25285, 823, 25352, 841, 25562, 866, 26162, 833, 26200, 594, 26173, 510, 26048, 499, 25916, 468, 25850, 418, 25898, 396, 26043, 411, 26190, 385, 26427, 380, 26736, 446, 26962, 481, 27185, 451, 27319, 416, 27432, 460, 27542, 463, 27685, 395, 27810, 347, 27885, 344, 27922, 395, 27878, 470, 27594, 518, 27554, 665, 27626.1, 831.714, 27768, 830, 28026, 843, 28348, 854, 28480, 820, 28817, 837, 29001, 833, 29132, 821, 29208, 786, 29308, 843, 29446, 880, 29654, 899, 29809, 885, 29898, 909, 30093, 975, 30266, 956, 30403, 928, 30521, 866, 30748, 835, 30794, 891, 30982, 941, 31246, 1004, 31367.1, 1051.26, 31508, 1054, 31573.6, 1059.76, 31686, 1062, 31742, 1046, 31819, 1048, 31919.4, 1021.26, 32036, 1023, 32096, 1039, 32128, 1071, 32350, 1043, 32421, 1025, 32504, 1020, 32543, 1028, 32596, 1039, 33080, 1048, 33296, 1039, 33612, 1029, 33715, 1025, 33841.6, 1046.83, 34127, 1051, 34232, 1045, 34315, 1031, 34448, 1029, 34536, 1043, 34650, 1051, 34703, 1038, 34792, 970, 34828, 982, 34880, 993, 34973, 951, 35072, 947, 35092, 958, 35128, 1022, 35287, 1030, 35394, 981, 35461.9, 1030.68, 35665, 1033, 35769, 1051, 35844, 976, 35886, 967, 35999.4, 1049.15, 36149, 1051, 36357, 1036, 36462.4, 1047.59, 36835, 1052, 37221, 1036, 37505, 1034, 37576, 1042, 38007, 1054, 38238, 1027, 38367, 946, 38386, 799, 38362, 574, 38202, 540, 38033, 525, 38060, 365, 37971, 167, 37913, 1, 38403, -4, 38434, 1081, 23042, 1088)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="." unique_id=687074245]
+visible = false
+position = Vector2(40298, -7)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(2784, 411, 2809, 351, 2857, 316, 2944, 327, 3071, 299, 3215, 283, 3271, 290, 3324, 358, 3497, 404, 3713, 449, 3974, 397, 4188, 353, 4331, 361, 4455, 288, 4637, 338, 4794, 339, 4878, 326, 4943, 407, 4921, 485, 4837, 500, 4684, 531, 4564, 541, 4266, 489, 4111, 508, 3886, 547, 3772, 537, 3495, 488, 3388, 499, 3104, 536, 2983, 509, 2867, 482, 2801, 460)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="." unique_id=202528258]
+visible = false
+position = Vector2(24293, 368)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-207, -75, -77, -92, 113, -52, 237, -32, 323, -24, 388, -24, 424, 42, 416, 77, 338, 119, 282, 132, 212, 135, 167, 158, 69, 136, -30, 92, -122, 10, -187, -36, -232, -79)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="." unique_id=1720949675]
+visible = false
+position = Vector2(28800, 2)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(2784, 411, 2809, 351, 2857, 316, 2944, 327, 3071, 299, 3215, 283, 3313, 310, 3438, 331, 3582, 356, 3707, 362, 3821, 364, 3920, 403, 4036, 494, 3804, 522, 3495, 488, 3388, 499, 3104, 536, 2983, 509, 2867, 482, 2801, 460)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="." unique_id=2096888439]
+visible = false
+position = Vector2(28401, 444)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-21, -23, -164, -24, -195, 24, -183, 86, -62, 125, 68, 152, 186, 154, 279, 125, 386, 135, 483, 146, 571, 160, 710, 133, 837, 109, 892, 63, 887, 5, 857, -30, 816, -37, 703, -29, 622, -56, 541, -59, 459, -76, 386, -76, 298, -76, 217, -81, 165, -79, 84, -54)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="." unique_id=1872031976]
+visible = false
+position = Vector2(29482, 407)
+polygon = PackedVector2Array(-2, -1, -480, -195, -513, -267, -639, -416, 1274, -412, 1202, -148, 1191, -71, 955, -44, 796, 44, 719, 94, 562, 93, 425, 86, 381, 59, 291, 56, 267, 77, 149, 54)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="." unique_id=1896235617]
+visible = false
+position = Vector2(27064, 275)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(109, -32, 183, -17, 236, -25, 291, 0, 301, 61, 279, 101, 210, 121, 149, 145, 107, 143, 55, 134, 10, 121, -55, 97, -73, 39, -59, -1, -27, -31, 26, -36)
+
+[node name="Sprites" type="Node2D" parent="." unique_id=1786917041]
+
+[node name="GlonZKolegamiTop3" type="Sprite2D" parent="Sprites" unique_id=624853365]
+position = Vector2(15066, 818)
+scale = Vector2(3.46875, 3.46875)
+texture = ExtResource("4_sajma")
+
+[node name="GlonZKolegamiTop4" type="Sprite2D" parent="Sprites" unique_id=609989851]
+position = Vector2(15121.5, 812.523)
+rotation = -0.359538
+scale = Vector2(2.66693, 2.66693)
+texture = ExtResource("4_sajma")
+
+[node name="GlonZKolegamiTop5" type="Sprite2D" parent="Sprites" unique_id=1798392905]
+position = Vector2(25611, 781.99994)
+rotation = 0.253073
+scale = Vector2(4.27492, 4.27492)
+texture = ExtResource("4_sajma")
+flip_h = true
+
+[node name="GlonZKolegamiTop6" type="Sprite2D" parent="Sprites" unique_id=1238158932]
+position = Vector2(25616, 802)
+rotation = -0.23911
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("4_sajma")
+flip_h = true
+
+[node name="Skrzynia" type="Sprite2D" parent="Sprites" unique_id=1973633672]
+position = Vector2(37282, 989)
+scale = Vector2(2.23438, 2.23438)
+texture = ExtResource("5_eviey")
+
+[node name="Gacek2" type="Sprite2D" parent="Sprites" unique_id=310827178]
+position = Vector2(3083, 956.99994)
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("6_auote")
+
+[node name="KosciDelfina8" type="Sprite2D" parent="Sprites" unique_id=1370651425]
+position = Vector2(26879, 1083)
+scale = Vector2(8.3125, 8.3125)
+texture = ExtResource("7_td73l")
+
+[node name="GlonSamotny11" type="Sprite2D" parent="Sprites" unique_id=358163673]
+position = Vector2(28740.002, 697.00006)
+scale = Vector2(6.6875, 6.6875)
+texture = ExtResource("8_58idd")
+
+[node name="GlonZKolegamiTop7" type="Sprite2D" parent="Sprites" unique_id=803963967]
+position = Vector2(25446.002, 781)
+scale = Vector2(6.24998, 6.24998)
+texture = ExtResource("4_sajma")
+
+[node name="GlonSamotny12" type="Sprite2D" parent="Sprites" unique_id=914059989]
+position = Vector2(24918, 753.99994)
+scale = Vector2(3.84374, 3.84374)
+texture = ExtResource("8_58idd")
+
+[node name="GlonSamotny13" type="Sprite2D" parent="Sprites" unique_id=1432206375]
+position = Vector2(488, 795)
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("8_58idd")
+
+[node name="Roslina7" type="Sprite2D" parent="Sprites" unique_id=1457046935]
+position = Vector2(2517.0002, 996.00006)
+scale = Vector2(3.4375, 3.4375)
+texture = ExtResource("9_unotf")
+
+[node name="Roslina8" type="Sprite2D" parent="Sprites" unique_id=1234568019]
+position = Vector2(2454, 978)
+scale = Vector2(4.25, 4.25)
+texture = ExtResource("10_4usp4")
+
+[node name="GlonSamotny" type="Sprite2D" parent="Sprites" unique_id=1370107330]
+visible = false
+modulate = Color(0.7882353, 1, 0.105882354, 1)
+position = Vector2(2717, 865)
+scale = Vector2(5, 5)
+texture = ExtResource("11_35tmu")
+
+[node name="Kamien" type="Sprite2D" parent="Sprites" unique_id=580194922]
+position = Vector2(638, 831.99994)
+rotation = -0.12042801
+scale = Vector2(3.1127489, 3.1127489)
+texture = ExtResource("12_qgjke")
+
+[node name="Kamien2" type="Sprite2D" parent="Sprites" unique_id=1026419730]
+position = Vector2(2332, 1013.99994)
+scale = Vector2(3.73438, 3.73438)
+texture = ExtResource("12_qgjke")
+
+[node name="GlonSamotny2" type="Sprite2D" parent="Sprites" unique_id=2069281664]
+position = Vector2(4008, 906)
+scale = Vector2(4.3125, 4.3125)
+texture = ExtResource("8_58idd")
+
+[node name="GlonZKolegamiTop" type="Sprite2D" parent="Sprites" unique_id=1975966023]
+position = Vector2(4045, 959.99994)
+scale = Vector2(4.46875, 4.46875)
+texture = ExtResource("4_sajma")
+
+[node name="Roslina1" type="Sprite2D" parent="Sprites" unique_id=390096267]
+position = Vector2(5447, 921.00006)
+scale = Vector2(4.8125, 4.8125)
+texture = ExtResource("10_4usp4")
+
+[node name="Roslina3" type="Sprite2D" parent="Sprites" unique_id=1989137188]
+position = Vector2(5514, 937.00006)
+scale = Vector2(3.04688, 3.04688)
+texture = ExtResource("9_unotf")
+
+[node name="GlonyNadnie" type="Sprite2D" parent="Sprites" unique_id=901190667]
+modulate = Color(1, 1, 0.28235295, 1)
+position = Vector2(7647, 941)
+texture = ExtResource("13_mrfmo")
+
+[node name="GlonyNadnie6" type="Sprite2D" parent="Sprites" unique_id=1002888222]
+modulate = Color(1.3266667, 1.3266667, 0, 1)
+position = Vector2(18440, 949)
+texture = ExtResource("13_mrfmo")
+
+[node name="GlonyNadnie7" type="Sprite2D" parent="Sprites" unique_id=504736261]
+modulate = Color(0.8235294, 0.83137256, 0, 1)
+position = Vector2(20786, 958)
+texture = ExtResource("13_mrfmo")
+
+[node name="Roslina4" type="Sprite2D" parent="Sprites" unique_id=104822527]
+position = Vector2(10644, 969)
+scale = Vector2(2.89063, 2.89063)
+texture = ExtResource("9_unotf")
+
+[node name="Roslina6" type="Sprite2D" parent="Sprites" unique_id=972916881]
+position = Vector2(10731, 996)
+rotation = 0.507891
+scale = Vector2(1.99217, 1.99217)
+texture = ExtResource("9_unotf")
+flip_h = true
+
+[node name="Gacek" type="Sprite2D" parent="Sprites" unique_id=1685780898]
+position = Vector2(12042.001, 814)
+scale = Vector2(2.53125, 2.53125)
+texture = ExtResource("6_auote")
+
+[node name="GlonSamotny3" type="Sprite2D" parent="Sprites" unique_id=2037013206]
+position = Vector2(11990, 772)
+scale = Vector2(2.90625, 2.90625)
+texture = ExtResource("8_58idd")
+
+[node name="Roslina2" type="Sprite2D" parent="Sprites" unique_id=1212613951]
+position = Vector2(10697, 993)
+scale = Vector2(2.98438, 2.98438)
+texture = ExtResource("10_4usp4")
+
+[node name="KosciDelfina" type="Sprite2D" parent="Sprites" unique_id=16853144]
+position = Vector2(12522, 420)
+scale = Vector2(2.64063, 2.64063)
+texture = ExtResource("7_td73l")
+
+[node name="GlonyNadnie2" type="Sprite2D" parent="Sprites" unique_id=1025385134]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(31369, 946)
+texture = ExtResource("13_mrfmo")
+
+[node name="GlonSamotny4" type="Sprite2D" parent="Sprites" unique_id=453513876]
+modulate = Color(0.8211368, 1.4954206, 0, 1)
+position = Vector2(30208.998, 893)
+scale = Vector2(5.92189, 5.92189)
+texture = ExtResource("11_35tmu")
+
+[node name="GlonyNadnie3" type="Sprite2D" parent="Sprites" unique_id=480722665]
+modulate = Color(0.7921569, 1, 0, 1)
+position = Vector2(33291, 955)
+texture = ExtResource("13_mrfmo")
+
+[node name="GlonyNadnie4" type="Sprite2D" parent="Sprites" unique_id=2138834349]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(39603, 731)
+texture = ExtResource("13_mrfmo")
+
+[node name="GlonSamotny5" type="Sprite2D" parent="Sprites" unique_id=149469947]
+position = Vector2(35552, 984)
+scale = Vector2(3.15625, 3.15625)
+texture = ExtResource("8_58idd")
+
+[node name="GlonZKolegamiTop2" type="Sprite2D" parent="Sprites" unique_id=580867993]
+position = Vector2(35214, 980)
+scale = Vector2(3.03125, 3.03125)
+texture = ExtResource("4_sajma")
+
+[node name="Kamien3" type="Sprite2D" parent="Sprites" unique_id=1369732799]
+position = Vector2(35654, 1024)
+scale = Vector2(2.88273, 2.88273)
+texture = ExtResource("12_qgjke")
+
+[node name="Kotwica" type="Sprite2D" parent="Sprites" unique_id=1264612851]
+position = Vector2(30543.996, 990)
+rotation = -0.38979703
+scale = Vector2(2.63785, 2.63785)
+texture = ExtResource("15_gv6u5")
+
+[node name="GlonSamotny6" type="Sprite2D" parent="Sprites" unique_id=2103400385]
+position = Vector2(27047.002, 165.00002)
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("8_58idd")
+
+[node name="GlonSamotny7" type="Sprite2D" parent="Sprites" unique_id=1317654600]
+position = Vector2(26955, 178.00005)
+scale = Vector2(2.5625, 2.5625)
+texture = ExtResource("8_58idd")
+
+[node name="GlonSamotny8" type="Sprite2D" parent="Sprites" unique_id=1969458141]
+position = Vector2(26866, 184)
+scale = Vector2(2.6875, 2.6875)
+texture = ExtResource("8_58idd")
+
+[node name="GlonSamotny9" type="Sprite2D" parent="Sprites" unique_id=588335951]
+position = Vector2(27703.002, 326)
+scale = Vector2(3.25, 3.25)
+texture = ExtResource("11_35tmu")
+
+[node name="KosciDelfina2" type="Sprite2D" parent="Sprites" unique_id=1306431181]
+position = Vector2(18988, 202)
+rotation = 0.23911
+scale = Vector2(3.58662, 3.87832)
+texture = ExtResource("7_td73l")
+
+[node name="KosciDelfina3" type="Sprite2D" parent="Sprites" unique_id=1951600003]
+position = Vector2(20408, 168)
+rotation = -0.6353
+scale = Vector2(2.125, 2.125)
+texture = ExtResource("7_td73l")
+
+[node name="KosciDelfina4" type="Sprite2D" parent="Sprites" unique_id=463746075]
+position = Vector2(21882, 243)
+rotation = 3.11192
+scale = Vector2(2.9531302, 2.9531302)
+texture = ExtResource("7_td73l")
+flip_v = true
+
+[node name="KosciDelfina5" type="Sprite2D" parent="Sprites" unique_id=1480548481]
+position = Vector2(32887, 329)
+scale = Vector2(3.46875, 3.46875)
+texture = ExtResource("7_td73l")
+flip_h = true
+
+[node name="Kotwica2" type="Sprite2D" parent="Sprites" unique_id=783041338]
+modulate = Color(0.78431374, 1, 1, 1)
+position = Vector2(38196, 913)
+rotation = -0.49392802
+scale = Vector2(3.28125, 3.28125)
+texture = ExtResource("15_gv6u5")
+
+[node name="GlonSamotny10" type="Sprite2D" parent="Sprites" unique_id=2123312679]
+position = Vector2(14917, 139.99994)
+rotation = 3.11192
+scale = Vector2(3.78125, 3.78125)
+texture = ExtResource("8_58idd")
+
+[node name="Roslina5" type="Sprite2D" parent="Sprites" unique_id=1857629919]
+position = Vector2(14400.001, 343.00003)
+scale = Vector2(3.31249, 3.31249)
+texture = ExtResource("10_4usp4")
+
+[node name="GlonyNadnie5" type="Sprite2D" parent="Sprites" unique_id=2120323748]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(17311, 943)
+texture = ExtResource("13_mrfmo")
+
+[node name="KosciDelfina6" type="Sprite2D" parent="Sprites" unique_id=596304164]
+position = Vector2(8760, 215)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("7_td73l")
+flip_h = true
+
+[node name="KosciDelfina7" type="Sprite2D" parent="Sprites" unique_id=1086784206]
+position = Vector2(8084, 384)
+rotation = 0.47822
+scale = Vector2(2.625, 2.625)
+texture = ExtResource("7_td73l")
+
+[node name="falling_obstacles" type="Node" parent="." unique_id=558265460]
+
+[node name="FallingObstacles" parent="falling_obstacles" unique_id=2018845334 instance=ExtResource("16_3468c")]
+modulate = Color(1, 1, 0.72156864, 1)
+position = Vector2(4086, 645)
+
+[node name="FallingObstacles2" parent="falling_obstacles" unique_id=2001298606 instance=ExtResource("16_3468c")]
+position = Vector2(6288, 354)
+
+[node name="FallingObstacles3" parent="falling_obstacles" unique_id=1316415533 instance=ExtResource("16_3468c")]
+position = Vector2(9271, 247)
+
+[node name="FallingObstacles4" parent="falling_obstacles" unique_id=774274081 instance=ExtResource("16_3468c")]
+position = Vector2(22613, 275)
+
+[node name="FallingObstacles5" parent="falling_obstacles" unique_id=1856125576 instance=ExtResource("16_3468c")]
+position = Vector2(23093, 144)
+
+[node name="FallingObstacles6" parent="falling_obstacles" unique_id=806762736 instance=ExtResource("16_3468c")]
+position = Vector2(24443, 453)
+
+[node name="FallingObstacles7" parent="falling_obstacles" unique_id=1734743044 instance=ExtResource("16_3468c")]
+position = Vector2(23504, 110)
+
+[node name="FallingObstacles9" parent="falling_obstacles" unique_id=1511089958 instance=ExtResource("16_3468c")]
+position = Vector2(34576, 137)
+
+[node name="FallingObstacles8" parent="falling_obstacles" unique_id=993392275 instance=ExtResource("16_3468c")]
+position = Vector2(23280, 146)
+
+[node name="Dmg" type="Node" parent="falling_obstacles" unique_id=1078752117]
+
+[node name="FallingRock9" parent="falling_obstacles/Dmg" unique_id=469458580 instance=ExtResource("17_7lr10")]
+position = Vector2(4497, 509)
+
+[node name="FallingRock2" parent="falling_obstacles/Dmg" unique_id=732573867 instance=ExtResource("18_321ha")]
+position = Vector2(5286, 71)
+
+[node name="FallingRock" parent="falling_obstacles/Dmg" unique_id=1927994822 instance=ExtResource("17_7lr10")]
+position = Vector2(6936, 453)
+
+[node name="FallingRock3" parent="falling_obstacles/Dmg" unique_id=1407574511 instance=ExtResource("17_7lr10")]
+position = Vector2(11583, 128)
+
+[node name="FallingRock4" parent="falling_obstacles/Dmg" unique_id=1671204785 instance=ExtResource("17_7lr10")]
+position = Vector2(16374, 419)
+
+[node name="FallingRock5" parent="falling_obstacles/Dmg" unique_id=1106665213 instance=ExtResource("17_7lr10")]
+position = Vector2(20469, 527)
+
+[node name="FallingRock6" parent="falling_obstacles/Dmg" unique_id=1397814818 instance=ExtResource("18_321ha")]
+position = Vector2(25153, 108)
+
+[node name="FallingRock7" parent="falling_obstacles/Dmg" unique_id=1849355798 instance=ExtResource("18_321ha")]
+position = Vector2(28521, 106)
+
+[node name="FallingRock8" parent="falling_obstacles/Dmg" unique_id=1419213498 instance=ExtResource("18_321ha")]
+position = Vector2(36049, 522)
+
+[node name="boat" type="AnimatedSprite2D" parent="." unique_id=655371963]
+position = Vector2(10877, 796)
+scale = Vector2(1.89062, 1.89063)
+sprite_frames = SubResource("SpriteFrames_1dwoq")
+autoplay = "default"
+frame_progress = 0.0963666
+script = ExtResource("20_37ewp")
+kierunek = 2
+
+[node name="boat_area" type="Area2D" parent="boat" unique_id=1375618803]
+position = Vector2(-510.41467, 57.65275)
+scale = Vector2(6.6975017, 1)
+
+[node name="boat_collision" type="CollisionShape2D" parent="boat/boat_area" unique_id=1021718608]
+position = Vector2(-26.298271, -67.17337)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_syyh6")
+
+[node name="RuchomeRybki" type="Node" parent="." unique_id=2087337757]
+
+[node name="Sprite2D2" parent="RuchomeRybki" unique_id=1245158133 instance=ExtResource("21_blnsp")]
+position = Vector2(4677, 771)
+
+[node name="Sprite2D3" parent="RuchomeRybki" unique_id=871927889 instance=ExtResource("21_blnsp")]
+position = Vector2(4987, 671)
+
+[node name="Sprite2D4" parent="RuchomeRybki" unique_id=147396562 instance=ExtResource("21_blnsp")]
+position = Vector2(4980, 711)
+
+[node name="Sprite2D5" parent="RuchomeRybki" unique_id=2144580064 instance=ExtResource("21_blnsp")]
+position = Vector2(4985, 775)
+
+[node name="Sprite2D6" parent="RuchomeRybki" unique_id=163045918 instance=ExtResource("21_blnsp")]
+position = Vector2(5032, 757)
+
+[node name="Sprite2D7" parent="RuchomeRybki" unique_id=672632376 instance=ExtResource("21_blnsp")]
+position = Vector2(5033, 722)
+
+[node name="Sprite2D8" parent="RuchomeRybki" unique_id=6178858 instance=ExtResource("21_blnsp")]
+position = Vector2(5047, 680)
+
+[node name="Sprite2D9" parent="RuchomeRybki" unique_id=191703602 instance=ExtResource("21_blnsp")]
+position = Vector2(5101, 730)
+
+[node name="Sprite2D10" parent="RuchomeRybki" unique_id=806341709 instance=ExtResource("21_blnsp")]
+position = Vector2(4786, 720)
+
+[node name="Sprite2D38" parent="RuchomeRybki" unique_id=1051629194 instance=ExtResource("21_blnsp")]
+position = Vector2(8490, 698)
+
+[node name="Sprite2D39" parent="RuchomeRybki" unique_id=1913916676 instance=ExtResource("21_blnsp")]
+position = Vector2(7909, 763)
+
+[node name="Sprite2D40" parent="RuchomeRybki" unique_id=949204436 instance=ExtResource("21_blnsp")]
+position = Vector2(8472, 730)
+
+[node name="Sprite2D41" parent="RuchomeRybki" unique_id=728843762 instance=ExtResource("21_blnsp")]
+position = Vector2(8445, 758)
+
+[node name="Sprite2D42" parent="RuchomeRybki" unique_id=1439947059 instance=ExtResource("21_blnsp")]
+position = Vector2(8529, 747)
+
+[node name="Sprite2D43" parent="RuchomeRybki" unique_id=2068229800 instance=ExtResource("21_blnsp")]
+position = Vector2(8517, 784)
+
+[node name="Sprite2D44" parent="RuchomeRybki" unique_id=2088085810 instance=ExtResource("21_blnsp")]
+position = Vector2(8557, 718)
+
+[node name="Sprite2D46" parent="RuchomeRybki" unique_id=1685474804 instance=ExtResource("21_blnsp")]
+position = Vector2(16693, 241)
+
+[node name="Sprite2D47" parent="RuchomeRybki" unique_id=1866378082 instance=ExtResource("21_blnsp")]
+position = Vector2(16455, 690)
+
+[node name="Sprite2D67" parent="RuchomeRybki" unique_id=1402486694 instance=ExtResource("21_blnsp")]
+position = Vector2(15715, 669)
+
+[node name="Sprite2D68" parent="RuchomeRybki" unique_id=179071657 instance=ExtResource("21_blnsp")]
+position = Vector2(15511, 657)
+
+[node name="Sprite2D69" parent="RuchomeRybki" unique_id=632710237 instance=ExtResource("21_blnsp")]
+position = Vector2(15655, 726)
+
+[node name="Sprite2D70" parent="RuchomeRybki" unique_id=773386096 instance=ExtResource("21_blnsp")]
+position = Vector2(15625, 585)
+
+[node name="Sprite2D51" parent="RuchomeRybki" unique_id=1773504053 instance=ExtResource("21_blnsp")]
+position = Vector2(23607, 743)
+
+[node name="Sprite2D52" parent="RuchomeRybki" unique_id=1782321769 instance=ExtResource("21_blnsp")]
+position = Vector2(23309, 730)
+
+[node name="Sprite2D53" parent="RuchomeRybki" unique_id=1757944639 instance=ExtResource("21_blnsp")]
+position = Vector2(23699, 674)
+
+[node name="Sprite2D54" parent="RuchomeRybki" unique_id=1564651700 instance=ExtResource("21_blnsp")]
+position = Vector2(23202, 722)
+
+[node name="Sprite2D55" parent="RuchomeRybki" unique_id=104835255 instance=ExtResource("21_blnsp")]
+position = Vector2(23528, 756)
+
+[node name="Sprite2D56" parent="RuchomeRybki" unique_id=913826950 instance=ExtResource("21_blnsp")]
+position = Vector2(24189, 689)
+
+[node name="Sprite2D101" parent="RuchomeRybki" unique_id=1397899343 instance=ExtResource("21_blnsp")]
+position = Vector2(29204, 521)
+
+[node name="Sprite2D102" parent="RuchomeRybki" unique_id=1474807776 instance=ExtResource("21_blnsp")]
+position = Vector2(31656, 662)
+
+[node name="Sprite2D103" parent="RuchomeRybki" unique_id=1365794901 instance=ExtResource("21_blnsp")]
+position = Vector2(31827, 713)
+
+[node name="Sprite2D104" parent="RuchomeRybki" unique_id=352052583 instance=ExtResource("21_blnsp")]
+position = Vector2(32051, 759)
+
+[node name="Sprite2D105" parent="RuchomeRybki" unique_id=824006142 instance=ExtResource("21_blnsp")]
+position = Vector2(32326, 732)
+
+[node name="Sprite2D106" parent="RuchomeRybki" unique_id=689380330 instance=ExtResource("21_blnsp")]
+position = Vector2(34866, 772)
+
+[node name="Sprite2D107" parent="RuchomeRybki" unique_id=1338425696 instance=ExtResource("21_blnsp")]
+position = Vector2(34920, 614)
+
+[node name="Sprite2D108" parent="RuchomeRybki" unique_id=1540657645 instance=ExtResource("21_blnsp")]
+position = Vector2(34785, 707)
+
+[node name="Sprite2D109" parent="RuchomeRybki" unique_id=92732940 instance=ExtResource("21_blnsp")]
+position = Vector2(34730, 586)
+
+[node name="Sprite2D110" parent="RuchomeRybki" unique_id=332716274 instance=ExtResource("21_blnsp")]
+position = Vector2(38600, 513)
+
+[node name="Sprite2D111" parent="RuchomeRybki" unique_id=1015188081 instance=ExtResource("21_blnsp")]
+position = Vector2(38717, 249)
+
+[node name="Sprite2D112" parent="RuchomeRybki" unique_id=2026084786 instance=ExtResource("21_blnsp")]
+position = Vector2(38191, 473)
+
+[node name="Sprite2D113" parent="RuchomeRybki" unique_id=1371460639 instance=ExtResource("21_blnsp")]
+position = Vector2(38797, 388)
+
+[node name="Sprite2D48" parent="RuchomeRybki" unique_id=1939372923 instance=ExtResource("21_blnsp")]
+position = Vector2(16588, 221)
+
+[node name="Sprite2D49" parent="RuchomeRybki" unique_id=1058627099 instance=ExtResource("21_blnsp")]
+position = Vector2(16404, 630)
+
+[node name="Sprite2D50" parent="RuchomeRybki" unique_id=1333606267 instance=ExtResource("21_blnsp")]
+position = Vector2(16673, 125)
+
+[node name="Sprite2D64" parent="RuchomeRybki" unique_id=713830598 instance=ExtResource("21_blnsp")]
+position = Vector2(12987, 316)
+
+[node name="Sprite2D65" parent="RuchomeRybki" unique_id=1871030739 instance=ExtResource("21_blnsp")]
+position = Vector2(12882, 296)
+
+[node name="Sprite2D66" parent="RuchomeRybki" unique_id=571671493 instance=ExtResource("21_blnsp")]
+position = Vector2(12967, 200)
+
+[node name="Sprite2D45" parent="RuchomeRybki" unique_id=621764486 instance=ExtResource("21_blnsp")]
+position = Vector2(8432, 679)
+
+[node name="Sprite2D114" parent="RuchomeRybki" unique_id=444294098 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2284.5, 744)
+
+[node name="Sprite2D115" parent="RuchomeRybki" unique_id=791227018 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2336.5, 743)
+
+[node name="Sprite2D116" parent="RuchomeRybki" unique_id=1534824860 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2395.5, 695)
+
+[node name="Sprite2D117" parent="RuchomeRybki" unique_id=1303443171 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2300.5, 689)
+
+[node name="Sprite2D118" parent="RuchomeRybki" unique_id=800207241 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2221.5, 739)
+
+[node name="Sprite2D119" parent="RuchomeRybki" unique_id=2087775959 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2449.5, 762)
+
+[node name="Sprite2D120" parent="RuchomeRybki" unique_id=1668220227 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2577.5, 752)
+
+[node name="Sprite2D121" parent="RuchomeRybki" unique_id=589954659 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2462.5, 675)
+
+[node name="Sprite2D11" parent="RuchomeRybki" unique_id=826207162 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2160.5, 837)
+
+[node name="Sprite2D12" parent="RuchomeRybki" unique_id=1319527536 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2212.5, 836)
+
+[node name="Sprite2D13" parent="RuchomeRybki" unique_id=325976572 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2271.5, 788)
+
+[node name="Sprite2D14" parent="RuchomeRybki" unique_id=492921628 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2176.5, 782)
+
+[node name="Sprite2D15" parent="RuchomeRybki" unique_id=600677150 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2097.5, 832)
+
+[node name="Sprite2D16" parent="RuchomeRybki" unique_id=807808379 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2115.5, 898)
+
+[node name="Sprite2D17" parent="RuchomeRybki" unique_id=146204736 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2247.5, 880)
+
+[node name="Sprite2D18" parent="RuchomeRybki" unique_id=1981356320 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2325.5, 855)
+
+[node name="Sprite2D19" parent="RuchomeRybki" unique_id=1290448003 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2453.5, 845)
+
+[node name="Sprite2D25" parent="RuchomeRybki" unique_id=474589930 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(4808.5, 892)
+
+[node name="Sprite2D26" parent="RuchomeRybki" unique_id=1763152130 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(4995.5, 865)
+
+[node name="Sprite2D27" parent="RuchomeRybki" unique_id=1124324674 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(5061.5, 889)
+
+[node name="Sprite2D28" parent="RuchomeRybki" unique_id=720159720 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(5126.5, 905)
+
+[node name="Sprite2D29" parent="RuchomeRybki" unique_id=515508543 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(6843.5, 719)
+
+[node name="Sprite2D30" parent="RuchomeRybki" unique_id=620963458 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(6894.5, 694)
+
+[node name="Sprite2D31" parent="RuchomeRybki" unique_id=223295256 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(6956.5, 738)
+
+[node name="Sprite2D32" parent="RuchomeRybki" unique_id=437990239 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(7027.5, 707)
+
+[node name="Sprite2D33" parent="RuchomeRybki" unique_id=1417979913 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(6843.5, 785)
+
+[node name="Sprite2D34" parent="RuchomeRybki" unique_id=358523198 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(6894.5, 760)
+
+[node name="Sprite2D35" parent="RuchomeRybki" unique_id=340143873 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(6956.5, 804)
+
+[node name="Sprite2D36" parent="RuchomeRybki" unique_id=1477580036 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(7093, 746)
+
+[node name="Sprite2D57" parent="RuchomeRybki" unique_id=515733337 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(9785.5, 677)
+
+[node name="Sprite2D58" parent="RuchomeRybki" unique_id=1293129314 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(9898.5, 696)
+
+[node name="Sprite2D59" parent="RuchomeRybki" unique_id=604164974 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(9972, 688)
+
+[node name="Sprite2D60" parent="RuchomeRybki" unique_id=144557034 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(9711, 708)
+
+[node name="Sprite2D61" parent="RuchomeRybki" unique_id=1981749389 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(9836.5, 718)
+
+[node name="Sprite2D62" parent="RuchomeRybki" unique_id=1675479025 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(9942, 711)
+
+[node name="Sprite2D63" parent="RuchomeRybki" unique_id=1794251235 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(10035, 704)
+
+[node name="Sprite2D71" parent="RuchomeRybki" unique_id=1632617888 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(13763.5, 196)
+
+[node name="Sprite2D72" parent="RuchomeRybki" unique_id=739968724 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(13815.5, 191)
+
+[node name="Sprite2D73" parent="RuchomeRybki" unique_id=1017180541 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(13757, 275)
+
+[node name="Sprite2D74" parent="RuchomeRybki" unique_id=657616161 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(13875, 155)
+
+[node name="Sprite2D75" parent="RuchomeRybki" unique_id=1109035404 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(17782, 841)
+
+[node name="Sprite2D76" parent="RuchomeRybki" unique_id=1724595311 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(17833, 872)
+
+[node name="Sprite2D77" parent="RuchomeRybki" unique_id=1680072077 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(17871, 801)
+
+[node name="Sprite2D79" parent="RuchomeRybki" unique_id=1540673577 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(19903, 767)
+
+[node name="Sprite2D80" parent="RuchomeRybki" unique_id=2131466069 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(20181.5, 815)
+
+[node name="Sprite2D81" parent="RuchomeRybki" unique_id=2027380353 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25433, 199)
+
+[node name="Sprite2D82" parent="RuchomeRybki" unique_id=1319368350 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25020, 230)
+
+[node name="Sprite2D83" parent="RuchomeRybki" unique_id=1471300418 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25260, 242)
+
+[node name="Sprite2D84" parent="RuchomeRybki" unique_id=664957649 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25295, 123)
+
+[node name="Sprite2D85" parent="RuchomeRybki" unique_id=1830707269 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25493, 270)
+
+[node name="Sprite2D86" parent="RuchomeRybki" unique_id=874894640 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25614, 229)
+
+[node name="Sprite2D87" parent="RuchomeRybki" unique_id=432108541 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25780, 221)
+
+[node name="Sprite2D88" parent="RuchomeRybki" unique_id=1133136472 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25574, 176)
+
+[node name="Sprite2D89" parent="RuchomeRybki" unique_id=1809333693 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(25291, 296)
+
+[node name="Sprite2D90" parent="RuchomeRybki" unique_id=20692790 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(24363, 549)
+
+[node name="Sprite2D92" parent="RuchomeRybki" unique_id=582836275 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(30369, 691)
+
+[node name="Sprite2D93" parent="RuchomeRybki" unique_id=102834399 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(30472, 655)
+
+[node name="Sprite2D94" parent="RuchomeRybki" unique_id=1493406743 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(30292.5, 696)
+
+[node name="Sprite2D95" parent="RuchomeRybki" unique_id=565547724 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(32629, 744)
+
+[node name="Sprite2D96" parent="RuchomeRybki" unique_id=2106892066 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(32269, 844)
+
+[node name="Sprite2D97" parent="RuchomeRybki" unique_id=739035935 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(33833, 854)
+
+[node name="Sprite2D98" parent="RuchomeRybki" unique_id=72440075 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(35059, 759)
+
+[node name="Sprite2D99" parent="RuchomeRybki" unique_id=731703460 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(35206, 685)
+
+[node name="Sprite2D100" parent="RuchomeRybki" unique_id=1440924826 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(37565, 238)
+
+[node name="Sprite2D91" parent="RuchomeRybki" unique_id=954117943 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(24550, 717)
+
+[node name="Sprite2D78" parent="RuchomeRybki" unique_id=1074676122 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(16432, 670)
+
+[node name="Sprite2D37" parent="RuchomeRybki" unique_id=1763573702 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(4736.5, 869)
+
+[node name="Sprite2D20" parent="RuchomeRybki" unique_id=832172285 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2338.5, 768)
+
+[node name="Sprite2D21" parent="RuchomeRybki" unique_id=1589304541 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(2077, 729)
+
+[node name="Sprite2D22" parent="RuchomeRybki" unique_id=1244805477 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(1077.5, 521)
+
+[node name="Sprite2D23" parent="RuchomeRybki" unique_id=1218520348 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(1235.5, 624)
+
+[node name="Sprite2D24" parent="RuchomeRybki" unique_id=1897957058 instance=ExtResource("22_el51w")]
+modulate = Color(2.5403565e-06, 1.5305343, 1.0143266, 1)
+position = Vector2(1958, 607)
+
+[node name="Sprite2D122" parent="RuchomeRybki" unique_id=976590538 instance=ExtResource("21_blnsp")]
+position = Vector2(4475, 790)
+
+[node name="WinDlaBubble" parent="." unique_id=231128833 instance=ExtResource("23_xvfcb")]
+position = Vector2(39497.004, 497)
+scale = Vector2(7, 7)
+
+[node name="Sprite2D" parent="WinDlaBubble" index="0"]
+rotation = 1.5707964
+
+[node name="Win" parent="WinDlaBubble" index="3"]
+position = Vector2(50.99944, 0)
+rotation = 1.5707964
+
+[connection signal="body_entered" from="ship_outside/ship_area" to="ship_outside" method="_on_ship_area_body_entered"]
+[connection signal="body_entered" from="boat/boat_area" to="boat" method="_on_area_2d_body_entered"]
+
+[editable path="WinDlaBubble"]
