@@ -122,6 +122,7 @@ position = Vector2(1905, 539.5)
 shape = SubResource("RectangleShape2D_oqgf2")
 
 [node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
+visible = false
 material = SubResource("ShaderMaterial_0bp2o")
 layout_direction = 3
 anchors_preset = 15
@@ -134,7 +135,7 @@ grow_vertical = 2
 color = Color(0.48669803, 0.43853337, 0.26804268, 0.44313726)
 
 [node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("9_5flq6")]
-position = Vector2(3269, 799)
+position = Vector2(2632, 806)
 collision_mask = 15
 
 [node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("10_051s1")]

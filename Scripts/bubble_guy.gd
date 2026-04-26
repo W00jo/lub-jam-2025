@@ -9,7 +9,6 @@ extends CharacterBody2D
 @onready var dymek = $DymekEw
 var tween: Tween
 var tween_dymek: Tween
-var go_up = false
 
 func _ready() -> void:
 	add_to_group("BubbleGuy")
@@ -18,23 +17,18 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if go_up == false:
-		var speed = Global.guy_speed
-		var direction = Input.get_vector("BubbleLeft", "BubbleRight", "BubbleUp", "BubbleDown").normalized()
-		if direction:
-			anim_tree["parameters/conditions/Idle"] = false
-			anim_tree["parameters/conditions/Swim"] = true
-			velocity = direction * speed
-		else:
-			anim_tree["parameters/conditions/Swim"] = false
-			anim_tree["parameters/conditions/Idle"] = true
-			velocity = velocity * 0.97
-		move_and_slide()
-	else: 
-		var x = global_position.x
-		var y = global_position.y
-		set_position(Vector2(x-5, y-15))
-		move_and_slide()
+	var speed = Global.guy_speed
+	var direction = Input.get_vector("BubbleLeft", "BubbleRight", "BubbleUp", "BubbleDown").normalized()
+	if direction:
+		anim_tree["parameters/conditions/Idle"] = false
+		anim_tree["parameters/conditions/Swim"] = true
+		velocity = direction * speed
+	else:
+		anim_tree["parameters/conditions/Swim"] = false
+		anim_tree["parameters/conditions/Idle"] = true
+		velocity = velocity * 0.97
+	move_and_slide()
+
 	
 func _on_shield_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Bullet"):
@@ -110,3 +104,15 @@ func dymek_show():
 
 func on_stinky_shield():
 	on_got_shield()
+	
+func bubble_win(upright):
+	var x = global_position.x
+	var y = global_position.y
+	if upright == 0: #Sprawdza w którą strone wędka zwycieska patrzy i daje animacje bublowy w która strone ma lecieć
+	
+		var tween = get_tree().create_tween()
+		tween.tween_property(self, "position", Vector2(x+1500,y+50), 1)
+	else:
+		var tween = get_tree().create_tween()
+		tween.tween_property(self, "position", Vector2(x+1500,y+50), 1)
+	set_process(false)

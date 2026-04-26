@@ -36,7 +36,7 @@ func guy_win():
 		Audio.play_music()
 	
 func on_restart():
-	get_tree().get_first_node_in_group("Level2").queue_free()
+	get_tree().get_first_node_in_group("Level").queue_free()
 	var reloaded_level = level.instantiate()
 	reloaded_level.add_to_group("Level")
 	game.add_child(reloaded_level)

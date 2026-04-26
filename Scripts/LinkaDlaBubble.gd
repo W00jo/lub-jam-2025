@@ -17,4 +17,4 @@ func _on_win_body_entered(body: Node2D) -> void:
 
 func guy_up():
 	var bubble_guy = get_tree().get_first_node_in_group("BubbleGuy")
-	bubble_guy.go_up = true
+	bubble_guy.bubble_win(rotation)
