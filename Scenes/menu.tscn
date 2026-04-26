@@ -701,7 +701,6 @@ icon = ExtResource("5_2rcsb")
 [node name="bubble_flee_splashart" type="CanvasLayer" parent="." unique_id=1928229765]
 
 [node name="TextureRect" type="TextureRect" parent="bubble_flee_splashart" unique_id=2076959772]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -712,7 +711,6 @@ texture = ExtResource("7_6ulg6")
 [node name="platform_ten_splashart" type="CanvasLayer" parent="." unique_id=1745618217]
 
 [node name="TextureRect2" type="AnimatedSprite2D" parent="platform_ten_splashart" unique_id=1952558219]
-visible = false
 position = Vector2(960, 540)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_cwkjn")
