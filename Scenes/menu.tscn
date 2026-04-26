@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://c10e4kd8e6o3g"]
 
-[ext_resource type="Texture2D" uid="uid://buk3j3hyeayy1" path="res://Assets/Sprites/Menu/menu_sheet.png" id="1_els47"]
+[ext_resource type="Texture2D" uid="uid://cvuib8x87g3vw" path="res://Assets/Sprites/Menu/menu_sheet.png" id="1_els47"]
 [ext_resource type="Script" uid="uid://c7bb3xedfme4t" path="res://Scripts/menu.gd" id="1_id2h2"]
-[ext_resource type="Texture2D" uid="uid://b2pa8uiptnl6m" path="res://Assets/Sprites/Menu/button_play.png" id="3_6swd7"]
-[ext_resource type="Texture2D" uid="uid://brya0rnq02d3" path="res://Assets/Sprites/Menu/button_options.png" id="3_je75w"]
-[ext_resource type="Texture2D" uid="uid://c4y5iwp5kgegb" path="res://Assets/Sprites/Menu/button_credits.png" id="4_xysjh"]
-[ext_resource type="Texture2D" uid="uid://irlwesee0wd0" path="res://Assets/Sprites/Menu/button_exit.png" id="5_2rcsb"]
-[ext_resource type="Texture2D" uid="uid://bpnrb0n1h16c8" path="res://Assets/Sprites/Menu/title_screen.png" id="7_6ulg6"]
-[ext_resource type="Texture2D" uid="uid://3tukb0wu60td" path="res://Assets/Sprites/Interactive/konduktorzy_logo.png" id="8_2iteq"]
-[ext_resource type="Texture2D" uid="uid://djahoaluu63ni" path="res://Assets/Sprites/Menu/credits.png" id="9_v6vij"]
+[ext_resource type="Texture2D" uid="uid://cuijtjlbxm3pk" path="res://Assets/Sprites/Menu/button_play.png" id="3_6swd7"]
+[ext_resource type="Texture2D" uid="uid://b4i25sww5qi2g" path="res://Assets/Sprites/Menu/button_options.png" id="3_je75w"]
+[ext_resource type="Texture2D" uid="uid://1r64frrbfi8q" path="res://Assets/Sprites/Menu/button_credits.png" id="4_xysjh"]
+[ext_resource type="Texture2D" uid="uid://dk4k7x6t7ekty" path="res://Assets/Sprites/Menu/button_exit.png" id="5_2rcsb"]
+[ext_resource type="Texture2D" uid="uid://db31ot8pmrljf" path="res://Assets/Sprites/Menu/title_screen.png" id="7_6ulg6"]
+[ext_resource type="Texture2D" uid="uid://cojhd0w5ajqd6" path="res://Assets/Sprites/Interactive/konduktorzy_logo.png" id="8_2iteq"]
+[ext_resource type="Texture2D" uid="uid://cffuuwfepsf01" path="res://Assets/Sprites/Menu/credits.png" id="9_v6vij"]
 [ext_resource type="Texture2D" uid="uid://dljj0cch0awhf" path="res://Assets/Sprites/Interactive/bubbles_transition.png" id="10_7qvly"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qvly"]
@@ -701,6 +701,7 @@ icon = ExtResource("5_2rcsb")
 [node name="bubble_flee_splashart" type="CanvasLayer" parent="." unique_id=1928229765]
 
 [node name="TextureRect" type="TextureRect" parent="bubble_flee_splashart" unique_id=2076959772]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -711,6 +712,7 @@ texture = ExtResource("7_6ulg6")
 [node name="platform_ten_splashart" type="CanvasLayer" parent="." unique_id=1745618217]
 
 [node name="TextureRect2" type="AnimatedSprite2D" parent="platform_ten_splashart" unique_id=1952558219]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_cwkjn")
@@ -737,6 +739,7 @@ stretch_mode = 0
 [node name="bubbles_transition" type="CanvasLayer" parent="." unique_id=1375224256]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bubbles_transition" unique_id=1627498344]
+visible = false
 position = Vector2(962, 541)
 scale = Vector2(4.007407, 4.007407)
 sprite_frames = SubResource("SpriteFrames_sdcr8")
