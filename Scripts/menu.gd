@@ -7,6 +7,9 @@ extends Control
 @onready var shader_canvas = get_tree().root.get_node('Game/ShaderLayer')
 @onready var menu = get_tree().root.get_node('Game/MenuLayer')
 @onready var platform_ten_splashart: AnimatedSprite2D = $platform_ten_splashart/TextureRect2
+var option_button : bool = false
+@onready var credits: AnimatedSprite2D = $Creditsy/credits
+
 
 func _ready() -> void:
 	get_tree().paused = true
@@ -25,6 +28,7 @@ func _on_credits_pressed() -> void:
 	$Creditsy.visible = true
 	$Creditsy.disabled = false
 	$Creditsy.grab_focus()
+	credits.play("Credits_start")
 	
 func _on_exit_pressed() -> void:
 	get_tree().quit()
@@ -36,6 +40,8 @@ func remove_conductors():
 	$platform_ten_splashart.queue_free()
 
 func _on_creditsy_pressed() -> void:
+	$CenterContainer/VBoxContainer/Credits.grab_focus()
+	credits.play("Credits_end")
+	await get_tree().create_timer(0.5).timeout
 	$Creditsy.visible = false
 	$Creditsy.disabled = true
-	$CenterContainer/VBoxContainer/Credits.grab_focus()
