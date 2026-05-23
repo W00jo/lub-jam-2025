@@ -898,7 +898,8 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_1gymj")
 animation = &"menu"
 autoplay = "menu"
-frame_progress = 0.29152066
+frame = 13
+frame_progress = 0.103968486
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1267186108]
 layout_mode = 0
@@ -929,7 +930,6 @@ layout_mode = 2
 icon = ExtResource("5_2rcsb")
 
 [node name="bubble_flee_splashart" type="CanvasLayer" parent="." unique_id=1928229765]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="bubble_flee_splashart" unique_id=2076959772]
 anchors_preset = 15
@@ -975,7 +975,6 @@ frame_progress = 1.0
 [node name="bubbles_transition" type="CanvasLayer" parent="." unique_id=1375224256]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bubbles_transition" unique_id=1627498344]
-visible = false
 position = Vector2(962, 541)
 scale = Vector2(4.007407, 4.007407)
 sprite_frames = SubResource("SpriteFrames_sdcr8")
