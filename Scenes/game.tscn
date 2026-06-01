@@ -22,10 +22,9 @@ process_mode = 3
 [node name="Menu" parent="MenuLayer" unique_id=1957599350 instance=ExtResource("10_2t82o")]
 
 [node name="ShaderLayer" type="CanvasLayer" parent="." unique_id=541458080]
-visible = false
+layer = 0
 
 [node name="Shader" type="ColorRect" parent="ShaderLayer" unique_id=1988952435]
-visible = false
 material = SubResource("ShaderMaterial_13ts7")
 anchors_preset = 15
 anchor_right = 1.0

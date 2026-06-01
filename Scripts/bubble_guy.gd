@@ -108,11 +108,10 @@ func on_stinky_shield():
 func bubble_win(upright):
 	var x = global_position.x
 	var y = global_position.y
+	var tween = get_tree().create_tween()
 	if upright == 0: #Sprawdza w którą strone wędka zwycieska patrzy i daje animacje bublowy w która strone ma lecieć
-	
-		var tween = get_tree().create_tween()
 		tween.tween_property(self, "position", Vector2(x+1500,y+50), 1)
 	else:
-		var tween = get_tree().create_tween()
+
 		tween.tween_property(self, "position", Vector2(x+1500,y+50), 1)
 	set_process(false)
