@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://483ql24i5gx7" path="res://Scripts/falling_rock.gd" id="1_cft5b"]
 [ext_resource type="Texture2D" uid="uid://doexcj0ro03pu" path="res://Assets/Sprites/Interactive/stalactice_1.png" id="2_8opli"]
 [ext_resource type="AudioStream" uid="uid://b63csh2eai25m" path="res://Assets/Sounds/Underwater rock cracking up soundeffect.mp3" id="3_jxpgp"]
+[ext_resource type="Texture2D" uid="uid://dtnhi7rhpfs5t" path="res://icon.svg" id="4_e7bri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8exj8"]
-size = Vector2(126, 462)
+size = Vector2(126, 1136)
 
 [node name="FallingRock2" type="Node2D" unique_id=204301608 groups=["FallingRock"]]
 script = ExtResource("1_cft5b")
@@ -19,7 +20,7 @@ texture = ExtResource("2_8opli")
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1216584060]
-position = Vector2(0, 168)
+position = Vector2(0, 505)
 shape = SubResource("RectangleShape2D_8exj8")
 
 [node name="kill_box" type="Area2D" parent="." unique_id=707692871 groups=["RockKillbox"]]
@@ -36,6 +37,11 @@ one_shot = true
 [node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=859374913]
 stream = ExtResource("3_jxpgp")
 volume_db = 1.0
+
+[node name="Granica" type="Sprite2D" parent="." unique_id=1405385717]
+position = Vector2(0, 1060.5)
+scale = Vector2(1, 0.17968692)
+texture = ExtResource("4_e7bri")
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
 [connection signal="body_entered" from="kill_box" to="." method="_on_killbox_body_entered"]

@@ -7,11 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnb3r"]
 size = Vector2(45.5, 951)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsxb8"]
-size = Vector2(156, 116)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pda8s"]
-size = Vector2(156, 96)
+size = Vector2(156, 118)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g8jlt"]
 atlas = ExtResource("2_vhv77")
@@ -129,28 +126,26 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g8jlt"]
+radius = 19.0
+height = 138.0
+
 [node name="FallingObstacles" type="StaticBody2D" unique_id=739616163]
 collision_layer = 17
-collision_mask = 3
+collision_mask = 19
 script = ExtResource("1_dkba5")
 
 [node name="TriggerArea" type="Area2D" parent="." unique_id=1872087470]
-collision_layer = 4
+collision_layer = 23
+collision_mask = 23
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1470120091]
 position = Vector2(-568, 445.5)
 shape = SubResource("RectangleShape2D_dnb3r")
 
-[node name="Killbox" type="Area2D" parent="." unique_id=1475220699]
-collision_layer = 8
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=1743983670]
-position = Vector2(-18, -38)
-shape = SubResource("RectangleShape2D_rsxb8")
-
 [node name="CollisionObstacle" type="CollisionShape2D" parent="." unique_id=522945519]
-position = Vector2(-18, -48)
+position = Vector2(-18, -37)
 shape = SubResource("RectangleShape2D_pda8s")
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1568282203]
@@ -164,5 +159,12 @@ sprite_frames = SubResource("SpriteFrames_e2rqq")
 animation = &"idle"
 autoplay = "idle"
 
+[node name="Ground_detector" type="Area2D" parent="." unique_id=2008788071]
+
+[node name="gd_coll" type="CollisionShape2D" parent="Ground_detector" unique_id=1697499256]
+position = Vector2(-17, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_g8jlt")
+
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
-[connection signal="body_entered" from="Killbox" to="." method="_on_killbox_body_entered"]
+[connection signal="body_entered" from="Ground_detector" to="." method="_on_ground_detector_body_entered"]

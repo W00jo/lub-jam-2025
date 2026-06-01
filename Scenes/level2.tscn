@@ -110,7 +110,7 @@ position = Vector2(2878, 540)
 limit_right = 40320
 
 [node name="side_bubbles" parent="Camera2D" unique_id=1169848261 instance=ExtResource("7_yj6rp")]
-modulate = Color(0.9599507, 0.9599507, 0.62418044, 1)
+modulate = Color(0.8202739, 1, 0.72833794, 1)
 z_index = 2
 position = Vector2(-960, -540)
 

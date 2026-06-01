@@ -23,8 +23,8 @@ func _process(_delta: float) -> void:
 		scale.y = -1
 	else:
 		scale.y = 1
-	
-	
+
+
 func _input(event: InputEvent) -> void:
 	if game.INPUT_SCHEME == game.INPUT_SCHEMES.KEYBOARD_AND_MOUSE:
 		if event.is_action_pressed("Shoot"):
