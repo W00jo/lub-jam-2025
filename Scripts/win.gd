@@ -8,7 +8,8 @@ func _ready() -> void:
 		win_texture.texture = preload("res://Assets/Sprites/Menu/win_bubble_guy.png")
 	if Global.guy_dead == true:
 		win_texture.texture = preload("res://Assets/Sprites/Menu/win_dolphin.png")
-	$Restart.grab_focus()
+	#$Restart.grab_focus()
+	$VBoxContainer.grab_focus()
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
@@ -17,3 +18,7 @@ func _on_restart_pressed() -> void:
 	get_tree().paused = false
 	Global.on_restart()
 	queue_free()
+
+
+func _on_menu_pressed() -> void:
+	pass #Powrut do menu - ale jak on kurwa działa

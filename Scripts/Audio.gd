@@ -5,7 +5,8 @@ extends Node
 @onready var game_music = preload("res://Assets/Sounds/Choochoo_spedup.mp3")
 
 func _ready() -> void:
-	play_music_queue()
+	#play_music_queue()
+	pass
 
 func play_music_queue():
 	audio.stream = game_music

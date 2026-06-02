@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://3tukb0wu60td" path="res://Assets/Sprites/Interactive/konduktorzy_logo.png" id="8_2iteq"]
 [ext_resource type="Texture2D" uid="uid://4dvieleexkaf" path="res://Assets/Sprites/Menu/credits_transitions.png" id="9_7qvly"]
 [ext_resource type="Texture2D" uid="uid://dljj0cch0awhf" path="res://Assets/Sprites/Interactive/bubbles_transition.png" id="10_7qvly"]
+[ext_resource type="PackedScene" uid="uid://dfsauewsnkka" path="res://Scenes/choose_level.tscn" id="11_rfqti"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qvly"]
 atlas = ExtResource("1_els47")
@@ -971,6 +972,10 @@ frame_progress = 1.0
 position = Vector2(962, 541)
 scale = Vector2(4.007407, 4.007407)
 sprite_frames = SubResource("SpriteFrames_sdcr8")
+
+[node name="choose_level" parent="." unique_id=198497191 instance=ExtResource("11_rfqti")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]

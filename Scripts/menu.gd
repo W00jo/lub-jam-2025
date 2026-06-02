@@ -9,6 +9,7 @@ extends Control
 @onready var platform_ten_splashart: AnimatedSprite2D = $platform_ten_splashart/TextureRect2
 var option_button : bool = false
 @onready var credits: AnimatedSprite2D = $Creditsy/credits
+@onready var choose_level: Control = $choose_level
 
 
 func _ready() -> void:
@@ -17,12 +18,17 @@ func _ready() -> void:
 	$CenterContainer/VBoxContainer/Play.grab_focus()
 
 func _on_play_pressed() -> void:
-	instruction_layer.visible = true
-	instructions.get_node('Ok').grab_focus()
-	#shader_canvas.visible = true
-	menu.queue_free()
-	Audio.game_music = preload("res://Assets/Sounds/Banger.mp3")
-	Audio.play_music()
+	choose_level.visible = true
+	
+	
+#	if Global.bubble_score == 0 or Global.bubble_score == 0:
+#		instruction_layer.visible = true
+#		instructions.get_node('Ok').grab_focus()
+#	#shader_canvas.visible = true
+#	menu.queue_free()
+#	Audio.game_music = preload("res://Assets/Sounds/Banger.mp3")
+#	Audio.play_music()
+
 
 func _on_credits_pressed() -> void:
 	$Creditsy.visible = true
@@ -33,6 +39,9 @@ func _on_credits_pressed() -> void:
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 
+
+
+#To jest do animacji 
 func remove_splash():
 	canvas.queue_free()
 

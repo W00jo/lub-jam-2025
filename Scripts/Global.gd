@@ -2,6 +2,7 @@ extends Node
 
 @onready var win = preload("res://Scenes/win.tscn")
 @onready var win_layer = get_tree().root.get_node('Game/WinLayer')
+
 @onready var game = get_tree().root.get_node('Game')
 @onready var level = preload("res://Scenes/level1.tscn")
 
@@ -17,6 +18,12 @@ var dolphin_speed = 370
 
 var guy_saved = false
 
+
+
+var bubble_score : int
+var dolphin_score : int
+
+var choosedLevel
 
 func dolphin_win():
 	if get_tree().paused == false:
@@ -40,6 +47,8 @@ func on_restart():
 	var reloaded_level = level.instantiate()
 	reloaded_level.add_to_group("Level")
 	game.add_child(reloaded_level)
+	
+	
 	Audio.game_music = preload("res://Assets/Sounds/Banger.mp3")
 	Audio.play_music()
 	has_bullet = true

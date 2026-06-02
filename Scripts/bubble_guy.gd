@@ -71,7 +71,6 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 			Global.dolphin_win()
 
 func on_stinky():
-	print("stinkyyyyy")
 	tween = create_tween()
 	tween_dymek = create_tween()
 	tween_dymek.tween_property(dymek, "scale", Vector2(1.5, 1.5), 0.5)
@@ -81,7 +80,6 @@ func on_stinky():
 
 
 func turn_green():
-	print("should be green")
 	guy_sprite.set_modulate(Color.WEB_GREEN)
 	Global.guy_speed = 280
 	await get_tree().create_timer(4).timeout
@@ -93,7 +91,6 @@ func turn_green():
 
 
 func dymek_show():
-	print("dymek eww")
 	dymek.set_scale(Vector2(1.5, 1.5))
 	await get_tree().create_timer(1.5).timeout
 	tween_dymek = create_tween()
@@ -112,6 +109,5 @@ func bubble_win(upright):
 	if upright == 0: #Sprawdza w którą strone wędka zwycieska patrzy i daje animacje bublowy w która strone ma lecieć
 		tween1.tween_property(self, "position", Vector2(x+1500,y+50), 1)
 	else:
-
 		tween1.tween_property(self, "position", Vector2(x+1500,y+50), 1)
 	set_process(false)
