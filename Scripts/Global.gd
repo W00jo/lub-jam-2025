@@ -3,6 +3,7 @@ extends Node
 @onready var win = preload("res://Scenes/win.tscn")
 @onready var win_layer = get_tree().root.get_node('Game/WinLayer')
 
+
 @onready var game = get_tree().root.get_node('Game')
 @onready var level = preload("res://Scenes/level1.tscn")
 
@@ -28,6 +29,7 @@ var choosedLevel
 func dolphin_win():
 	if get_tree().paused == false:
 		get_tree().paused = true
+		bubble_score += 1
 		var splash_win = win.instantiate()
 		win_layer.add_child(splash_win)
 		Audio.game_music = preload("res://Assets/Sounds/Dolfinus wygrywa dźwięk.mp3")
@@ -36,17 +38,20 @@ func dolphin_win():
 func guy_win():
 	if get_tree().paused == false:
 		get_tree().paused = true
+		dolphin_score += 1
 		var splash_win = win.instantiate()
 		win_layer.add_child(splash_win)
-		splash_win.get_node('Restart').grab_focus()
 		Audio.game_music = preload("res://Assets/Sounds/Bubbloczłek Wygrywa.mp3")
 		Audio.play_music()
-	
+
+
 func on_restart():
 	get_tree().get_first_node_in_group("Level").queue_free() 
-	var reloaded_level = level.instantiate()
-	reloaded_level.add_to_group("Level")
+	var reloaded_level = choosedLevel.instantiate()
+	#reloaded_level.add_to_group("Level")
 	game.add_child(reloaded_level)
+	game.move_child(reloaded_level,0)
+	get_tree().paused = false
 	
 	
 	Audio.game_music = preload("res://Assets/Sounds/Banger.mp3")

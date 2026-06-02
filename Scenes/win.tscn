@@ -30,6 +30,9 @@ layout_mode = 0
 offset_right = 411.9928
 offset_bottom = 303.0
 
+[node name="punktacja" type="Label" parent="VBoxContainer" unique_id=1294815753]
+layout_mode = 2
+
 [node name="Restart" type="Button" parent="VBoxContainer" unique_id=1681612985]
 layout_mode = 2
 icon = ExtResource("3_5wra6")

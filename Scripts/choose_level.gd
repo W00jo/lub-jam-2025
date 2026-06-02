@@ -23,11 +23,10 @@ func _on_back_pressed() -> void:
 	visible = false
 
 func _on_play_pressed() -> void:
-	#get_tree().change_scene_to_file(Global.choosedLevel)
-	
-	var map = Global.choosedLevel.instantiate()
-	grandpa.add_child(map)
-	grandpa.move_child(map,0)
-	visible = false
-	menu.visible = false
-	get_tree().paused = false
+	if Global.choosedLevel != null:
+		var map = Global.choosedLevel.instantiate()
+		grandpa.add_child(map)
+		grandpa.move_child(map,0)
+		visible = false
+		menu.visible = false
+		get_tree().paused = false
