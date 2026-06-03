@@ -16,6 +16,8 @@ var dolphin_dead: bool = false
 
 var guy_speed = 380
 var dolphin_speed = 370
+var camera_speed = 200
+
 
 var guy_saved = false
 

@@ -1088,7 +1088,7 @@ position = Vector2(1958, 607)
 position = Vector2(4475, 790)
 
 [node name="WinDlaBubble" parent="." unique_id=231128833 instance=ExtResource("23_xvfcb")]
-position = Vector2(39865, 556.00006)
+position = Vector2(39339, 556.00006)
 rotation = 1.5707964
 scale = Vector2(7, 7)
 

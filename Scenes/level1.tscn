@@ -11,12 +11,18 @@
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="9_esggg"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="10_nolpu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqgf2"]
-size = Vector2(338, 1215)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0bp2o"]
 shader = ExtResource("8_yymuf")
 shader_parameter/intensity = 1.0
+
+[sub_resource type="Curve2D" id="Curve2D_bs12r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2, 18.35977, 0, 0, 0, 0, 38385, 18.35977)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqgf2"]
+size = Vector2(338, 1215)
 
 [node name="Level1" type="Node2D" unique_id=188927186]
 process_mode = 1
@@ -106,20 +112,6 @@ position = Vector2(30916, 227)
 [node name="StinkyBubble4" parent="stinky_bubbles" unique_id=1909018363 instance=ExtResource("6_bdr3p")]
 position = Vector2(34823, 851)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1866845073]
-position = Vector2(960, 540)
-
-[node name="side_bubbles" parent="Camera2D" unique_id=1169848261 instance=ExtResource("7_wwu6c")]
-z_index = 2
-position = Vector2(-960, -540)
-
-[node name="camera_speed_up" type="Area2D" parent="Camera2D" unique_id=879184771]
-position = Vector2(-960, -540)
-
-[node name="camera_speed_up_collision" type="CollisionShape2D" parent="Camera2D/camera_speed_up" unique_id=798272550]
-position = Vector2(1905, 539.5)
-shape = SubResource("RectangleShape2D_oqgf2")
-
 [node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
 visible = false
 material = SubResource("ShaderMaterial_0bp2o")
@@ -142,5 +134,32 @@ position = Vector2(737, 530)
 scale = Vector2(2, 2)
 collision_mask = 15
 
-[connection signal="body_entered" from="Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_entered"]
-[connection signal="body_exited" from="Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_exited"]
+[node name="PathForCamera" type="Path2D" parent="." unique_id=538014896]
+position = Vector2(0, -19.473572)
+scale = Vector2(1, 1.0606654)
+curve = SubResource("Curve2D_bs12r")
+
+[node name="FollowPath" type="PathFollow2D" parent="PathForCamera" unique_id=1776467713]
+position = Vector2(2, 18.35977)
+rotation = 0.05583852
+scale = Vector2(1, 0.9428044)
+rotates = false
+
+[node name="Camera2D" type="Camera2D" parent="PathForCamera/FollowPath" unique_id=1866845073]
+position = Vector2(959.9999, 540)
+rotation = -0.059218295
+scale = Vector2(1.0003892, 0.9996107)
+
+[node name="side_bubbles" parent="PathForCamera/FollowPath/Camera2D" unique_id=1169848261 instance=ExtResource("7_wwu6c")]
+z_index = 2
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=879184771]
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up_collision" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/camera_speed_up" unique_id=798272550]
+position = Vector2(1905, 539.5)
+shape = SubResource("RectangleShape2D_oqgf2")
+
+[connection signal="body_entered" from="PathForCamera/FollowPath/Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_entered"]
+[connection signal="body_exited" from="PathForCamera/FollowPath/Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_exited"]

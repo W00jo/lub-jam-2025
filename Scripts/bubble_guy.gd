@@ -107,7 +107,7 @@ func bubble_win(upright):
 	var y = global_position.y
 	var tween1 = get_tree().create_tween()
 	if upright == 0: #Sprawdza w którą strone wędka zwycieska patrzy i daje animacje bublowy w która strone ma lecieć
-		tween1.tween_property(self, "position", Vector2(x+1500,y+50), 1)
+		tween1.tween_property(self, "position", Vector2(x+50,y-1500), 1)
 	else:
 		tween1.tween_property(self, "position", Vector2(x+1500,y+50), 1)
 	set_process(false)
