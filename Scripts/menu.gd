@@ -19,6 +19,7 @@ func _ready() -> void:
 
 func _on_play_pressed() -> void:
 	choose_level.visible = true
+	choose_level.score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
 	
 	
 #	if Global.bubble_score == 0 or Global.bubble_score == 0:

@@ -134,7 +134,7 @@ scale = Vector2(2, 2)
 collision_mask = 15
 
 [node name="PathForCamera" type="Path2D" parent="." unique_id=1504750307]
-position = Vector2(1626, -19.473572)
+position = Vector2(1627, -19)
 scale = Vector2(1, 1.0606654)
 curve = SubResource("Curve2D_vn2uo")
 
@@ -145,7 +145,7 @@ scale = Vector2(1, 0.9428044)
 rotates = false
 
 [node name="Camera2D" type="Camera2D" parent="PathForCamera/FollowPath" unique_id=153699640]
-position = Vector2(959.9999, 540)
+position = Vector2(990.8859, 481.62134)
 rotation = -0.059218295
 scale = Vector2(1.0003892, 0.9996107)
 

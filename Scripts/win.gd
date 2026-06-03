@@ -5,7 +5,7 @@ extends Control
 @onready var punktacja: Label = $VBoxContainer/punktacja
 
 func _ready() -> void:
-	punktacja.text = "Dolphine " + str(Global.bubble_score) + " : " + str(Global.dolphin_score) + " Bubble"
+	punktacja.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
 	if Global.dolphin_dead == true or Global.guy_saved == true:
 		win_texture.texture = preload("res://Assets/Sprites/Menu/win_bubble_guy.png")
 	if Global.guy_dead == true:

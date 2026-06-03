@@ -183,7 +183,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y8wla")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1966586458]
+[node name="background_splashart" type="AnimatedSprite2D" parent="." unique_id=1966586458]
 modulate = Color(0, 1, 1, 1)
 position = Vector2(960, 540)
 scale = Vector2(4, 4)
@@ -220,7 +220,24 @@ offset_right = 1148.0
 offset_bottom = 379.0
 text = "Play"
 
+[node name="reset_score" type="Button" parent="." unique_id=1968255786]
+layout_mode = 0
+offset_left = 1066.0
+offset_top = 145.0
+offset_right = 1181.0
+offset_bottom = 176.0
+text = "Resetuj wynik"
+
+[node name="score" type="Label" parent="." unique_id=1965018891]
+layout_mode = 0
+offset_left = 1038.0
+offset_top = 73.0
+offset_right = 1086.0
+offset_bottom = 96.0
+text = "Wynik"
+
 [connection signal="pressed" from="VBoxContainer/1Level" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="VBoxContainer/2Level" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="reset_score" to="." method="_on_reset_score_pressed"]

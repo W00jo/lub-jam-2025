@@ -6,10 +6,12 @@ const LEVEL_2 = preload("uid://b8cumjm4mkugu")
 @onready var menu: Control = $".."
 
 @onready var grandpa = $"../../.." #ustawia gre ponad menu
+@onready var score: Label = $score
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 
@@ -30,3 +32,10 @@ func _on_play_pressed() -> void:
 		visible = false
 		menu.visible = false
 		get_tree().paused = false
+
+
+func _on_reset_score_pressed() -> void:
+	Global.save_data.bubble_score = 0
+	Global.save_data.dolphin_score = 0
+	Global.save_data.save()
+	score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"

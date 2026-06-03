@@ -23,15 +23,19 @@ var guy_saved = false
 
 
 
-var bubble_score : int
-var dolphin_score : int
 
 var choosedLevel
 
+var save_data:SaveData
+
+func _ready() -> void:
+	save_data = SaveData.load_or_create()
+	
 func dolphin_win():
 	if get_tree().paused == false:
 		get_tree().paused = true
-		bubble_score += 1
+		save_data.dolphin_score += 1
+		save_data.save()
 		var splash_win = win.instantiate()
 		win_layer.add_child(splash_win)
 		Audio.game_music = preload("res://Assets/Sounds/Dolfinus wygrywa dźwięk.mp3")
@@ -40,7 +44,8 @@ func dolphin_win():
 func guy_win():
 	if get_tree().paused == false:
 		get_tree().paused = true
-		dolphin_score += 1
+		save_data.bubble_score += 1
+		save_data.save()
 		var splash_win = win.instantiate()
 		win_layer.add_child(splash_win)
 		Audio.game_music = preload("res://Assets/Sounds/Bubbloczłek Wygrywa.mp3")
