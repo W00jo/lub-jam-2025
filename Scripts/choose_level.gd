@@ -39,3 +39,11 @@ func _on_reset_score_pressed() -> void:
 	Global.save_data.dolphin_score = 0
 	Global.save_data.save()
 	score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
+
+
+
+func _on_change_skin_pressed() -> void:
+	if Global.bubble_skin == Global.BUBBLE_BLACK:
+		Global.bubble_skin = Global.BUBBLE_NORMAL
+	else:
+		Global.bubble_skin = Global.BUBBLE_BLACK

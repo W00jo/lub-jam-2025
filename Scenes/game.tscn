@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c0r23lm2xyl01"]
 
-[ext_resource type="Script" uid="uid://d2ri2bkryn4nk" path="res://Scenes/game.gd" id="1_3dryh"]
 [ext_resource type="Shader" uid="uid://dbs0slpb7yx6l" path="res://game.gdshader" id="3_fdbou"]
 [ext_resource type="PackedScene" uid="uid://c10e4kd8e6o3g" path="res://Scenes/menu.tscn" id="10_2t82o"]
 [ext_resource type="PackedScene" uid="uid://bcyrah88k0iba" path="res://Scenes/instructions.tscn" id="11_8dwh7"]
@@ -11,7 +10,6 @@ shader_parameter/intensity = 1.0
 
 [node name="Game" type="Node" unique_id=1590009313]
 process_mode = 3
-script = ExtResource("1_3dryh")
 
 [node name="MenuLayer" type="CanvasLayer" parent="." unique_id=381092461]
 process_mode = 3

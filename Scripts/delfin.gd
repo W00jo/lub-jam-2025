@@ -5,7 +5,8 @@ extends CharacterBody2D
 @onready var stinky_bubble = get_tree().get_first_node_in_group("StinkyBubble")
 @onready var anim_tree = $AnimationTree
 @onready var sfx = $SFX
-@onready var dolphin_sprite = $Sprite2D
+@onready var dolphin_sprite: Sprite2D = $dolphin_sprite
+
 @onready var dymek = $DymekMniam
 @onready var dolphin_arm: Node2D = $DolphinArm
 var tween: Tween
@@ -13,6 +14,9 @@ var tween_dymek: Tween
 
 func _ready() -> void:
 	add_to_group("Dolphin")
+	dolphin_sprite.texture = Global.dolphine_skin
+	$DolphinArm/arm_sprite.texture = Global.dolphine_arm_skin
+	
 	#stinky_bubble.connect("stinky_mniam", on_stinky)
 	
 
@@ -20,9 +24,9 @@ func _process(_delta):
 	#if game.INPUT_SCHEME == game.INPUT_SCHEMES.KEYBOARD_AND_MOUSE:
 	var mouse_position = get_global_mouse_position()
 	if mouse_position.x > position.x:
-		$Sprite2D.set_flip_h(false)
+		dolphin_sprite.set_flip_h(false)
 	elif mouse_position.x < position.x:
-		$Sprite2D.set_flip_h(true)
+		dolphin_sprite.set_flip_h(true)
 	
 #	elif game.INPUT_SCHEME == game.INPUT_SCHEMES.GAMEPAD:
 #		if Input.get_action_strength("aim_right"):

@@ -236,8 +236,17 @@ offset_right = 1086.0
 offset_bottom = 96.0
 text = "Wynik"
 
+[node name="change_skin" type="Button" parent="." unique_id=1766971753]
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 611.0
+offset_right = 1062.0
+offset_bottom = 619.0
+text = "Skin inny"
+
 [connection signal="pressed" from="VBoxContainer/1Level" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="VBoxContainer/2Level" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="reset_score" to="." method="_on_reset_score_pressed"]
+[connection signal="pressed" from="change_skin" to="." method="_on_change_skin_pressed"]

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://gvfdf4fim2n0"]
 
 [ext_resource type="Script" uid="uid://cflyhu3fipggw" path="res://Scripts/delfin.gd" id="1_lv03r"]
-[ext_resource type="Texture2D" uid="uid://ctobu3nwnl2y7" path="res://Assets/Sprites/Characters/Dolphin/dolphine_sheet.png" id="2_cdavg"]
+[ext_resource type="Texture2D" uid="uid://ctobu3nwnl2y7" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="2_cdavg"]
 [ext_resource type="Script" uid="uid://dpc77qu6t6j45" path="res://Scripts/dolphin_arm.gd" id="3_kua7p"]
-[ext_resource type="Texture2D" uid="uid://dxr3iadxo6ci8" path="res://Assets/Sprites/Characters/Dolphin/dolphine_arm.png" id="4_b4p31"]
+[ext_resource type="Texture2D" uid="uid://dxr3iadxo6ci8" path="res://Assets/Sprites/Characters/Dolphin/dolphine_arm_normal.png" id="4_b4p31"]
 [ext_resource type="AudioStream" uid="uid://dgsjtb7jivtan" path="res://Assets/Sounds/DelfinKukuSound.mp3" id="5_bbla4"]
 [ext_resource type="Texture2D" uid="uid://bf38qj50xogrh" path="res://Assets/Sprites/Characters/speech_ballon_mniam.png" id="6_bxs6p"]
 
@@ -33,7 +33,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/path = NodePath("dolphin_sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -50,7 +50,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -67,7 +67,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -84,7 +84,7 @@ step = 0.025
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -99,7 +99,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -128,7 +128,7 @@ step = 0.025
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -145,7 +145,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -175,7 +175,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -293,7 +293,7 @@ collision_mask = 31
 motion_mode = 1
 script = ExtResource("1_lv03r")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1571566880]
+[node name="dolphin_sprite" type="Sprite2D" parent="." unique_id=1571566880]
 texture = ExtResource("2_cdavg")
 hframes = 48
 vframes = 5
@@ -312,7 +312,7 @@ width = 5.0
 default_color = Color(1, 1, 1, 0.709804)
 gradient = SubResource("Gradient_kgtv5")
 
-[node name="Sprite2D" type="Sprite2D" parent="DolphinArm" unique_id=1719841584]
+[node name="arm_sprite" type="Sprite2D" parent="DolphinArm" unique_id=1719841584]
 position = Vector2(5, 6)
 texture = ExtResource("4_b4p31")
 

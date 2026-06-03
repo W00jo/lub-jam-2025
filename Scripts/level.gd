@@ -8,6 +8,8 @@ var speed_up : float = 1   #Jak zbliży się do prawej cześci ekranu, ekran prz
 
 
 func _ready() -> void:
+	Audio.game_music = preload("res://Assets/Sounds/Banger.mp3")
+	Audio.play_music()
 	var tween = get_tree().create_tween()     #Zwolnienie kamery na początku by odrazu nie zapierdalało
 	tween.tween_property(camera,"progress", 70,3).set_ease(Tween.EASE_IN)
 	add_to_group("Level")

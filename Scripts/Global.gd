@@ -7,6 +7,25 @@ extends Node
 @onready var game = get_tree().root.get_node('Game')
 @onready var level = preload("res://Scenes/level1.tscn")
 
+
+###Bubble Skins
+const BUBBLE_BLACK = preload("uid://ib1fwy25d5t6")
+const BUBBLE_NORMAL = preload("uid://mk5uhqgt564w")
+
+###Dolphine Skins
+const DOLPHINE_NORMAL = preload("uid://ctobu3nwnl2y7")
+const DOLPHINE_ARM_NORMAL = preload("uid://dxr3iadxo6ci8")
+
+
+
+
+var bubble_skin = BUBBLE_NORMAL
+
+var dolphine_skin = DOLPHINE_NORMAL
+var dolphine_arm_skin = DOLPHINE_ARM_NORMAL
+
+#skins
+
 var has_bullet: bool = false
 
 var has_shield: bool = true

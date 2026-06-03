@@ -11,6 +11,7 @@ var tween: Tween
 var tween_dymek: Tween
 
 func _ready() -> void:
+	guy_sprite.texture = Global.bubble_skin
 	add_to_group("BubbleGuy")
 	#shield_bubble.connect("got_shield", on_got_shield)
 	anim_tree["parameters/conditions/Idle"] = true
@@ -23,6 +24,10 @@ func _physics_process(_delta: float) -> void:
 		anim_tree["parameters/conditions/Idle"] = false
 		anim_tree["parameters/conditions/Swim"] = true
 		velocity = direction * speed
+		if direction.x >0:
+			guy_sprite.set_flip_h(false)
+		else:
+			guy_sprite.set_flip_h(true)
 	else:
 		anim_tree["parameters/conditions/Swim"] = false
 		anim_tree["parameters/conditions/Idle"] = true
