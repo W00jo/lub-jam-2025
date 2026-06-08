@@ -20,11 +20,11 @@ func _process(_delta: float) -> void:
 #		controllerangle = Vector2(xAxisRL, yAxisUD).angle()
 #		rotation = controllerangle
 #	
-#	rotation_degrees = wrap(rotation_degrees, 0 ,360)
-#	if rotation_degrees > 90 and rotation_degrees < 270:
-#		scale.y = -1
-#	else:
-#		scale.y = 1
+	rotation_degrees = wrap(rotation_degrees, 0 ,360)
+	if rotation_degrees > 90 and rotation_degrees < 270:
+		scale.y = -1
+	else:
+		scale.y = 1
 
 
 func _input(event: InputEvent) -> void:

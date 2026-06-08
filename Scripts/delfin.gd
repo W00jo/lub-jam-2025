@@ -15,7 +15,7 @@ var tween_dymek: Tween
 func _ready() -> void:
 	add_to_group("Dolphin")
 	dolphin_sprite.texture = Global.dolphine_skin
-	$DolphinArm/arm_sprite.texture = Global.dolphine_arm_skin
+	$DolphinArm/arm_sprite.texture = Global.dolphine_skin
 	
 	#stinky_bubble.connect("stinky_mniam", on_stinky)
 	

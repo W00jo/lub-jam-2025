@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://def70hve6jpwd" path="res://Scripts/choose_level.gd" id="1_y8wla"]
 [ext_resource type="Texture2D" uid="uid://buk3j3hyeayy1" path="res://Assets/Sprites/Menu/menu_sheet.png" id="2_mi1cq"]
 [ext_resource type="Texture2D" uid="uid://c66qtxem05tgf" path="res://Assets/Sprites/Menu/levels_splasharts/2level.png" id="2_yise3"]
+[ext_resource type="Texture2D" uid="uid://mk5uhqgt564w" path="res://Assets/Sprites/Characters/Bubble_guy/bubble_normal.png" id="5_bji3q"]
+[ext_resource type="Texture2D" uid="uid://cqqgpjh1v41s3" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="6_jbd2j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qvly"]
 atlas = ExtResource("2_mi1cq")
@@ -236,17 +238,63 @@ offset_right = 1086.0
 offset_bottom = 96.0
 text = "Wynik"
 
-[node name="change_skin" type="Button" parent="." unique_id=1766971753]
-layout_mode = 0
-offset_left = 1054.0
-offset_top = 611.0
-offset_right = 1062.0
-offset_bottom = 619.0
-text = "Skin inny"
+[node name="ChangeSkin" type="Node2D" parent="." unique_id=1986003665]
+
+[node name="BubbleSpriteSkin" type="Sprite2D" parent="ChangeSkin" unique_id=1994083617]
+position = Vector2(948, 606.82513)
+scale = Vector2(1.700393, 1.700393)
+texture = ExtResource("5_bji3q")
+hframes = 60
+
+[node name="Bubble" type="HBoxContainer" parent="ChangeSkin" unique_id=1324181047]
+offset_left = 873.0
+offset_top = 664.82513
+offset_right = 1010.0
+offset_bottom = 730.82513
+
+[node name="BubbleSkinLeft" type="Button" parent="ChangeSkin/Bubble" unique_id=887229327]
+layout_mode = 2
+text = "<"
+
+[node name="BubbleSkinName" type="Label" parent="ChangeSkin/Bubble" unique_id=1632312869]
+layout_mode = 2
+text = "Bubble Man"
+
+[node name="BubbleSkinRight" type="Button" parent="ChangeSkin/Bubble" unique_id=777890379]
+layout_mode = 2
+text = ">"
+
+[node name="DolphineSpriteSkin" type="Sprite2D" parent="ChangeSkin" unique_id=208897022]
+position = Vector2(1255, 599.82513)
+scale = Vector2(1.700393, 1.700393)
+texture = ExtResource("6_jbd2j")
+hframes = 94
+frame = 83
+
+[node name="Dolphine" type="HBoxContainer" parent="ChangeSkin" unique_id=1540461385]
+offset_left = 1180.0
+offset_top = 684.82513
+offset_right = 1294.0
+offset_bottom = 724.82513
+
+[node name="DolphineSkinLeft" type="Button" parent="ChangeSkin/Dolphine" unique_id=2070510376]
+layout_mode = 2
+text = "<"
+
+[node name="DolphineSkinName" type="Label" parent="ChangeSkin/Dolphine" unique_id=522290461]
+layout_mode = 2
+text = "Dolphine"
+
+[node name="DolphineSkinRight" type="Button" parent="ChangeSkin/Dolphine" unique_id=424316977]
+layout_mode = 2
+text = ">"
 
 [connection signal="pressed" from="VBoxContainer/1Level" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="VBoxContainer/2Level" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="reset_score" to="." method="_on_reset_score_pressed"]
-[connection signal="pressed" from="change_skin" to="." method="_on_change_skin_pressed"]
+[connection signal="pressed" from="ChangeSkin/Bubble/BubbleSkinLeft" to="." method="_on_bubble_skin_left_pressed"]
+[connection signal="pressed" from="ChangeSkin/Bubble/BubbleSkinRight" to="." method="_on_bubble_skin_right_pressed"]
+[connection signal="pressed" from="ChangeSkin/Dolphine/DolphineSkinLeft" to="." method="_on_dolphine_skin_left_pressed"]
+[connection signal="pressed" from="ChangeSkin/Dolphine/DolphineSkinRight" to="." method="_on_dolphine_skin_right_pressed"]

@@ -6,7 +6,6 @@ extends Node
 
 func _ready() -> void:
 	play_music_queue()
-	pass
 
 func play_music_queue():
 	audio.stream = game_music

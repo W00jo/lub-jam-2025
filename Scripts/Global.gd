@@ -13,16 +13,17 @@ const BUBBLE_BLACK = preload("uid://ib1fwy25d5t6")
 const BUBBLE_NORMAL = preload("uid://mk5uhqgt564w")
 
 ###Dolphine Skins
-const DOLPHINE_NORMAL = preload("uid://ctobu3nwnl2y7")
-const DOLPHINE_ARM_NORMAL = preload("uid://dxr3iadxo6ci8")
+const DOLPHINE_NORMAL = preload("uid://cqqgpjh1v41s3")
+const DOLPHINE_GAY = preload("uid://duduydtwj5thx")
 
-
-
+#Nowe skiny dodajemy do tego aaraya
+var bubble_skins_aaray = [BUBBLE_NORMAL, BUBBLE_BLACK]
+var dolphine_skins_aaray = [DOLPHINE_NORMAL, DOLPHINE_GAY]
 
 var bubble_skin = BUBBLE_NORMAL
 
 var dolphine_skin = DOLPHINE_NORMAL
-var dolphine_arm_skin = DOLPHINE_ARM_NORMAL
+var dolphine_arm_skin = DOLPHINE_NORMAL
 
 #skins
 

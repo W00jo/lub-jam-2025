@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://gvfdf4fim2n0"]
 
 [ext_resource type="Script" uid="uid://cflyhu3fipggw" path="res://Scripts/delfin.gd" id="1_lv03r"]
-[ext_resource type="Texture2D" uid="uid://ctobu3nwnl2y7" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="2_cdavg"]
+[ext_resource type="Texture2D" uid="uid://cqqgpjh1v41s3" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="2_t5q2t"]
 [ext_resource type="Script" uid="uid://dpc77qu6t6j45" path="res://Scripts/dolphin_arm.gd" id="3_kua7p"]
-[ext_resource type="Texture2D" uid="uid://dxr3iadxo6ci8" path="res://Assets/Sprites/Characters/Dolphin/dolphine_arm_normal.png" id="4_b4p31"]
 [ext_resource type="AudioStream" uid="uid://dgsjtb7jivtan" path="res://Assets/Sounds/DelfinKukuSound.mp3" id="5_bbla4"]
 [ext_resource type="Texture2D" uid="uid://bf38qj50xogrh" path="res://Assets/Sprites/Characters/speech_ballon_mniam.png" id="6_bxs6p"]
 
@@ -12,12 +11,13 @@ offsets = PackedFloat32Array(0, 0.002331, 0.588578)
 colors = PackedColorArray(1, 1, 1, 0.768627, 1, 1, 1, 0, 1, 1, 1, 0)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml5yh"]
-radius = 20.0
+radius = 16.000004
 height = 98.0
 
 [sub_resource type="Animation" id="Animation_upye3"]
 resource_name = "Aim"
 length = 0.1
+step = 0.005
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -40,7 +40,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [197]
+"values": [91]
 }
 
 [sub_resource type="Animation" id="Animation_ag7nd"]
@@ -74,7 +74,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [96, 97, 98, 99, 100, 101, 102]
+"values": [57, 58, 59, 60, 61, 62, 63]
 }
 
 [sub_resource type="Animation" id="Animation_di8x2"]
@@ -88,7 +88,7 @@ tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.175, 0.2, 0.225),
+"times": PackedFloat32Array(0, 0.025, 0.05, 0.1, 0.15, 0.2, 0.225),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [48, 49, 50, 51, 52, 53, 54]
@@ -132,16 +132,16 @@ tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15, 0.175, 0.225, 0.275, 0.325, 0.375, 0.425, 0.475, 0.525, 0.575, 0.625),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.012048192, 0.024096385, 0.036144577, 0.04819277, 0.060240965, 0.075, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225, 0.25, 0.3, 0.375, 0.45, 0.525, 0.575, 0.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [144, 145, 146, 147, 148, 149, 150, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163]
+"values": [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]
 }
 
 [sub_resource type="Animation" id="Animation_gf82o"]
 resource_name = "Stop_AIM"
 length = 2.0
-step = 0.1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -149,10 +149,10 @@ tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.4, 1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [163, 162, 161, 160, 159, 158, 157, 156, 155, 154, 153, 152, 151, 150, 149, 148, 147, 146, 145, 144]
+"values": [84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -171,7 +171,7 @@ tracks/1/keys = {
 resource_name = "Swim"
 length = 0.8
 loop_mode = 1
-step = 0.1
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -179,10 +179,10 @@ tracks/0/path = NodePath("dolphin_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"times": PackedFloat32Array(0.08028671, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [192, 193, 194, 195]
+"values": [86, 87, 88, 89]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_njhvm"]
@@ -294,9 +294,8 @@ motion_mode = 1
 script = ExtResource("1_lv03r")
 
 [node name="dolphin_sprite" type="Sprite2D" parent="." unique_id=1571566880]
-texture = ExtResource("2_cdavg")
-hframes = 48
-vframes = 5
+texture = ExtResource("2_t5q2t")
+hframes = 94
 
 [node name="DolphinArm" type="Node2D" parent="." unique_id=1903723321]
 visible = false
@@ -314,9 +313,12 @@ gradient = SubResource("Gradient_kgtv5")
 
 [node name="arm_sprite" type="Sprite2D" parent="DolphinArm" unique_id=1719841584]
 position = Vector2(5, 6)
-texture = ExtResource("4_b4p31")
+texture = ExtResource("2_t5q2t")
+hframes = 94
+frame = 93
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1535888159]
+visible = false
 collision_layer = 129
 collision_mask = 129
 
@@ -324,6 +326,7 @@ collision_mask = 129
 position = Vector2(2, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ml5yh")
+debug_color = Color(0.53605926, 0.9081948, 0.9999997, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1307954731]
 position = Vector2(2, 5)
