@@ -34,10 +34,11 @@ var has_shield: bool = true
 var guy_dead: bool = false
 var dolphin_dead: bool = false
 
-var guy_speed = 380
-var dolphin_speed = 370
-var camera_speed = 200
+var guy_speed = 450
+var dolphin_speed = 430
+var camera_speed = 360
 
+#Stare wartości = 380,370,200
 
 var guy_saved = false
 

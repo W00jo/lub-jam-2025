@@ -35,6 +35,17 @@ window/size/mode=2
 
 project/assembly_name="Bubble"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "yellow",
+"res://Assets/Sprites/": "teal",
+"res://Docs/": "gray",
+"res://Scenes/": "green",
+"res://Scripts/": "red",
+"res://data/": "gray"
+}
+
 [global_group]
 
 Dolphin=""
