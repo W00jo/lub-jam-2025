@@ -15,7 +15,6 @@ func _ready() -> void:
 	add_to_group("Level")
 
 func _process(delta: float) -> void:
-	
 	camera.progress += Global.camera_speed * speed_up * delta
 
 

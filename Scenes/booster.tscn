@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://caemcxcccavne"]
+
+[ext_resource type="Script" uid="uid://cyedn2tim8fjp" path="res://Scripts/booster.gd" id="1_tf3vi"]
+[ext_resource type="Texture2D" uid="uid://dtnhi7rhpfs5t" path="res://icon.svg" id="2_o0tsq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2xbq"]
+size = Vector2(172, 567)
+
+[node name="booster" type="Node2D" unique_id=832800389]
+script = ExtResource("1_tf3vi")
+
+[node name="magnes_sprite" type="Sprite2D" parent="." unique_id=1414219380]
+texture = ExtResource("2_o0tsq")
+
+[node name="Magnes_area" type="Area2D" parent="." unique_id=1674145971]
+position = Vector2(0, -65)
+
+[node name="Magnes_coll" type="CollisionShape2D" parent="Magnes_area" unique_id=1384557163]
+position = Vector2(4, -213.5)
+shape = SubResource("RectangleShape2D_v2xbq")
+
+[connection signal="body_entered" from="Magnes_area" to="." method="_on_magnes_area_body_entered"]
+[connection signal="body_exited" from="Magnes_area" to="." method="_on_magnes_area_body_exited"]

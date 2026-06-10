@@ -17,23 +17,26 @@ func _ready() -> void:
 	anim_tree["parameters/conditions/Idle"] = true
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var speed = Global.guy_speed
 	var direction = Input.get_vector("BubbleLeft", "BubbleRight", "BubbleUp", "BubbleDown").normalized()
+	
 	if direction:
+		var target_v = direction * max(velocity.length(), speed)
+		velocity = velocity.move_toward(target_v, speed * delta * 5) #Można to 5 zmienić wtedy będzie się sterowało jak w bąblu
 		anim_tree["parameters/conditions/Idle"] = false
 		anim_tree["parameters/conditions/Swim"] = true
-		velocity = direction * speed
-		if direction.x >0:
-			guy_sprite.set_flip_h(false)
-		else:
-			guy_sprite.set_flip_h(true)
+		
+		if velocity.length() > speed:
+			velocity = velocity.move_toward(velocity.normalized() * speed, speed * delta * 1.5)
+
+		guy_sprite.flip_h = direction.x < 0
 	else:
+		velocity = velocity.move_toward(Vector2.ZERO, speed * delta * 1)
 		anim_tree["parameters/conditions/Swim"] = false
 		anim_tree["parameters/conditions/Idle"] = true
-		velocity = velocity * 0.97
 	move_and_slide()
-
+	
 	
 func _on_shield_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Bullet"):

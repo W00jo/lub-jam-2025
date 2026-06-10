@@ -10,6 +10,7 @@
 [ext_resource type="Shader" uid="uid://dbs0slpb7yx6l" path="res://game.gdshader" id="8_orbd0"]
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="9_5flq6"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="10_051s1"]
+[ext_resource type="PackedScene" uid="uid://caemcxcccavne" path="res://Scenes/booster.tscn" id="11_mtqcm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0bp2o"]
 shader = ExtResource("8_orbd0")
@@ -159,3 +160,19 @@ position = Vector2(-960, -540)
 [node name="camera_speed_up_collision" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/camera_speed_up" unique_id=1521327165]
 position = Vector2(1905, 539.5)
 shape = SubResource("RectangleShape2D_mtqcm")
+
+[node name="Magnes" parent="." unique_id=832800389 instance=ExtResource("11_mtqcm")]
+position = Vector2(2916, 918.99994)
+rotation = 1.4767572
+
+[node name="Magnes2" parent="." unique_id=605066214 instance=ExtResource("11_mtqcm")]
+position = Vector2(4200, 918)
+rotation = 1.5673846
+
+[node name="Magnes3" parent="." unique_id=2103606516 instance=ExtResource("11_mtqcm")]
+position = Vector2(5254, 908.99994)
+rotation = 1.4767572
+
+[node name="Magnes4" parent="." unique_id=1373260598 instance=ExtResource("11_mtqcm")]
+position = Vector2(6538, 908)
+rotation = 1.5673846

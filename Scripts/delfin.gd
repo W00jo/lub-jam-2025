@@ -34,15 +34,19 @@ func _process(_delta):
 #		elif Input.get_action_strength("aim_left"):
 #			$Sprite2D.set_flip_h(true)
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var speed = Global.dolphin_speed
 	var direction = Input.get_vector("DolphinLeft", "DolphinRight", "DolphinUp", "DolphinDown").normalized()
+
 	if direction:
-		velocity = direction * speed
+		var target_v = direction * max(velocity.length(), speed)
+		velocity = velocity.move_toward(target_v, speed * delta * 10)
+		if velocity.length() > speed:
+			velocity = velocity.move_toward(velocity.normalized() * speed, speed * delta * 1.5)
 	else:
-		velocity = velocity * 0.97
+		velocity = velocity.move_toward(Vector2.ZERO, speed * delta * 1)
+		
 	move_and_slide()
-	
 
 func on_bump_kill():
 	anim_tree["parameters/conditions/dead"] = true
