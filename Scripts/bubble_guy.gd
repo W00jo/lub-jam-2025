@@ -46,7 +46,7 @@ func _on_shield_area_area_entered(area: Area2D) -> void:
 		short_on_air.start()
 		print("Wykryty chłop. KŁUJ")
 		Global.has_shield = false
-		Global.guy_speed = 250
+		Global.guy_speed += 100  ##Wcześniej było 250
 		await get_tree().create_timer(0.5).timeout
 		anim_tree["parameters/conditions/Break_Bubble"] = false
 
@@ -59,7 +59,7 @@ func on_got_shield():
 	anim_tree["parameters/conditions/Get_Bubble"] = false
 
 func _on_short_on_air_timeout() -> void:
-	Global.guy_speed = 420
+	Global.guy_speed += 100
 	anim_tree["parameters/conditions/Close_To_Death"] = true
 	die_no_air.start()
 
@@ -89,13 +89,13 @@ func on_stinky():
 
 func turn_green():
 	guy_sprite.set_modulate(Color.WEB_GREEN)
-	Global.guy_speed = 280
+	Global.guy_speed -= 100
 	await get_tree().create_timer(4).timeout
 	tween = create_tween()
 	tween.tween_property(guy_sprite, "modulate" , Color.WHITE, 0.5)
 	await tween.finished
 	guy_sprite.set_modulate(Color.WHITE)
-	Global.guy_speed = 380
+	Global.guy_speed += 100
 
 
 func dymek_show():
