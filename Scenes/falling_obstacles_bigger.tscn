@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://dcqarkeyjs01v"]
+
+[ext_resource type="Script" uid="uid://h15dssh2wpt2" path="res://Scripts/falling_obstacles.gd" id="1_aynnu"]
+[ext_resource type="AudioStream" uid="uid://byjpf0x4ssyhi" path="res://Assets/Sounds/Rock Falling.mp3" id="2_ix010"]
+[ext_resource type="Texture2D" uid="uid://q5oy7ujmlu6h" path="res://Assets/Sprites/Interactive/rock_falling.png" id="3_ybpxq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnb3r"]
+size = Vector2(45.5, 951)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pda8s"]
+size = Vector2(156, 195)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aynnu"]
+size = Vector2(101.92389, 118.894455)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8jlt"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(1440, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i35o4"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmsfx"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjfa7"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_458sb"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7exwa"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqx6o"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lat8w"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl6bh"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0k7b"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itrwh"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(960, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgnld"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(1056, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a8dd"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(1152, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o170k"]
+atlas = ExtResource("3_ybpxq")
+region = Rect2(1248, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2rqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8jlt")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i35o4")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmsfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjfa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_458sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7exwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqx6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lat8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl6bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0k7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itrwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgnld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a8dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o170k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g8jlt"]
+radius = 19.0
+height = 138.0
+
+[node name="FallingObstacles" type="StaticBody2D" unique_id=739616163]
+collision_layer = 17
+collision_mask = 19
+script = ExtResource("1_aynnu")
+
+[node name="TriggerArea" type="Area2D" parent="." unique_id=1872087470]
+collision_layer = 23
+collision_mask = 23
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1470120091]
+position = Vector2(-372, 445.5)
+shape = SubResource("RectangleShape2D_dnb3r")
+
+[node name="CollisionObstacle" type="CollisionShape2D" parent="." unique_id=522945519]
+position = Vector2(-18, 1.5)
+shape = SubResource("RectangleShape2D_pda8s")
+
+[node name="CollisionObstacle2" type="CollisionShape2D" parent="." unique_id=733396104]
+position = Vector2(-15.999996, 101)
+rotation = 0.7853982
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_aynnu")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1568282203]
+stream = ExtResource("2_ix010")
+volume_db = 1.0
+
+[node name="falling_obstacle_sprite" type="AnimatedSprite2D" parent="." unique_id=1282504258]
+position = Vector2(3, 69)
+scale = Vector2(2.7005208, 4.5377607)
+sprite_frames = SubResource("SpriteFrames_e2rqq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Ground_detector" type="Area2D" parent="." unique_id=2008788071]
+
+[node name="gd_coll" type="CollisionShape2D" parent="Ground_detector" unique_id=1697499256]
+position = Vector2(-17, 89)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_g8jlt")
+
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
+[connection signal="body_entered" from="Ground_detector" to="." method="_on_ground_detector_body_entered"]

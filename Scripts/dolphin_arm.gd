@@ -39,6 +39,7 @@ func _input(event: InputEvent) -> void:
 			aim_line.add_point(end_aim, 1)
 			await get_tree().create_timer(1).timeout
 			canshoot = true
+			Global.dolphin_speed -= 50
 			
 	if event.is_action_released("Shoot"):
 		aim_line.clear_points()
@@ -52,6 +53,7 @@ func _input(event: InputEvent) -> void:
 			await get_tree().create_timer(0.1).timeout
 			anim_tree["parameters/conditions/Stop_AIM"] = false
 			canshoot = false
+			Global.dolphin_speed += 50
 	
 	
 	
