@@ -1,0 +1,987 @@
+[gd_scene format=3 uid="uid://cjg7mmc0teprh"]
+
+[ext_resource type="Texture2D" uid="uid://jvfyafvjg04x" path="res://Assets/Sprites/Enviroment/Animals/fishes_blue_sheet.png" id="1_nircn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nircn"]
+atlas = ExtResource("1_nircn")
+region = Rect2(0, 0, 67, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qxsu"]
+atlas = ExtResource("1_nircn")
+region = Rect2(67, 0, 67, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw6k6"]
+atlas = ExtResource("1_nircn")
+region = Rect2(134, 0, 67, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfyf5"]
+atlas = ExtResource("1_nircn")
+region = Rect2(201, 0, 67, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6j55q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nircn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qxsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw6k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfyf5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="Shader" id="Shader_hsywg"]
+code = "shader_type canvas_item;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qw6k6"]
+shader = SubResource("Shader_hsywg")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j55q"]
+atlas = ExtResource("1_nircn")
+region = Rect2(0, 0, 67, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsywg"]
+atlas = ExtResource("1_nircn")
+region = Rect2(67, 0, 67, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yym8x"]
+atlas = ExtResource("1_nircn")
+region = Rect2(134, 0, 67, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i13oe"]
+atlas = ExtResource("1_nircn")
+region = Rect2(201, 0, 67, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nu7y3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j55q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsywg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yym8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i13oe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="ParalaxForeground" type="Node2D" unique_id=56706474]
+
+[node name="Fishes" type="Parallax2D" parent="." unique_id=1029255194]
+top_level = true
+z_index = 99
+scroll_scale = Vector2(2, 2)
+repeat_times = 3
+
+[node name="Group1" type="Node2D" parent="Fishes" unique_id=275122601]
+
+[node name="BlackFish" type="AnimatedSprite2D" parent="Fishes/Group1" unique_id=1479208689]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(2749, 999)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.115605466
+flip_h = true
+
+[node name="BlackFish11" type="AnimatedSprite2D" parent="Fishes/Group1" unique_id=6436174]
+modulate = Color(0.4900705, 0.18732072, 0.94994104, 1)
+z_index = 99
+position = Vector2(2463, 883)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.89266986
+flip_h = true
+
+[node name="BlackFish2" type="AnimatedSprite2D" parent="Fishes/Group1" unique_id=1748192289]
+modulate = Color(0.7942701, 0.47073758, 1.6197081, 1)
+z_index = 99
+position = Vector2(2511, 977)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.69640875
+flip_h = true
+
+[node name="BlackFish12" type="AnimatedSprite2D" parent="Fishes/Group1" unique_id=1008083414]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(2334, 993)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.71615577
+flip_h = true
+
+[node name="BlackFish3" type="AnimatedSprite2D" parent="Fishes/Group1" unique_id=1450165433]
+z_index = 99
+position = Vector2(2427, 1018)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.819359
+flip_h = true
+
+[node name="BlackFish4" type="AnimatedSprite2D" parent="Fishes/Group1" unique_id=2101162792]
+z_index = 99
+position = Vector2(2628, 916)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.26282996
+flip_h = true
+
+[node name="Group2" type="Node2D" parent="Fishes" unique_id=2050476399]
+
+[node name="BlackFish6" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=1643635444]
+modulate = Color(0.36453724, 1.7534367, 0.04669587, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(6820.9995, 123)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.763825
+flip_h = true
+
+[node name="BlackFish7" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=187445971]
+modulate = Color(0.39816886, 1.8984075, 0.05484819, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(7155.9995, 92)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.5799989
+flip_h = true
+
+[node name="BlackFish8" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=1040315698]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(6982.9995, 79)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.8179513
+flip_h = true
+
+[node name="BlackFish9" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=1154830199]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+position = Vector2(6692, 43)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.11060994
+flip_h = true
+
+[node name="BlackFish10" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=288733292]
+modulate = Color(1.5141732, 1.3348655, 3.1952447e-06, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(7417, -55)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.63382316
+flip_h = true
+
+[node name="BlackFish13" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=1356662709]
+modulate = Color(0.36508325, 1.33291, 0.04286361, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(6551, 89)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.36232844
+flip_h = true
+
+[node name="BlackFish14" type="AnimatedSprite2D" parent="Fishes/Group2" unique_id=1261443885]
+modulate = Color(1.0929723, 1.3117088, 0.3919851, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(6877, 57)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.13831411
+flip_h = true
+
+[node name="Group3" type="Node2D" parent="Fishes" unique_id=1495261443]
+
+[node name="BlackFish15" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=213243743]
+modulate = Color(0.36453724, 1.7534367, 0.04669587, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(10664, 967)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.8473006
+flip_h = true
+
+[node name="BlackFish16" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=989867641]
+modulate = Color(0.39816886, 1.8984075, 0.05484819, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(10924.341, 1030.5)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.6634893
+flip_h = true
+
+[node name="BlackFish17" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=1340545556]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(10751.341, 1017.5)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.9014243
+flip_h = true
+
+[node name="BlackFish18" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=604537552]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+position = Vector2(10591, 1017)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.19409461
+flip_h = true
+
+[node name="BlackFish19" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=701880012]
+modulate = Color(1.5141732, 1.3348655, 3.1952447e-06, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(10942, 956)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.7173084
+flip_h = true
+
+[node name="BlackFish20" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=750982183]
+modulate = Color(0.36508325, 1.33291, 0.04286361, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(10566.999, 908)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.4458221
+flip_h = true
+
+[node name="BlackFish21" type="AnimatedSprite2D" parent="Fishes/Group3" unique_id=1506560429]
+modulate = Color(1.0929723, 1.3117088, 0.3919851, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(10781, 966.00006)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.22179976
+flip_h = true
+
+[node name="Group4" type="Node2D" parent="Fishes" unique_id=693280359]
+
+[node name="BlackFish5" type="AnimatedSprite2D" parent="Fishes/Group4" unique_id=57662311]
+modulate = Color(6.1610274, 1.3781348, 0, 1)
+z_index = 99
+position = Vector2(12099.394, 100.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7950444
+flip_h = true
+
+[node name="BlackFish22" type="AnimatedSprite2D" parent="Fishes/Group4" unique_id=385729318]
+modulate = Color(6.1610274, 0.4508821, 0, 1)
+z_index = 99
+position = Vector2(11822, 11)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.57209414
+flip_h = true
+
+[node name="BlackFish23" type="AnimatedSprite2D" parent="Fishes/Group4" unique_id=2061089659]
+modulate = Color(6.1610274, 2.6027403, 0, 1)
+z_index = 99
+position = Vector2(11828.001, 83)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.3758422
+flip_h = true
+
+[node name="BlackFish24" type="AnimatedSprite2D" parent="Fishes/Group4" unique_id=1930719436]
+modulate = Color(6.1610274, 2.6720576, 0, 1)
+z_index = 99
+position = Vector2(11714, 96.00001)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.39558566
+flip_h = true
+
+[node name="BlackFish25" type="AnimatedSprite2D" parent="Fishes/Group4" unique_id=1079766781]
+modulate = Color(6.161, 1.921, 0, 1)
+z_index = 99
+position = Vector2(11770, 121)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.4987855
+flip_h = true
+
+[node name="BlackFish26" type="AnimatedSprite2D" parent="Fishes/Group4" unique_id=1135606369]
+modulate = Color(6.1611967, 1.9207352, 0, 1)
+z_index = 99
+position = Vector2(11991, 40)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.94226784
+flip_h = true
+
+[node name="Group5" type="Node2D" parent="Fishes" unique_id=986555991]
+
+[node name="BlackFish27" type="AnimatedSprite2D" parent="Fishes/Group5" unique_id=1716176248]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(15878.342, 999)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.18986614
+flip_h = true
+
+[node name="BlackFish29" type="AnimatedSprite2D" parent="Fishes/Group5" unique_id=124135938]
+modulate = Color(0.4900705, 0.18732072, 0.94994104, 1)
+z_index = 99
+position = Vector2(15592.342, 883)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.9669169
+flip_h = true
+
+[node name="BlackFish30" type="AnimatedSprite2D" parent="Fishes/Group5" unique_id=564995873]
+modulate = Color(0.7942701, 0.47073758, 1.6197081, 1)
+z_index = 99
+position = Vector2(15640.342, 977)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7706648
+flip_h = true
+
+[node name="BlackFish31" type="AnimatedSprite2D" parent="Fishes/Group5" unique_id=705410825]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(15463.342, 993)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7904087
+flip_h = true
+
+[node name="BlackFish32" type="AnimatedSprite2D" parent="Fishes/Group5" unique_id=1227018554]
+z_index = 99
+position = Vector2(15556.342, 1018)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.89360964
+flip_h = true
+
+[node name="BlackFish33" type="AnimatedSprite2D" parent="Fishes/Group5" unique_id=963813365]
+z_index = 99
+position = Vector2(15757.342, 916)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.3370897
+flip_h = true
+
+[node name="Group6" type="Node2D" parent="Fishes" unique_id=1965671637]
+
+[node name="BlackFish28" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=1797374164]
+modulate = Color(0.36453724, 1.7534367, 0.04669587, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(19950.342, 123)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.83807814
+flip_h = true
+
+[node name="BlackFish34" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=2010920644]
+modulate = Color(0.39816886, 1.8984075, 0.05484819, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20285.342, 92)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.65426546
+flip_h = true
+
+[node name="BlackFish35" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=50680866]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20112.342, 79)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.8922023
+flip_h = true
+
+[node name="BlackFish36" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=1476587504]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+position = Vector2(19821.342, 43)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.18487044
+flip_h = true
+
+[node name="BlackFish37" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=1668767023]
+modulate = Color(1.5141732, 1.3348655, 3.1952447e-06, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20546.342, -55)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.7080852
+flip_h = true
+
+[node name="BlackFish38" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=754495224]
+modulate = Color(0.36508325, 1.33291, 0.04286361, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(19680.342, 89)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.43659815
+flip_h = true
+
+[node name="BlackFish39" type="AnimatedSprite2D" parent="Fishes/Group6" unique_id=71573168]
+modulate = Color(1.0929723, 1.3117088, 0.3919851, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20006.342, 57)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.21257555
+flip_h = true
+
+[node name="Group7" type="Node2D" parent="Fishes" unique_id=1874451180]
+
+[node name="BlackFish40" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=1510874465]
+modulate = Color(6.161, 1.921, 0, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23793.342, 967)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.8473006
+flip_h = true
+
+[node name="BlackFish41" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=1806044506]
+modulate = Color(6.1610274, 1.07776, 0, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(24053.684, 1030.5)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.6634893
+flip_h = true
+
+[node name="BlackFish42" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=1925091918]
+modulate = Color(6.1610274, 1.3319232, 0, 1)
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23880.684, 1017.5)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.9014243
+flip_h = true
+
+[node name="BlackFish43" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=217555733]
+modulate = Color(6.1610274, 3.0417497, 0, 1)
+position = Vector2(23720.342, 1017)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.19409461
+flip_h = true
+
+[node name="BlackFish44" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=290366293]
+modulate = Color(6.161, 1.921, 0, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23957, 915.00006)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.7173084
+flip_h = true
+
+[node name="BlackFish45" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=115601823]
+modulate = Color(6.1610274, 2.3947883, 0, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23708, 945.00006)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.4458221
+flip_h = true
+
+[node name="BlackFish46" type="AnimatedSprite2D" parent="Fishes/Group7" unique_id=121634138]
+modulate = Color(6.1610274, 2.3716826, 0, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23910.342, 966.00006)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.22179976
+flip_h = true
+
+[node name="Group8" type="Node2D" parent="Fishes" unique_id=1000026356]
+
+[node name="BlackFish47" type="AnimatedSprite2D" parent="Fishes/Group8" unique_id=734632714]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(25228.734, 100.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7950444
+flip_h = true
+
+[node name="BlackFish48" type="AnimatedSprite2D" parent="Fishes/Group8" unique_id=1998214718]
+modulate = Color(0.4900705, 0.18732072, 0.94994104, 1)
+z_index = 99
+position = Vector2(24942.734, -15.139343)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.57209414
+flip_h = true
+
+[node name="BlackFish49" type="AnimatedSprite2D" parent="Fishes/Group8" unique_id=1302833953]
+modulate = Color(0.7942701, 0.47073758, 1.6197081, 1)
+z_index = 99
+position = Vector2(24990.734, 78.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.3758422
+flip_h = true
+
+[node name="BlackFish50" type="AnimatedSprite2D" parent="Fishes/Group8" unique_id=492261301]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(24813.734, 94.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.39558566
+flip_h = true
+
+[node name="BlackFish51" type="AnimatedSprite2D" parent="Fishes/Group8" unique_id=972451288]
+z_index = 99
+position = Vector2(24906.734, 119.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.4987855
+flip_h = true
+
+[node name="BlackFish52" type="AnimatedSprite2D" parent="Fishes/Group8" unique_id=885312109]
+z_index = 99
+position = Vector2(25107.734, 17.860657)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.94226784
+flip_h = true
+
+[node name="Group9" type="Node2D" parent="Fishes" unique_id=1760299227]
+
+[node name="BlackFish27" type="AnimatedSprite2D" parent="Fishes/Group9" unique_id=1359131394]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(23534.342, 1127.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.18986614
+flip_h = true
+
+[node name="BlackFish29" type="AnimatedSprite2D" parent="Fishes/Group9" unique_id=1079368995]
+modulate = Color(0.4900705, 0.18732072, 0.94994104, 1)
+z_index = 99
+position = Vector2(23248.342, 1011.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.9669169
+flip_h = true
+
+[node name="BlackFish30" type="AnimatedSprite2D" parent="Fishes/Group9" unique_id=1916718929]
+modulate = Color(0.7942701, 0.47073758, 1.6197081, 1)
+z_index = 99
+position = Vector2(23296.342, 1105.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7706648
+flip_h = true
+
+[node name="BlackFish31" type="AnimatedSprite2D" parent="Fishes/Group9" unique_id=1798722775]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(23119.342, 1121.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7904087
+flip_h = true
+
+[node name="BlackFish32" type="AnimatedSprite2D" parent="Fishes/Group9" unique_id=1491241948]
+z_index = 99
+position = Vector2(23212.342, 1146.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.89360964
+flip_h = true
+
+[node name="BlackFish33" type="AnimatedSprite2D" parent="Fishes/Group9" unique_id=1320213859]
+z_index = 99
+position = Vector2(23413.342, 1044.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.3370897
+flip_h = true
+
+[node name="Group10" type="Node2D" parent="Fishes" unique_id=2015931472]
+position = Vector2(3959, 42)
+
+[node name="BlackFish28" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=979263611]
+modulate = Color(0.36453724, 1.7534367, 0.04669587, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(19950.342, 123)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.83807814
+flip_h = true
+
+[node name="BlackFish34" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=1879621619]
+modulate = Color(0.39816886, 1.8984075, 0.05484819, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20285.342, 92)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.65426546
+flip_h = true
+
+[node name="BlackFish35" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=1072302263]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20112.342, 79)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.8922023
+flip_h = true
+
+[node name="BlackFish36" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=1084525752]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+position = Vector2(19821.342, 43)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.18487044
+flip_h = true
+
+[node name="BlackFish37" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=1255753917]
+modulate = Color(1.5141732, 1.3348655, 3.1952447e-06, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20546.342, -55)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.7080852
+flip_h = true
+
+[node name="BlackFish38" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=397432469]
+modulate = Color(0.36508325, 1.33291, 0.04286361, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(19680.342, 89)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.43659815
+flip_h = true
+
+[node name="BlackFish39" type="AnimatedSprite2D" parent="Fishes/Group10" unique_id=2012778919]
+modulate = Color(1.0929723, 1.3117088, 0.3919851, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(20006.342, 57)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.21257555
+flip_h = true
+
+[node name="Group11" type="Node2D" parent="Fishes" unique_id=1986126699]
+position = Vector2(2809, 193)
+
+[node name="BlackFish40" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=1593628913]
+modulate = Color(0.36453724, 1.7534367, 0.04669587, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23793.342, 967)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.8473006
+flip_h = true
+
+[node name="BlackFish41" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=1148424228]
+modulate = Color(0.39816886, 1.8984075, 0.05484819, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(24053.684, 1030.5)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.6634893
+flip_h = true
+
+[node name="BlackFish42" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=1135848332]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23880.684, 1017.5)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.9014243
+flip_h = true
+
+[node name="BlackFish43" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=149684042]
+modulate = Color(0.19933243, 1.0413129, 0.014167705, 1)
+position = Vector2(23720.342, 1017)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.19409461
+flip_h = true
+
+[node name="BlackFish44" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=501876514]
+modulate = Color(1.5141732, 1.3348655, 3.1952447e-06, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(24071.342, 956)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.7173084
+flip_h = true
+
+[node name="BlackFish45" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=1086445800]
+modulate = Color(0.36508325, 1.33291, 0.04286361, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23696.34, 908)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.4458221
+flip_h = true
+
+[node name="BlackFish46" type="AnimatedSprite2D" parent="Fishes/Group11" unique_id=1839076368]
+modulate = Color(1.0929723, 1.3117088, 0.3919851, 1)
+z_index = 99
+material = SubResource("ShaderMaterial_qw6k6")
+position = Vector2(23910.342, 966.00006)
+scale = Vector2(4.166461, 4.1664615)
+sprite_frames = SubResource("SpriteFrames_nu7y3")
+autoplay = "default"
+frame_progress = 0.22179976
+flip_h = true
+
+[node name="Group12" type="Node2D" parent="Fishes" unique_id=463758684]
+position = Vector2(3826, -2)
+
+[node name="BlackFish47" type="AnimatedSprite2D" parent="Fishes/Group12" unique_id=1534614428]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(25228.734, 100.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7950444
+flip_h = true
+
+[node name="BlackFish48" type="AnimatedSprite2D" parent="Fishes/Group12" unique_id=1570228851]
+modulate = Color(0.4900705, 0.18732072, 0.94994104, 1)
+z_index = 99
+position = Vector2(24942.734, -15.139343)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.57209414
+flip_h = true
+
+[node name="BlackFish49" type="AnimatedSprite2D" parent="Fishes/Group12" unique_id=2004744140]
+modulate = Color(0.7942701, 0.47073758, 1.6197081, 1)
+z_index = 99
+position = Vector2(24990.734, 78.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.3758422
+flip_h = true
+
+[node name="BlackFish50" type="AnimatedSprite2D" parent="Fishes/Group12" unique_id=38415128]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(24813.734, 94.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.39558566
+flip_h = true
+
+[node name="BlackFish51" type="AnimatedSprite2D" parent="Fishes/Group12" unique_id=582730741]
+z_index = 99
+position = Vector2(24906.734, 119.86066)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.4987855
+flip_h = true
+
+[node name="BlackFish52" type="AnimatedSprite2D" parent="Fishes/Group12" unique_id=1130201190]
+z_index = 99
+position = Vector2(25107.734, 17.860657)
+scale = Vector2(3.2953548, 3.295355)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.94226784
+flip_h = true
+
+[node name="Group13" type="Node2D" parent="Fishes" unique_id=1674416885]
+position = Vector2(3826, -2)
+
+[node name="BlackFish27" type="AnimatedSprite2D" parent="Fishes/Group13" unique_id=501555994]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(23534.342, 1127.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.18986614
+flip_h = true
+
+[node name="BlackFish29" type="AnimatedSprite2D" parent="Fishes/Group13" unique_id=564791114]
+modulate = Color(0.4900705, 0.18732072, 0.94994104, 1)
+z_index = 99
+position = Vector2(23248.342, 1011.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.9669169
+flip_h = true
+
+[node name="BlackFish30" type="AnimatedSprite2D" parent="Fishes/Group13" unique_id=1702874685]
+modulate = Color(0.7942701, 0.47073758, 1.6197081, 1)
+z_index = 99
+position = Vector2(23296.342, 1105.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7706648
+flip_h = true
+
+[node name="BlackFish31" type="AnimatedSprite2D" parent="Fishes/Group13" unique_id=269365048]
+modulate = Color(0.78067154, 0.36298332, 0.8498036, 1)
+z_index = 99
+position = Vector2(23119.342, 1121.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.7904087
+flip_h = true
+
+[node name="BlackFish32" type="AnimatedSprite2D" parent="Fishes/Group13" unique_id=363803415]
+z_index = 99
+position = Vector2(23212.342, 1146.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.89360964
+flip_h = true
+
+[node name="BlackFish33" type="AnimatedSprite2D" parent="Fishes/Group13" unique_id=1343710064]
+z_index = 99
+position = Vector2(23413.342, 1044.5)
+scale = Vector2(5.383333, 5.3833337)
+sprite_frames = SubResource("SpriteFrames_6j55q")
+autoplay = "default"
+frame_progress = 0.3370897
+flip_h = true
+
+[node name="Bushes" type="Parallax2D" parent="." unique_id=1444222397]

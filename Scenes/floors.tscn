@@ -1090,5 +1090,15 @@ position = Vector2(1958, 607)
 position = Vector2(37418, 499.99997)
 scale = Vector2(7, 7)
 
+[node name="main2" type="Sprite2D" parent="." unique_id=1250953544]
+position = Vector2(20162, -540)
+scale = Vector2(4, 4)
+texture = ExtResource("1_y6jeu")
+
+[node name="main3" type="Sprite2D" parent="." unique_id=1346173734]
+position = Vector2(20162, 1620)
+scale = Vector2(4, 4)
+texture = ExtResource("1_y6jeu")
+
 [connection signal="body_entered" from="ship_outside/ship_area" to="ship_outside" method="_on_ship_area_body_entered"]
 [connection signal="body_entered" from="boat/boat_area" to="boat" method="_on_area_2d_body_entered"]

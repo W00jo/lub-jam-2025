@@ -9,7 +9,7 @@ func _on_body_entered(body: Node2D) -> void:
 			print("URATOW-  EWWWW!!!")
 			guy.on_stinky_shield()
 			#Global.has_shield = true
-			Global.guy_speed = 380
+			#Global.guy_speed -= 100
 			queue_free()
 	elif body.is_in_group("Dolphin"):
 		print("Wykryty delfin. Mniam :3")

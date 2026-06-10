@@ -9,12 +9,12 @@ extends Node
 
 
 ###Bubble Skins
-const BUBBLE_BLACK = preload("uid://ib1fwy25d5t6")
-const BUBBLE_NORMAL = preload("uid://mk5uhqgt564w")
+const BUBBLE_BLACK = preload("res://Assets/Sprites/Characters/Bubble_guy/bubble_black.png")
+const BUBBLE_NORMAL = preload("res://Assets/Sprites/Characters/Bubble_guy/bubble_normal.png")
 
 ###Dolphine Skins
-const DOLPHINE_NORMAL = preload("uid://cqqgpjh1v41s3")
-const DOLPHINE_GAY = preload("uid://duduydtwj5thx")
+const DOLPHINE_NORMAL = preload("res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png")
+const DOLPHINE_GAY = preload("res://Assets/Sprites/Characters/Dolphin/dolphine_gay.png")
 
 #Nowe skiny dodajemy do tego aaraya
 var bubble_skins_aaray = [BUBBLE_NORMAL, BUBBLE_BLACK]
@@ -35,7 +35,7 @@ var guy_dead: bool = false
 var dolphin_dead: bool = false
 
 var guy_speed = 450
-var dolphin_speed = 430
+var dolphin_speed = 440
 var camera_speed = 360
 
 #Stare wartości = 380,370,200

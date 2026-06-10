@@ -9,6 +9,7 @@ var is_falling: bool = false # Jeśli aktualnie spada
 @onready var self_destruct_timer = $SelfDestructTimer # Żeby nie spadał nieskończoną ilość czasu
 @onready var sfx = $SFX
 
+@onready var shake: ColorRect = $"../../../../PathForCamera/FollowPath/Camera2D/Shake"
 
 
 func _physics_process(delta: float) -> void:
@@ -18,6 +19,7 @@ func _physics_process(delta: float) -> void:
 # Funkcja wykrywająca ziutka w bąblu
 func _on_trigger_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("BubbleGuy"):
+		shake.shake(1)
 		print("Wykryty chłop. Leciii...")
 		is_falling = true
 		self_destruct_timer.start()

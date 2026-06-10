@@ -11,10 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="9_5flq6"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="10_051s1"]
 [ext_resource type="PackedScene" uid="uid://caemcxcccavne" path="res://Scenes/booster.tscn" id="11_mtqcm"]
+[ext_resource type="Shader" uid="uid://chb71ycp5wfmg" path="res://Scenes/flash.gdshader" id="11_vn460"]
+[ext_resource type="Script" uid="uid://dgl8aq0gab7gm" path="res://Scripts/shake.gd" id="12_r8hce"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0bp2o"]
 shader = ExtResource("8_orbd0")
-shader_parameter/intensity = 1.0
+shader_parameter/frames = 4
+shader_parameter/speed = 5.0
 
 [sub_resource type="Curve2D" id="Curve2D_vn2uo"]
 _data = {
@@ -24,6 +27,14 @@ point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtqcm"]
 size = Vector2(338, 1215)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ca0bt"]
+shader = ExtResource("11_vn460")
+shader_parameter/hit_effect = 0.0
+shader_parameter/shake_intensity = 5.0
+shader_parameter/blink_color = Color(0.29411766, 1, 0.90588236, 1)
+shader_parameter/blink_intensity = 0.0
+shader_parameter/base_modulate = Color(1, 1, 1, 1)
 
 [node name="Level2" type="Node2D" unique_id=188927186]
 process_mode = 1
@@ -160,6 +171,14 @@ position = Vector2(-960, -540)
 [node name="camera_speed_up_collision" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/camera_speed_up" unique_id=1521327165]
 position = Vector2(1905, 539.5)
 shape = SubResource("RectangleShape2D_mtqcm")
+
+[node name="Shake" type="ColorRect" parent="PathForCamera/FollowPath/Camera2D" unique_id=1804360149]
+material = SubResource("ShaderMaterial_ca0bt")
+offset_left = -1018.1382
+offset_top = -577.44824
+offset_right = 1013.95654
+offset_bottom = 602.9519
+script = ExtResource("12_r8hce")
 
 [node name="Magnes" parent="." unique_id=832800389 instance=ExtResource("11_mtqcm")]
 position = Vector2(2916, 918.99994)

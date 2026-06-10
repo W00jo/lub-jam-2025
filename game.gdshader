@@ -1,14 +1,13 @@
 shader_type canvas_item;
 
-uniform sampler2D SCREEN_TEXTURE:hint_screen_texture;
-uniform float intensity : hint_range(0,1) = 1.0;
+uniform int frames = 4; // liczba klatek w poziomie
+uniform float speed = 5.0; // klatki na sekundę
 
-vec4 multiply(vec4 base, vec4 blend){
-	return base * blend;
-}
-
-void fragment()
-{
-  vec4 bg_color = texture( SCREEN_TEXTURE, SCREEN_UV );
-  COLOR.rgb = mix( COLOR, multiply(bg_color,COLOR), intensity ).rgb;
+void fragment() {
+    vec2 uv = UV;
+    // Obliczanie aktualnej klatki na podstawie czasu
+    float frame = floor(mod(TIME * speed, float(frames)));
+    // Przesunięcie UV do odpowiedniej klatki
+    uv.x = (uv.x + frame) / float(frames);
+    COLOR = texture(TEXTURE, uv);
 }

@@ -11,6 +11,8 @@ var has_landed: bool = false # Czy już dotknął "Floor"
 @onready var sfx = $SFX
 @onready var sprite: AnimatedSprite2D = $falling_obstacle_sprite
 
+@onready var shake: ColorRect = $"../../../PathForCamera/FollowPath/Camera2D/Shake"
+
 func _ready():
 	# Killbox i Collision_Obstacle domyślnie są wyłączone
 	collision_shape.disabled = true
@@ -30,10 +32,12 @@ func _on_trigger_area_body_entered(body: Node2D) -> void:
 		is_falling = true
 		sfx.play()
 		sprite.play("falling")
+		shake.shake(1)
 
 
 func _on_ground_detector_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Floor"):
+		shake.shake(3)
 		is_falling = false
 		has_landed = true
 		trigger_area.monitoring = false

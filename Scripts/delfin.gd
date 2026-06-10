@@ -12,6 +12,11 @@ extends CharacterBody2D
 var tween: Tween
 var tween_dymek: Tween
 
+const TRAIL = preload("uid://cfaybs4amf5c1")
+
+@onready var shake: ColorRect = $"../PathForCamera/FollowPath/Camera2D/Shake"
+
+
 func _ready() -> void:
 	add_to_group("Dolphin")
 	dolphin_sprite.texture = Global.dolphine_skin
@@ -41,8 +46,10 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		var target_v = direction * max(velocity.length(), speed)
 		velocity = velocity.move_toward(target_v, speed * delta * 10)
+		trail(1)
 		if velocity.length() > speed:
 			velocity = velocity.move_toward(velocity.normalized() * speed, speed * delta * 1.5)
+			trail(5)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed * delta * 1)
 		
@@ -56,6 +63,7 @@ func on_bump_kill():
 	Global.guy_win()
 
 func on_stinky():
+	shake.flash(Color(1,0.2,0.5,1))
 	tween = create_tween()
 	tween_dymek = create_tween()
 	tween_dymek.tween_property(dymek, "scale", Vector2(1,1), 0.5)
@@ -66,14 +74,14 @@ func on_stinky():
 func turn_pink():
 	dolphin_sprite.set_modulate(Color.DEEP_PINK)
 	dolphin_arm.set_modulate(Color.DEEP_PINK)
-	Global.dolphin_speed = 450
+	Global.dolphin_speed += 100
 	await get_tree().create_timer(4).timeout
 	tween = create_tween()
 	tween.tween_property(dolphin_sprite, "modulate" , Color.WHITE, 0.5)
 	await tween.finished
 	dolphin_sprite.set_modulate(Color.WHITE)
 	dolphin_arm.set_modulate(Color.WHITE)
-	Global.dolphin_speed = 370
+	Global.dolphin_speed -= 100
 
 
 func dymek_show():
@@ -83,3 +91,11 @@ func dymek_show():
 	tween_dymek.tween_property(dymek, "scale", Vector2(0,0), 0.5)
 	await tween_dymek.finished
 	dymek.set_scale(Vector2(0,0))
+	
+func trail(number):
+	for a in number:
+		var rand_pos = randf_range(-40,10)
+		var rand_pos1 = randf_range(-10,10)
+		var new_trail = TRAIL.instantiate()
+		new_trail.global_position = Vector2(dolphin_sprite.global_position.x+rand_pos,dolphin_sprite.global_position.y+rand_pos1)
+		Global.add_child(new_trail)

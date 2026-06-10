@@ -9,6 +9,12 @@ extends CharacterBody2D
 @onready var dymek = $DymekEw
 var tween: Tween
 var tween_dymek: Tween
+var close_to_death: bool = false
+
+@onready var shake: ColorRect = $"../PathForCamera/FollowPath/Camera2D/Shake"
+
+
+const TRAIL = preload("uid://cfaybs4amf5c1")
 
 func _ready() -> void:
 	guy_sprite.texture = Global.bubble_skin
@@ -26,9 +32,10 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(target_v, speed * delta * 5) #Można to 5 zmienić wtedy będzie się sterowało jak w bąblu
 		anim_tree["parameters/conditions/Idle"] = false
 		anim_tree["parameters/conditions/Swim"] = true
-		
+		trail(2)
 		if velocity.length() > speed:
 			velocity = velocity.move_toward(velocity.normalized() * speed, speed * delta * 1.5)
+			trail(5)
 
 		guy_sprite.flip_h = direction.x < 0
 	else:
@@ -40,6 +47,7 @@ func _physics_process(delta: float) -> void:
 	
 func _on_shield_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Bullet"):
+		shake.flash(Color(0.29,1,0.9,1))
 		anim_tree["parameters/conditions/Break_Bubble"] = true
 		sfx.play()
 		await get_tree().create_timer(1).timeout
@@ -51,6 +59,7 @@ func _on_shield_area_area_entered(area: Area2D) -> void:
 		anim_tree["parameters/conditions/Break_Bubble"] = false
 
 func on_got_shield():
+	shake.flash(Color(1,1,1,1))
 	Global.has_shield = true
 	anim_tree["parameters/conditions/Get_Bubble"] = true
 	short_on_air.stop()
@@ -59,6 +68,7 @@ func on_got_shield():
 	anim_tree["parameters/conditions/Get_Bubble"] = false
 
 func _on_short_on_air_timeout() -> void:
+	close_to_death = true
 	Global.guy_speed += 100
 	anim_tree["parameters/conditions/Close_To_Death"] = true
 	die_no_air.start()
@@ -79,6 +89,7 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 			Global.dolphin_win()
 
 func on_stinky():
+	shake.flash(Color(0.5,0.8,0.1,1))
 	tween = create_tween()
 	tween_dymek = create_tween()
 	tween_dymek.tween_property(dymek, "scale", Vector2(1.5, 1.5), 0.5)
@@ -105,7 +116,6 @@ func dymek_show():
 	tween_dymek.tween_property(dymek, "scale", Vector2(0,0), 0.5)
 	await tween_dymek.finished
 	dymek.set_scale(Vector2(0,0))
-	
 
 func on_stinky_shield():
 	on_got_shield()
@@ -119,3 +129,11 @@ func bubble_win(upright):
 	else:
 		tween1.tween_property(self, "position", Vector2(x+1500,y+50), 1)
 	set_process(false)
+
+func trail(number):
+	for a in number:
+		var rand_pos = randf_range(-20,20)
+		var rand_pos1 = randf_range(-20,20)
+		var new_trail = TRAIL.instantiate()
+		new_trail.global_position = Vector2(guy_sprite.global_position.x+rand_pos,guy_sprite.global_position.y+rand_pos1)
+		Global.add_child(new_trail)
