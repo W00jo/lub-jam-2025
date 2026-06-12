@@ -14,15 +14,15 @@ var gra_wystartowala: bool = false #
 
 func _ready():
 	if label_status_g1:
-		label_status_g1.text = "Kliknij W, aby być gotowym"
+		label_status_g1.text = "Kliknij E, aby być gotowym"
 	if label_status_g2:
-		label_status_g2.text = "Kliknij ⬆, aby być gotowym"
+		label_status_g2.text = "Kliknij ENTER, aby być gotowym"
 	if label_glowny_status:
 		label_glowny_status.text = "Czekanie na graczy..."
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("BubbleUp"):
+	if event.is_action_pressed("BubbleReady"):
 		g1_gotowy = !g1_gotowy
 		if g1_gotowy:
 			if label_status_g1:
@@ -30,20 +30,20 @@ func _input(event: InputEvent) -> void:
 				label_status_g1.modulate = Color.GREEN
 		else:
 			if label_status_g1:
-				label_status_g1.text = "Kliknij W, aby być gotowym"
+				label_status_g1.text = "Kliknij E, aby być gotowym"
 				label_status_g1.modulate = Color.WHITE
 		sprawdz_czy_start()
 
 
-	if event.is_action_pressed("DolphinUp"):
+	if event.is_action_pressed("DolphinReady"):
 		g2_gotowy = !g2_gotowy
 		if g2_gotowy:
 			if label_status_g2:
-				label_status_g2.text = "----Gracz 2 GOTOWY!----"
+				label_status_g2.text = "------Gracz 2 GOTOWY!------"
 				label_status_g2.modulate = Color.GREEN
 		else:
 			if label_status_g2: 
-				label_status_g2.text = "Kliknij ⬆, aby być gotowym"
+				label_status_g2.text = "Kliknij ENTER, aby być gotowym"
 				label_status_g2.modulate = Color.WHITE
 		sprawdz_czy_start()
 
@@ -66,9 +66,9 @@ func odliczanie_i_start():
 			if g1_gotowy == false or g2_gotowy == false:
 				label_glowny_status.text = "Czekanie na graczy..."
 				return
-		label_status_g2.text = "Kliknij ⬆, aby być gotowym"
+		label_status_g2.text = "Kliknij ENTER, aby być gotowym"
 		label_status_g2.modulate = Color.WHITE
-		label_status_g1.text = "Kliknij W, aby być gotowym"
+		label_status_g1.text = "Kliknij E, aby być gotowym"
 		label_status_g1.modulate = Color.WHITE
 		label_glowny_status.text = "Czekanie na graczy..."
 		g1_gotowy = false

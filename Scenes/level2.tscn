@@ -7,21 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://cphod0ydvo8ke" path="res://Scenes/shield_bubble.tscn" id="5_r8hce"]
 [ext_resource type="PackedScene" uid="uid://d3jkfuc0bhhh0" path="res://Scenes/stinky_bubble.tscn" id="6_ca0bt"]
 [ext_resource type="PackedScene" uid="uid://brsj11mvkc6fj" path="res://Scenes/side.tscn" id="7_yj6rp"]
-[ext_resource type="Shader" uid="uid://dbs0slpb7yx6l" path="res://game.gdshader" id="8_orbd0"]
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="9_5flq6"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="10_051s1"]
 [ext_resource type="PackedScene" uid="uid://caemcxcccavne" path="res://Scenes/booster.tscn" id="11_mtqcm"]
-[ext_resource type="Shader" uid="uid://chb71ycp5wfmg" path="res://Scenes/flash.gdshader" id="11_vn460"]
-[ext_resource type="Script" uid="uid://dgl8aq0gab7gm" path="res://Scripts/shake.gd" id="12_r8hce"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bp2o"]
-shader = ExtResource("8_orbd0")
-shader_parameter/frames = 4
-shader_parameter/speed = 5.0
+[ext_resource type="Shader" path="res://Scenes/flash.gdshader" id="11_vn460"]
+[ext_resource type="Script" path="res://Scripts/shake.gd" id="12_r8hce"]
+[ext_resource type="PackedScene" uid="uid://cjg7mmc0teprh" path="res://Scenes/parallax_foreground.tscn" id="13_vn460"]
 
 [sub_resource type="Curve2D" id="Curve2D_vn2uo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2, 18.35977, 0, 0, 0, 0, 38385, 18.35977)
+"points": PackedVector2Array(0, 0, 0, 0, 2, 18.35977, 0, 0, 0, 0, 37029, 17.913284)
 }
 point_count = 2
 
@@ -123,25 +118,12 @@ position = Vector2(30916, 227)
 [node name="StinkyBubble4" parent="stinky_bubbles" unique_id=1909018363 instance=ExtResource("6_ca0bt")]
 position = Vector2(34823, 851)
 
-[node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
-visible = false
-material = SubResource("ShaderMaterial_0bp2o")
-layout_direction = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40322.0
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.48669803, 0.43853337, 0.26804268, 0.44313726)
-
 [node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("9_5flq6")]
-position = Vector2(2632, 806)
+position = Vector2(3069, 683)
 collision_mask = 15
 
 [node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("10_051s1")]
-position = Vector2(2711, 136)
+position = Vector2(2651, 550)
 scale = Vector2(2, 2)
 collision_mask = 15
 
@@ -173,6 +155,7 @@ position = Vector2(1905, 539.5)
 shape = SubResource("RectangleShape2D_mtqcm")
 
 [node name="Shake" type="ColorRect" parent="PathForCamera/FollowPath/Camera2D" unique_id=1804360149]
+visible = false
 material = SubResource("ShaderMaterial_ca0bt")
 offset_left = -1018.1382
 offset_top = -577.44824
@@ -180,18 +163,40 @@ offset_right = 1013.95654
 offset_bottom = 602.9519
 script = ExtResource("12_r8hce")
 
-[node name="Magnes" parent="." unique_id=832800389 instance=ExtResource("11_mtqcm")]
-position = Vector2(2916, 918.99994)
+[node name="Boosters" type="Node2D" parent="." unique_id=1748179096]
+
+[node name="booster4" parent="Boosters" unique_id=832800389 instance=ExtResource("11_mtqcm")]
+position = Vector2(3364, 961.99994)
 rotation = 1.4767572
 
-[node name="Magnes2" parent="." unique_id=605066214 instance=ExtResource("11_mtqcm")]
-position = Vector2(4200, 918)
+[node name="booster" parent="Boosters" unique_id=605066214 instance=ExtResource("11_mtqcm")]
+position = Vector2(9933, 117.000015)
 rotation = 1.5673846
+scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Magnes3" parent="." unique_id=2103606516 instance=ExtResource("11_mtqcm")]
-position = Vector2(5254, 908.99994)
-rotation = 1.4767572
+[node name="booster2" parent="Boosters" unique_id=2103606516 instance=ExtResource("11_mtqcm")]
+position = Vector2(14185, 766)
+rotation = 1.548065
 
-[node name="Magnes4" parent="." unique_id=1373260598 instance=ExtResource("11_mtqcm")]
-position = Vector2(6538, 908)
+[node name="booster3" parent="Boosters" unique_id=1373260598 instance=ExtResource("11_mtqcm")]
+position = Vector2(23853, 190.99988)
 rotation = 1.5673846
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="booster5" parent="Boosters" unique_id=471275461 instance=ExtResource("11_mtqcm")]
+position = Vector2(28375.998, 286.9999)
+rotation = 1.5673846
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="booster6" parent="Boosters" unique_id=1430579707 instance=ExtResource("11_mtqcm")]
+position = Vector2(24242, 719)
+rotation = -1.582467
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="booster7" parent="Boosters" unique_id=858718964 instance=ExtResource("11_mtqcm")]
+position = Vector2(24260.002, 559.00006)
+rotation = -1.582467
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="ParalaxForeground" parent="." unique_id=56706474 instance=ExtResource("13_vn460")]
+modulate = Color(2.2623272, 1.4537852, 2.929, 1)

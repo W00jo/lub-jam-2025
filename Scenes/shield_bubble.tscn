@@ -77,6 +77,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ual84"]
 radius = 61.86376
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ual84"]
+size = Vector2(69, 1127.5)
+
 [node name="shield_bubble" type="Area2D" unique_id=1085672759 groups=["ShieldBubble"]]
 script = ExtResource("1_miaed")
 
@@ -92,4 +95,14 @@ visible = false
 position = Vector2(0.249999, 0.25)
 shape = SubResource("CircleShape2D_ual84")
 
+[node name="change" type="Timer" parent="." unique_id=1505775353]
+
+[node name="for_player" type="Area2D" parent="." unique_id=249342588]
+
+[node name="for_player_coll" type="CollisionShape2D" parent="for_player" unique_id=125974196]
+position = Vector2(-492, -2.25)
+shape = SubResource("RectangleShape2D_ual84")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="change" to="." method="_on_change_timeout"]
+[connection signal="body_entered" from="for_player" to="." method="_on_for_player_body_entered"]

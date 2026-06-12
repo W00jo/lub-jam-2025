@@ -104,7 +104,6 @@ size = Vector2(40380, 182)
 [node name="ParalaxForeground" type="Node2D" unique_id=56706474]
 
 [node name="Fishes" type="Parallax2D" parent="." unique_id=1029255194]
-visible = false
 top_level = true
 z_index = 99
 scroll_scale = Vector2(2, 2)

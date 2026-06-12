@@ -1,7 +1,64 @@
 [gd_scene format=3 uid="uid://caemcxcccavne"]
 
-[ext_resource type="Script" uid="uid://cyedn2tim8fjp" path="res://Scripts/booster.gd" id="1_tf3vi"]
-[ext_resource type="Texture2D" uid="uid://dtnhi7rhpfs5t" path="res://icon.svg" id="2_o0tsq"]
+[ext_resource type="Script" path="res://Scripts/booster.gd" id="1_tf3vi"]
+[ext_resource type="Texture2D" uid="uid://c33t222vookgf" path="res://Assets/Sprites/Interactive/boost.png" id="2_tf3vi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0tsq"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(0, 0, 150, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntnxt"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(150, 0, 150, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_geh36"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(300, 0, 150, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2alu"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(450, 0, 150, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoqm6"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(600, 0, 150, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edbhv"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(750, 0, 150, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2bdw"]
+atlas = ExtResource("2_tf3vi")
+region = Rect2(900, 0, 150, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sirjk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0tsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntnxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_geh36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2alu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoqm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edbhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2bdw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2xbq"]
 size = Vector2(172, 567)
@@ -9,8 +66,13 @@ size = Vector2(172, 567)
 [node name="booster" type="Node2D" unique_id=832800389]
 script = ExtResource("1_tf3vi")
 
-[node name="magnes_sprite" type="Sprite2D" parent="." unique_id=1414219380]
-texture = ExtResource("2_o0tsq")
+[node name="magnes_sprite" type="AnimatedSprite2D" parent="." unique_id=1651164161]
+position = Vector2(3, -281)
+rotation = -1.5707964
+scale = Vector2(3.777205, 3.777205)
+sprite_frames = SubResource("SpriteFrames_sirjk")
+autoplay = "default"
+frame_progress = 0.38193733
 
 [node name="Magnes_area" type="Area2D" parent="." unique_id=1674145971]
 position = Vector2(0, -65)

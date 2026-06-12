@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://brsj11mvkc6fj" path="res://Scenes/side.tscn" id="7_wwu6c"]
 [ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="9_esggg"]
 [ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="10_nolpu"]
-[ext_resource type="Shader" uid="uid://chb71ycp5wfmg" path="res://Scenes/flash.gdshader" id="11_d1mwp"]
+[ext_resource type="Shader" path="res://Scenes/flash.gdshader" id="11_d1mwp"]
 [ext_resource type="PackedScene" uid="uid://cjg7mmc0teprh" path="res://Scenes/parallax_foreground.tscn" id="11_rqhku"]
-[ext_resource type="Script" uid="uid://dgl8aq0gab7gm" path="res://Scripts/shake.gd" id="12_u1b78"]
+[ext_resource type="Script" path="res://Scripts/shake.gd" id="12_u1b78"]
 
 [sub_resource type="Curve2D" id="Curve2D_bs12r"]
 _data = {
@@ -101,7 +101,7 @@ position = Vector2(10381, 560)
 position = Vector2(12763, 739)
 
 [node name="StinkyBubble5" parent="stinky_bubbles" unique_id=919177387 instance=ExtResource("6_bdr3p")]
-position = Vector2(1428, 563)
+position = Vector2(1021, 647)
 
 [node name="ShieldBubble4" parent="stinky_bubbles" unique_id=40370348 instance=ExtResource("5_u1b78")]
 position = Vector2(15132, 225)

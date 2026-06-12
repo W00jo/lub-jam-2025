@@ -141,6 +141,9 @@ animations = [{
 radius = 18.25
 height = 52.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkb76"]
+size = Vector2(69, 1127.5)
+
 [node name="StinkyBubble" type="Area2D" unique_id=956967720 groups=["ShieldBubble", "StinkyBubble"]]
 modulate = Color(0.7834406, 0.99999994, 0.7514134, 1)
 scale = Vector2(2, 2)
@@ -156,4 +159,15 @@ visible = false
 position = Vector2(-4.25, 1.5)
 shape = SubResource("CapsuleShape2D_dkb76")
 
+[node name="change" type="Timer" parent="." unique_id=430017832]
+wait_time = 2.0
+
+[node name="for_player" type="Area2D" parent="." unique_id=993053053]
+
+[node name="for_player_coll" type="CollisionShape2D" parent="for_player" unique_id=2120375234]
+position = Vector2(-492, -2.25)
+shape = SubResource("RectangleShape2D_dkb76")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="change" to="." method="_on_change_timeout"]
+[connection signal="body_entered" from="for_player" to="." method="_on_for_player_body_entered"]
