@@ -85,9 +85,10 @@ position = Vector2(1.0000038, 1.0000038)
 scale = Vector2(4.0625, 4.0625)
 sprite_frames = SubResource("SpriteFrames_va5w5")
 autoplay = "default"
-frame_progress = 0.38307872
+frame_progress = 0.5757757
 
 [node name="shield_bubble_collision" type="CollisionShape2D" parent="." unique_id=1709810925]
+visible = false
 position = Vector2(0.249999, 0.25)
 shape = SubResource("CircleShape2D_ual84")
 

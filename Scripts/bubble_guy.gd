@@ -32,10 +32,10 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(target_v, speed * delta * 5) #Można to 5 zmienić wtedy będzie się sterowało jak w bąblu
 		anim_tree["parameters/conditions/Idle"] = false
 		anim_tree["parameters/conditions/Swim"] = true
-		trail(2)
+		trail(1)
 		if velocity.length() > speed:
 			velocity = velocity.move_toward(velocity.normalized() * speed, speed * delta * 1.5)
-			trail(5)
+			#trail(5)
 
 		guy_sprite.flip_h = direction.x < 0
 	else:

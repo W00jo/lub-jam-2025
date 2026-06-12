@@ -1,5 +1,9 @@
 extends Node2D
 
+func _physics_process(delta: float) -> void:
+	#position.x += 100 * delta
+	pass
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("BubbleGuy"):
 		print("Wykryty chłop. Ewww :<")

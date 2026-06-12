@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hg7f7x82640v"]
 
 [ext_resource type="Texture2D" uid="uid://gaujy2r4ye6g" path="res://Assets/Sprites/Background/MorzeTlo.png" id="1_4c3oa"]
-[ext_resource type="Texture2D" uid="uid://bl17ckq5fcuow" path="res://Assets/Sprites/Background/parallax_long.png" id="2_0lpmf"]
+[ext_resource type="Texture2D" uid="uid://daeg0tv3wu4j8" path="res://Assets/Sprites/Background/parallax_2_long.png" id="2_4c3oa"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" unique_id=1163747396]
 
@@ -21,7 +21,7 @@ motion_mirroring = Vector2(11520, 0)
 [node name="Sprite2D" type="Sprite2D" parent="cave" unique_id=1134111795]
 position = Vector2(5760, 540)
 scale = Vector2(4, 4)
-texture = ExtResource("2_0lpmf")
+texture = ExtResource("2_4c3oa")
 
 [node name="Timer" type="Timer" parent="." unique_id=749810066]
 wait_time = 17.0

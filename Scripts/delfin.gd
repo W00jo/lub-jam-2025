@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 		trail(1)
 		if velocity.length() > speed:
 			velocity = velocity.move_toward(velocity.normalized() * speed, speed * delta * 1.5)
-			trail(5)
+			#trail(5)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed * delta * 1)
 		

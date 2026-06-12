@@ -142,16 +142,17 @@ radius = 18.25
 height = 52.0
 
 [node name="StinkyBubble" type="Area2D" unique_id=956967720 groups=["ShieldBubble", "StinkyBubble"]]
-modulate = Color(0.6627451, 1, 0.6156863, 1)
+modulate = Color(0.7834406, 0.99999994, 0.7514134, 1)
 scale = Vector2(2, 2)
 script = ExtResource("1_2odtd")
 
 [node name="stinky_bubble_sprite" type="AnimatedSprite2D" parent="." unique_id=2147462806]
 sprite_frames = SubResource("SpriteFrames_oruom")
 autoplay = "default"
-frame_progress = 0.57483083
+frame_progress = 0.7463669
 
 [node name="stinky_bubble_area_collision" type="CollisionShape2D" parent="." unique_id=1819998562]
+visible = false
 position = Vector2(-4.25, 1.5)
 shape = SubResource("CapsuleShape2D_dkb76")
 
