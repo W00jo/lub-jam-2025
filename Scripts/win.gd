@@ -1,15 +1,25 @@
 extends Control
 
 @onready var game = get_tree().root.get_node('Game')
-@onready var win_texture = $WinTexture
-@onready var punktacja: Label = $VBoxContainer/punktacja
+@onready var punktacja: Label = $punktacja
+@onready var w_delfin: Label = $WygranyDelfin
+@onready var w_ziutek: Label = $WygranyZiutek
+@onready var dolphine: Sprite2D = $WygranyDelfin/dolphine
+@onready var bubble: Sprite2D = $WygranyZiutek/bubble
 
 func _ready() -> void:
-	punktacja.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
+	punktacja.text = "Dolphine : " + str(Global.save_data.dolphin_score) + " 
+	Bubble : " + str(Global.save_data.bubble_score)
 	if Global.dolphin_dead == true or Global.guy_saved == true:
-		win_texture.texture = preload("res://Assets/Sprites/Menu/win_bubble_guy.png")
+		w_delfin.visible = false
+		w_ziutek.visible = true
+		bubble.texture = Global.bubble_skin
+		
 	if Global.guy_dead == true:
-		win_texture.texture = preload("res://Assets/Sprites/Menu/win_dolphin.png")
+		w_delfin.visible = true
+		w_ziutek.visible = false
+		dolphine.texture = Global.dolphine_skin
+		
 	$VBoxContainer/Restart.grab_focus()
 
 func _on_exit_button_pressed() -> void:

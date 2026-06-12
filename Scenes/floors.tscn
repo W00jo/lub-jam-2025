@@ -24,6 +24,9 @@
 [ext_resource type="PackedScene" uid="uid://008pn0vyrnyc" path="res://Scenes/ZolteRybki.tscn" id="19_13rxq"]
 [ext_resource type="PackedScene" uid="uid://7juupnnmnluv" path="res://Scenes/SzareRyby.tscn" id="20_1tpmh"]
 [ext_resource type="PackedScene" uid="uid://ce8ebklcondor" path="res://Scenes/Linka.tscn" id="21_w6cm7"]
+[ext_resource type="Texture2D" uid="uid://cbdd551be5edw" path="res://Assets/Sprites/Enviroment/shell_0.png" id="25_t44ee"]
+[ext_resource type="Texture2D" uid="uid://cutolmcwvgnxi" path="res://Assets/Sprites/Enviroment/shell_1.png" id="26_f7kj2"]
+[ext_resource type="Texture2D" uid="uid://bfmcdb4ir5y5k" path="res://Assets/Sprites/Enviroment/shell_2.png" id="27_howja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hp6e"]
 size = Vector2(44.787598, 1033)
@@ -399,7 +402,6 @@ position = Vector2(-199.69531, 116.035126)
 shape = SubResource("RectangleShape2D_0hp6e")
 
 [node name="Sprites" type="Node2D" parent="." unique_id=1786917041]
-visible = false
 
 [node name="GlonZKolegamiTop3" type="Sprite2D" parent="Sprites" unique_id=624853365]
 position = Vector2(15066, 818)
@@ -717,7 +719,7 @@ position = Vector2(28206, 153)
 position = Vector2(17797, 335)
 
 [node name="FallingObstacles14" parent="falling_obstacles" unique_id=1652561331 instance=ExtResource("19_3nukd")]
-position = Vector2(15698, 148)
+position = Vector2(15712, 131)
 
 [node name="FallingObstacles15" parent="falling_obstacles" unique_id=232517847 instance=ExtResource("13_vs76o")]
 position = Vector2(13760, 133)
@@ -731,7 +733,7 @@ position = Vector2(6444, 387)
 [node name="Dmg" type="Node" parent="falling_obstacles" unique_id=1078752117]
 
 [node name="FallingRock9" parent="falling_obstacles/Dmg" unique_id=469458580 instance=ExtResource("3_titvf")]
-position = Vector2(1237, 84)
+position = Vector2(3371, 538)
 
 [node name="FallingRock2" parent="falling_obstacles/Dmg" unique_id=732573867 instance=ExtResource("4_376lc")]
 position = Vector2(5286, 71)
@@ -1126,6 +1128,66 @@ texture = ExtResource("1_y6jeu")
 position = Vector2(20162, 1620)
 scale = Vector2(4, 4)
 texture = ExtResource("1_y6jeu")
+
+[node name="Shell0" type="Sprite2D" parent="." unique_id=1281864853]
+position = Vector2(4896, 883)
+scale = Vector2(2.1751037, 2.1751037)
+texture = ExtResource("25_t44ee")
+
+[node name="Shell1" type="Sprite2D" parent="." unique_id=1036949446]
+position = Vector2(4960.0005, 907)
+scale = Vector2(2.1751037, 2.1751037)
+texture = ExtResource("26_f7kj2")
+
+[node name="Shell2" type="Sprite2D" parent="." unique_id=1272497454]
+position = Vector2(4920, 929)
+scale = Vector2(2.1751037, 2.1751037)
+texture = ExtResource("27_howja")
+
+[node name="Shell3" type="Sprite2D" parent="." unique_id=500549516]
+position = Vector2(5015, 889)
+scale = Vector2(2.1751037, 2.1751037)
+texture = ExtResource("25_t44ee")
+
+[node name="Shell4" type="Sprite2D" parent="." unique_id=89963456]
+position = Vector2(5118, 958.00006)
+scale = Vector2(2.1751037, 2.1751037)
+texture = ExtResource("26_f7kj2")
+
+[node name="Shell6" type="Sprite2D" parent="." unique_id=756931665]
+position = Vector2(7590.8374, 132.83719)
+scale = Vector2(1.8546494, 1.8546494)
+texture = ExtResource("25_t44ee")
+
+[node name="Shell7" type="Sprite2D" parent="." unique_id=2092438534]
+position = Vector2(7846.8374, 228.83722)
+scale = Vector2(1.8546494, 1.8546494)
+texture = ExtResource("26_f7kj2")
+
+[node name="Shell8" type="Sprite2D" parent="." unique_id=1022717440]
+position = Vector2(7686.8374, 316.83722)
+scale = Vector2(1.8546503, 1.8546503)
+texture = ExtResource("27_howja")
+
+[node name="Shell9" type="Sprite2D" parent="." unique_id=2084609131]
+position = Vector2(8066.8374, 156.83722)
+scale = Vector2(1.8546494, 1.8546494)
+texture = ExtResource("25_t44ee")
+
+[node name="Shell10" type="Sprite2D" parent="." unique_id=1289055805]
+position = Vector2(8478.838, 432.83722)
+scale = Vector2(1.8546494, 1.8546494)
+texture = ExtResource("26_f7kj2")
+
+[node name="Shell11" type="Sprite2D" parent="." unique_id=632056188]
+position = Vector2(7694.8374, 508.83722)
+scale = Vector2(1.8546503, 1.8546503)
+texture = ExtResource("27_howja")
+
+[node name="Shell5" type="Sprite2D" parent="." unique_id=484298443]
+position = Vector2(4922, 977)
+scale = Vector2(2.1751037, 2.1751037)
+texture = ExtResource("27_howja")
 
 [connection signal="body_entered" from="ship_outside/ship_area" to="ship_outside" method="_on_ship_area_body_entered"]
 [connection signal="body_entered" from="boat/boat_area" to="boat" method="_on_area_2d_body_entered"]

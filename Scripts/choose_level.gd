@@ -10,9 +10,11 @@ const LEVEL_2 = preload("uid://b8cumjm4mkugu")
 @onready var grandpa = $"../../.." #ustawia gre ponad menu
 @onready var score: Label = $score
 
+@onready var bubble_sprite_skin: Sprite2D = $ReadyUp/Ready/PanelGracz1/TextureRect1
+@onready var dolphine_sprite_skin: Sprite2D = $ReadyUp/Ready/PanelGracz2/TextureRect2
 
-@onready var bubble_sprite_skin: Sprite2D = $ChangeSkin/BubbleSpriteSkin
-@onready var dolphine_sprite_skin: Sprite2D = $ChangeSkin/DolphineSpriteSkin
+@onready var label_status: Label = $ReadyUp/LabelStatus
+@onready var ready_up: Control = $ReadyUp
 
 
 
@@ -22,23 +24,39 @@ var bubble_max_skin : int = 1
 var dolphine_aktualny_skin : int = 0
 var dolphine_max_skin : int = 1
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
+
 
 
 
 func _on_level1_pressed() -> void:
 	Global.choosedLevel = LEVEL_1
+	ready_up.sprawdz_czy_start()
 
 func _on_level2_pressed() -> void:
 	Global.choosedLevel = LEVEL_2
+	ready_up.sprawdz_czy_start()
+	
+func _on_level3_pressed() -> void:
+	#Global.choosedLevel = LEVEL_3
+	ready_up.sprawdz_czy_start()
 
 func _on_back_pressed() -> void:
 	closed.emit()
 	visible = false
 
+
+
+
 func _on_play_pressed() -> void:
+	if Global.choosedLevel != null:
+		var map = Global.choosedLevel.instantiate()
+		grandpa.add_child(map)
+		grandpa.move_child(map,0)
+		visible = false
+		menu.visible = false
+		get_tree().paused = false
+
+func game_start() -> void:
 	if Global.choosedLevel != null:
 		var map = Global.choosedLevel.instantiate()
 		grandpa.add_child(map)
@@ -53,6 +71,9 @@ func _on_reset_score_pressed() -> void:
 	Global.save_data.dolphin_score = 0
 	Global.save_data.save()
 	score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
+
+
+
 
 
 func bubble_skin_change():

@@ -29,19 +29,18 @@ func _process(_delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	#if game.INPUT_SCHEME == game.INPUT_SCHEMES.KEYBOARD_AND_MOUSE:
-	if event.is_action_pressed("Shoot"):
-		if Global.has_bullet == true:
-			anim_tree["parameters/conditions/Start_AIM"] = true
-			await get_tree().create_timer(0.1).timeout
-			anim_tree["parameters/conditions/Start_AIM"] = false
-			aim_line.add_point(aim_line.position, 0)
-			var end_aim = Vector2(aim_line.position.x + 200, aim_line.position.y)
-			aim_line.add_point(end_aim, 1)
-			await get_tree().create_timer(1).timeout
-			canshoot = true
-			Global.dolphin_speed -= 50
+	if event.is_action_pressed("Shoot") and Global.has_bullet == true and canshoot == false:
+		anim_tree["parameters/conditions/Start_AIM"] = true
+		await get_tree().create_timer(0.01).timeout
+		anim_tree["parameters/conditions/Start_AIM"] = false
+		aim_line.add_point(aim_line.position, 0)
+		var end_aim = Vector2(aim_line.position.x + 200, aim_line.position.y)
+		aim_line.add_point(end_aim, 1)
+		await get_tree().create_timer(1).timeout
+		canshoot = true
+		Global.dolphin_speed -= 30
 			
-	if event.is_action_released("Shoot"):
+	if event.is_action_released("Shoot") and canshoot == true:
 		aim_line.clear_points()
 		if Global.has_bullet == true and canshoot == true:
 			var new_bullet = bullet.instantiate()
@@ -53,8 +52,10 @@ func _input(event: InputEvent) -> void:
 			await get_tree().create_timer(0.1).timeout
 			anim_tree["parameters/conditions/Stop_AIM"] = false
 			canshoot = false
-			Global.dolphin_speed += 50
-	
+			Global.dolphin_speed += 30
+		elif event.is_action_released("Shoot") and canshoot == false:
+			pass
+			
 	
 	
 	# sterowanie pod pada ^ wyżej trzeba dać ifa

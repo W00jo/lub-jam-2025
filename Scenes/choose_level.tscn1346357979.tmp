@@ -5,11 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://gaujy2r4ye6g" path="res://Assets/Sprites/Background/MorzeTlo.png" id="2_jbd2j"]
 [ext_resource type="Texture2D" uid="uid://c66qtxem05tgf" path="res://Assets/Sprites/Menu/levels_splasharts/2level.png" id="2_yise3"]
 [ext_resource type="Texture2D" uid="uid://mk5uhqgt564w" path="res://Assets/Sprites/Characters/Bubble_guy/bubble_normal.png" id="5_bji3q"]
-[ext_resource type="Texture2D" uid="uid://cndn0gvk5pdc5" path="res://Assets/Sprites/Menu/levels_splasharts/3level.png" id="5_sfpaf"]
 [ext_resource type="Texture2D" uid="uid://cqqgpjh1v41s3" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="6_jbd2j"]
 [ext_resource type="FontFile" uid="uid://dat77hi8xiw80" path="res://Assets/Fonts/ari-w9500-condensed-display.ttf" id="7_qs2gy"]
 [ext_resource type="FontFile" uid="uid://jhevv75oplm1" path="res://Assets/Fonts/ari-w9500-display.ttf" id="8_qnqc6"]
 [ext_resource type="Script" uid="uid://dx7o30kjgs5vk" path="res://Scripts/lobby.gd" id="8_sfpaf"]
+[ext_resource type="Texture2D" uid="uid://bj344bfsr7h5o" path="res://Assets/Sprites/Characters/speech_ballon_ew.png" id="9_i4pw5"]
+[ext_resource type="Texture2D" uid="uid://co41hbgc4xi2p" path="res://Assets/Sprites/Characters/Dolphin/dart_collect.png" id="11_osus2"]
 
 [node name="choose_level" type="Control" unique_id=198497191]
 layout_mode = 3
@@ -39,10 +40,6 @@ texture_normal = ExtResource("1_tyk5r")
 layout_mode = 2
 texture_normal = ExtResource("2_yise3")
 
-[node name="3Level" type="TextureButton" parent="VBoxContainer" unique_id=626914177]
-layout_mode = 2
-texture_normal = ExtResource("5_sfpaf")
-
 [node name="back" type="Button" parent="." unique_id=395675455]
 layout_mode = 0
 offset_left = 21.0
@@ -53,29 +50,35 @@ text = "Back"
 
 [node name="play" type="Button" parent="." unique_id=602341916]
 layout_mode = 0
-offset_left = 500.0
-offset_top = 18.0
-offset_right = 541.0
-offset_bottom = 49.0
+offset_left = 1107.0
+offset_top = 348.0
+offset_right = 1148.0
+offset_bottom = 379.0
 text = "Play"
 
 [node name="reset_score" type="Button" parent="." unique_id=1968255786]
 layout_mode = 0
-offset_left = 571.0
-offset_top = 19.0
-offset_right = 686.0
-offset_bottom = 50.0
+offset_left = 1066.0
+offset_top = 145.0
+offset_right = 1181.0
+offset_bottom = 176.0
 text = "Resetuj wynik"
 
 [node name="score" type="Label" parent="." unique_id=1965018891]
 layout_mode = 0
-offset_left = 546.0
-offset_top = 58.0
-offset_right = 594.0
-offset_bottom = 81.0
+offset_left = 1038.0
+offset_top = 73.0
+offset_right = 1086.0
+offset_bottom = 96.0
 text = "Wynik"
 
 [node name="ChangeSkin" type="Node2D" parent="." unique_id=1986003665]
+
+[node name="BubbleSpriteSkin" type="Sprite2D" parent="ChangeSkin" unique_id=1994083617]
+position = Vector2(948, 606.82513)
+scale = Vector2(1.700393, 1.700393)
+texture = ExtResource("5_bji3q")
+hframes = 60
 
 [node name="Bubble" type="HBoxContainer" parent="ChangeSkin" unique_id=1324181047]
 offset_left = 873.0
@@ -94,6 +97,13 @@ text = "Bubble Man"
 [node name="BubbleSkinRight" type="Button" parent="ChangeSkin/Bubble" unique_id=777890379]
 layout_mode = 2
 text = ">"
+
+[node name="DolphineSpriteSkin" type="Sprite2D" parent="ChangeSkin" unique_id=208897022]
+position = Vector2(1255, 599.82513)
+scale = Vector2(1.700393, 1.700393)
+texture = ExtResource("6_jbd2j")
+hframes = 94
+frame = 83
 
 [node name="Dolphine" type="HBoxContainer" parent="ChangeSkin" unique_id=1540461385]
 offset_left = 1180.0
@@ -115,10 +125,8 @@ text = ">"
 
 [node name="ReadyUp" type="Control" parent="." unique_id=1179671342]
 anchors_preset = 0
-offset_left = 835.0
-offset_top = 79.0
-offset_right = 875.0
-offset_bottom = 119.0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("8_sfpaf")
 
 [node name="Ready" type="HBoxContainer" parent="ReadyUp" unique_id=1465387598]
@@ -146,11 +154,12 @@ theme_override_fonts/font = ExtResource("7_qs2gy")
 theme_override_font_sizes/font_size = 70
 text = "Player 1 "
 
-[node name="TextureRect1" type="Sprite2D" parent="ReadyUp/Ready/PanelGracz1" unique_id=1400931919]
-position = Vector2(179, 474)
-scale = Vector2(2.328125, 2.328125)
-texture = ExtResource("5_bji3q")
-hframes = 60
+[node name="TextureRect1" type="TextureRect" parent="ReadyUp/Ready/PanelGracz1" unique_id=417718803]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture = ExtResource("9_i4pw5")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="LabelGotow1" type="Label" parent="ReadyUp/Ready/PanelGracz1" unique_id=2076082012]
 layout_mode = 2
@@ -168,12 +177,12 @@ theme_override_fonts/font = ExtResource("7_qs2gy")
 theme_override_font_sizes/font_size = 70
 text = "Player 2 "
 
-[node name="TextureRect2" type="Sprite2D" parent="ReadyUp/Ready/PanelGracz2" unique_id=604332977]
-position = Vector2(90, 473)
-scale = Vector2(1.9140625, 1.9140625)
-texture = ExtResource("6_jbd2j")
-hframes = 94
-frame = 83
+[node name="TextureRect2" type="TextureRect" parent="ReadyUp/Ready/PanelGracz2" unique_id=250526538]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_osus2")
+stretch_mode = 5
 
 [node name="LabelGotow2" type="Label" parent="ReadyUp/Ready/PanelGracz2" unique_id=490033459]
 layout_mode = 2
@@ -188,10 +197,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -57.0
-offset_top = 638.0
-offset_right = 570.0
-offset_bottom = 695.0
+offset_left = 788.0
+offset_top = 759.64
+offset_right = 1415.0
+offset_bottom = 816.64
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("7_qs2gy")
@@ -199,8 +208,6 @@ theme_override_font_sizes/font_size = 56
 
 [connection signal="pressed" from="VBoxContainer/1Level" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="VBoxContainer/2Level" to="." method="_on_level2_pressed"]
-[connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level_pressed"]
-[connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level3_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="reset_score" to="." method="_on_reset_score_pressed"]

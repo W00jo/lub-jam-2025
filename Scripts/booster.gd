@@ -14,7 +14,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if boost_bolphine_bool == true:
 		var push_dir = (boost_dolphin.global_position - global_position).normalized()
-		boost_dolphin.velocity += push_dir * 1100 * delta
+		boost_dolphin.velocity += push_dir * 1600 * delta
 		
 	if boost_bubble_bool == true:
 		var push_dir = (boost_bubble.global_position - global_position).normalized()
@@ -26,7 +26,7 @@ func _on_magnes_area_body_entered(body: Node2D) -> void:
 		boost_bubble_bool = true
 		boost_bubble = body
 		set_physics_process(true)
-		#atraction_buble = true
+
 	elif body.is_in_group("Dolphin"):
 		boost_bolphine_bool = true
 		boost_dolphin = body
