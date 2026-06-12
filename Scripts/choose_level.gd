@@ -1,5 +1,7 @@
 extends Control
 
+signal closed
+
 const LEVEL_1 = preload("uid://dycaivlgy07q")
 const LEVEL_2 = preload("uid://b8cumjm4mkugu")
 
@@ -33,6 +35,7 @@ func _on_level2_pressed() -> void:
 	Global.choosedLevel = LEVEL_2
 
 func _on_back_pressed() -> void:
+	closed.emit()
 	visible = false
 
 func _on_play_pressed() -> void:
