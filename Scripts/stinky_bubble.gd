@@ -20,11 +20,13 @@ func _on_body_entered(body: Node2D) -> void:
 			#Global.has_shield = true
 			#Global.guy_speed -= 100
 			queue_free()
+		else:
+			queue_free()
 	elif body.is_in_group("Dolphin"):
 		print("Wykryty delfin. Mniam :3")
 		var dolphin = get_tree().get_first_node_in_group("Dolphin")
 		dolphin.on_stinky()
-	queue_free()
+		queue_free()
 
 
 func _on_change_timeout() -> void:

@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ceskn772iert0" path="res://Scripts/win.gd" id="1_wre44"]
 [ext_resource type="Texture2D" uid="uid://fojuwcqxqbfq" path="res://Assets/Sprites/Menu/levels_splasharts/Tlo-export.png" id="2_611cj"]
-[ext_resource type="FontFile" uid="uid://cy6pde7bq75qs" path="res://Assets/Fonts/GrapeSoda.ttf" id="3_3xxyo"]
-[ext_resource type="Texture2D" uid="uid://ccw1td6tgyi3e" path="res://Assets/Sprites/Menu/przycisk.png" id="3_g1l0l"]
+[ext_resource type="FontFile" uid="uid://ci32fy1yayfy0" path="res://Assets/Fonts/GrapeSoda.ttf" id="3_3xxyo"]
+[ext_resource type="Texture2D" uid="uid://cnwhwfqmtfifi" path="res://Assets/Sprites/Menu/przycisk.png" id="3_g1l0l"]
+[ext_resource type="Theme" uid="uid://gn5ot8inm3ki" path="res://Assets/Fonts/end_screen_theme.tres" id="3_liiam"]
+[ext_resource type="Texture2D" uid="uid://mk5uhqgt564w" path="res://Assets/Sprites/Characters/Bubble_guy/bubble_normal.png" id="5_ru4ub"]
+[ext_resource type="Texture2D" uid="uid://cqqgpjh1v41s3" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="6_liiam"]
 
 [node name="Win" type="Control" unique_id=658718630]
 process_mode = 3
@@ -23,7 +26,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_wre44")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537950394]
+[node name="art" type="Sprite2D" parent="." unique_id=537950394]
 position = Vector2(-7, 3)
 scale = Vector2(4.0125, 4)
 texture = ExtResource("2_611cj")
@@ -34,8 +37,7 @@ offset_left = 8.0
 offset_top = -381.0
 offset_right = 925.0
 offset_bottom = -209.0
-theme_override_fonts/font = ExtResource("3_3xxyo")
-theme_override_font_sizes/font_size = 126
+theme = ExtResource("3_liiam")
 text = "WYGRAŁ"
 horizontal_alignment = 1
 
@@ -45,10 +47,16 @@ offset_left = 8.0
 offset_top = -273.0
 offset_right = 925.0
 offset_bottom = -101.0
-theme_override_fonts/font = ExtResource("3_3xxyo")
-theme_override_font_sizes/font_size = 126
+theme = ExtResource("3_liiam")
 text = "Deflin"
 horizontal_alignment = 1
+
+[node name="dolphine" type="Sprite2D" parent="WygranyDelfin" unique_id=691762449]
+position = Vector2(506, 388)
+scale = Vector2(5.1484375, 5.1484375)
+texture = ExtResource("6_liiam")
+hframes = 94
+frame = 82
 
 [node name="WygranyZiutek" type="Label" parent="." unique_id=618250622]
 visible = false
@@ -57,28 +65,33 @@ offset_left = 8.0
 offset_top = -273.0
 offset_right = 925.0
 offset_bottom = -101.0
-theme_override_fonts/font = ExtResource("3_3xxyo")
-theme_override_font_sizes/font_size = 126
+theme = ExtResource("3_liiam")
 text = "Bubble Guy"
 horizontal_alignment = 1
 
-[node name="WinTexture" type="TextureRect" parent="." unique_id=1029466361]
+[node name="bubble" type="Sprite2D" parent="WygranyZiutek" unique_id=1706965890]
+position = Vector2(483, 393)
+scale = Vector2(7.046875, 7.046875)
+texture = ExtResource("5_ru4ub")
+hframes = 60
+
+[node name="punktacja" type="Label" parent="." unique_id=1294815753]
 layout_mode = 0
-offset_left = -670.0
-offset_top = -356.0
-offset_right = 680.0
-offset_bottom = 356.0
+offset_left = -719.0
+offset_top = -384.0
+offset_right = 198.0
+offset_bottom = -127.0
+theme = ExtResource("3_liiam")
+text = "Bubble : 67
+Delfin : 69"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=233191262]
 layout_mode = 0
-offset_left = -767.0
-offset_top = -245.99997
-offset_right = 150.0
-offset_bottom = 722.0
+offset_left = -719.0
+offset_top = -104.999985
+offset_right = 198.0
+offset_bottom = 863.0
 scale = Vector2(0.58, 0.58)
-
-[node name="punktacja" type="Label" parent="VBoxContainer" unique_id=1294815753]
-layout_mode = 2
 
 [node name="Restart" type="Button" parent="VBoxContainer" unique_id=1681612985]
 layout_mode = 2

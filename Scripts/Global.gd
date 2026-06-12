@@ -34,9 +34,15 @@ var has_shield: bool = true
 var guy_dead: bool = false
 var dolphin_dead: bool = false
 
+# Trzeba pamietac o zmianie w dwoch miejscach
+# TODO: Dodać zmienną która jest bazowa predkoscia, a potem zmienna ktora jest bazowa predkosc + modyfiaktor
+var base_guy_speed = 450
+var base_dolphine_speed = 450
+var base_camera_speed = 340
+
 var guy_speed = 450
-var dolphin_speed = 440
-var camera_speed = 360
+var dolphin_speed = 450
+var camera_speed = 340
 
 #Stare wartości = 380,370,200
 
@@ -88,5 +94,6 @@ func on_restart():
 	has_shield = true
 	guy_dead = false
 	dolphin_dead = false
-	guy_speed = 380
-	dolphin_speed = 370
+	guy_speed = base_guy_speed
+	dolphin_speed = base_dolphine_speed
+	camera_speed = base_camera_speed

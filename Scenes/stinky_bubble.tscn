@@ -165,7 +165,7 @@ wait_time = 2.0
 [node name="for_player" type="Area2D" parent="." unique_id=993053053]
 
 [node name="for_player_coll" type="CollisionShape2D" parent="for_player" unique_id=2120375234]
-position = Vector2(-492, -2.25)
+position = Vector2(-383.5, -2.25)
 shape = SubResource("RectangleShape2D_dkb76")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

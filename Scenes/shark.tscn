@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bujkdsg00jto8"]
+
+[ext_resource type="Script" uid="uid://bkufh4w5xahpo" path="res://Scenes/shark.gd" id="1_87kak"]
+[ext_resource type="Texture2D" uid="uid://b31ax0t8yuusu" path="res://Assets/Sprites/Interactive/Shark.png" id="2_87kak"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_87kak"]
+radius = 129.0
+height = 398.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cb72u"]
+size = Vector2(92, 1678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87kak"]
+size = Vector2(40.27382, 22.645454)
+
+[node name="Shark" type="Node2D" unique_id=1324800761]
+script = ExtResource("1_87kak")
+
+[node name="Shart_sprite" type="Sprite2D" parent="." unique_id=1441034742]
+position = Vector2(95, -34)
+scale = Vector2(2.6352649, 2.6352649)
+texture = ExtResource("2_87kak")
+
+[node name="dmg_area" type="Area2D" parent="." unique_id=1898967483]
+
+[node name="dmg_coll" type="CollisionShape2D" parent="dmg_area" unique_id=1022743397]
+position = Vector2(2, 1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_87kak")
+
+[node name="start_move" type="Area2D" parent="." unique_id=1454855786]
+
+[node name="start_move_coll" type="CollisionShape2D" parent="start_move" unique_id=1339825870]
+position = Vector2(-1464, 144)
+shape = SubResource("RectangleShape2D_cb72u")
+
+[node name="stop_move" type="Area2D" parent="." unique_id=88347085]
+
+[node name="stop_move_coll" type="CollisionShape2D" parent="stop_move" unique_id=315612647]
+position = Vector2(4213, 194.00003)
+rotation = 3.1415927
+scale = Vector2(22.825, -110)
+shape = SubResource("RectangleShape2D_87kak")
+
+[connection signal="body_entered" from="dmg_area" to="." method="_on_dmg_area_body_entered"]
+[connection signal="body_entered" from="start_move" to="." method="_on_start_move_body_entered"]
+[connection signal="body_entered" from="stop_move" to="." method="_on_stop_move_body_entered"]

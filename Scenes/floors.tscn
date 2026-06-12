@@ -719,7 +719,7 @@ position = Vector2(28206, 153)
 position = Vector2(17797, 335)
 
 [node name="FallingObstacles14" parent="falling_obstacles" unique_id=1652561331 instance=ExtResource("19_3nukd")]
-position = Vector2(15698, 148)
+position = Vector2(15712, 131)
 
 [node name="FallingObstacles15" parent="falling_obstacles" unique_id=232517847 instance=ExtResource("13_vs76o")]
 position = Vector2(13760, 133)
@@ -733,7 +733,7 @@ position = Vector2(6444, 387)
 [node name="Dmg" type="Node" parent="falling_obstacles" unique_id=1078752117]
 
 [node name="FallingRock9" parent="falling_obstacles/Dmg" unique_id=469458580 instance=ExtResource("3_titvf")]
-position = Vector2(1237, 84)
+position = Vector2(3371, 538)
 
 [node name="FallingRock2" parent="falling_obstacles/Dmg" unique_id=732573867 instance=ExtResource("4_376lc")]
 position = Vector2(5286, 71)

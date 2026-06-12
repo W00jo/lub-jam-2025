@@ -20,7 +20,10 @@ _data = {
 point_count = 12
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqgf2"]
-size = Vector2(338, 1215)
+size = Vector2(272.7334, 1215)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpkqv"]
+size = Vector2(303.9394, 1263.0082)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bdr3p"]
 shader = ExtResource("11_d1mwp")
@@ -89,7 +92,7 @@ position = Vector2(34583, 948)
 [node name="stinky_bubbles" type="Node2D" parent="." unique_id=689855314]
 
 [node name="ShieldBubble" parent="stinky_bubbles" unique_id=206720843 instance=ExtResource("5_u1b78")]
-position = Vector2(1295, 416)
+position = Vector2(1893, 741)
 
 [node name="StinkyBubble" parent="stinky_bubbles" unique_id=1745118559 instance=ExtResource("6_bdr3p")]
 position = Vector2(7316, 969)
@@ -101,7 +104,7 @@ position = Vector2(10381, 560)
 position = Vector2(12763, 739)
 
 [node name="StinkyBubble5" parent="stinky_bubbles" unique_id=919177387 instance=ExtResource("6_bdr3p")]
-position = Vector2(1021, 647)
+position = Vector2(1994, 602)
 
 [node name="ShieldBubble4" parent="stinky_bubbles" unique_id=40370348 instance=ExtResource("5_u1b78")]
 position = Vector2(15132, 225)
@@ -138,6 +141,57 @@ position = Vector2(30767, 699)
 
 [node name="StinkyBubble12" parent="stinky_bubbles" unique_id=131805628 instance=ExtResource("6_bdr3p")]
 position = Vector2(34771, 647)
+
+[node name="StinkyBubble13" parent="stinky_bubbles" unique_id=1794026172 instance=ExtResource("6_bdr3p")]
+position = Vector2(7747, 743)
+
+[node name="StinkyBubble14" parent="stinky_bubbles" unique_id=1272192356 instance=ExtResource("6_bdr3p")]
+position = Vector2(10168, 870)
+
+[node name="StinkyBubble15" parent="stinky_bubbles" unique_id=809538228 instance=ExtResource("6_bdr3p")]
+position = Vector2(12250, 748)
+
+[node name="StinkyBubble16" parent="stinky_bubbles" unique_id=970495382 instance=ExtResource("6_bdr3p")]
+position = Vector2(13114, 172)
+
+[node name="StinkyBubble17" parent="stinky_bubbles" unique_id=707228986 instance=ExtResource("6_bdr3p")]
+position = Vector2(13761, 764)
+
+[node name="StinkyBubble18" parent="stinky_bubbles" unique_id=134312795 instance=ExtResource("6_bdr3p")]
+position = Vector2(16996, 354)
+
+[node name="StinkyBubble19" parent="stinky_bubbles" unique_id=1951052949 instance=ExtResource("6_bdr3p")]
+position = Vector2(18376, 890)
+
+[node name="StinkyBubble20" parent="stinky_bubbles" unique_id=644291279 instance=ExtResource("6_bdr3p")]
+position = Vector2(18770, 647)
+
+[node name="StinkyBubble21" parent="stinky_bubbles" unique_id=2132730027 instance=ExtResource("6_bdr3p")]
+position = Vector2(21070, 673)
+
+[node name="StinkyBubble22" parent="stinky_bubbles" unique_id=1082245349 instance=ExtResource("6_bdr3p")]
+position = Vector2(24669, 435)
+
+[node name="StinkyBubble23" parent="stinky_bubbles" unique_id=112827430 instance=ExtResource("6_bdr3p")]
+position = Vector2(25812, 729)
+
+[node name="StinkyBubble24" parent="stinky_bubbles" unique_id=236648236 instance=ExtResource("6_bdr3p")]
+position = Vector2(29334, 673)
+
+[node name="StinkyBubble25" parent="stinky_bubbles" unique_id=1633040250 instance=ExtResource("6_bdr3p")]
+position = Vector2(31796, 465)
+
+[node name="StinkyBubble26" parent="stinky_bubbles" unique_id=450121664 instance=ExtResource("6_bdr3p")]
+position = Vector2(31912, 688)
+
+[node name="StinkyBubble27" parent="stinky_bubbles" unique_id=1126331337 instance=ExtResource("6_bdr3p")]
+position = Vector2(34156, 845)
+
+[node name="StinkyBubble28" parent="stinky_bubbles" unique_id=2550320 instance=ExtResource("6_bdr3p")]
+position = Vector2(2016, 762)
+
+[node name="StinkyBubble29" parent="stinky_bubbles" unique_id=209012242 instance=ExtResource("6_bdr3p")]
+position = Vector2(2110, 738)
 
 [node name="Shader" type="ColorRect" parent="." unique_id=1407960332]
 visible = false
@@ -182,10 +236,21 @@ position = Vector2(-960, -540)
 
 [node name="camera_speed_up" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=879184771]
 position = Vector2(-960, -540)
+collision_layer = 255
+collision_mask = 255
 
 [node name="camera_speed_up_collision" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/camera_speed_up" unique_id=798272550]
-position = Vector2(1905, 539.5)
+position = Vector2(1872.367, 539.5)
 shape = SubResource("RectangleShape2D_oqgf2")
+
+[node name="player_slowdown" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=1528770175]
+collision_layer = 255
+collision_mask = 255
+
+[node name="player_slowodwn_coll" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/player_slowdown" unique_id=1991962678]
+position = Vector2(1203.8477, -12.476082)
+shape = SubResource("RectangleShape2D_cpkqv")
+debug_color = Color(0.95075256, 4.6205523e-06, 0.5694639, 0.41960785)
 
 [node name="Shake" type="ColorRect" parent="PathForCamera/FollowPath/Camera2D" unique_id=340898322]
 material = SubResource("ShaderMaterial_bdr3p")
@@ -195,7 +260,18 @@ offset_right = 1013.95654
 offset_bottom = 602.9519
 script = ExtResource("12_u1b78")
 
+[node name="Label" type="Label" parent="PathForCamera/FollowPath/Camera2D" unique_id=1819362766]
+offset_left = -763.06494
+offset_top = -424.55634
+offset_right = -615.2924
+offset_bottom = -312.3521
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+
 [node name="ParallaxForeground" parent="." unique_id=1029255194 instance=ExtResource("11_rqhku")]
 
 [connection signal="body_entered" from="PathForCamera/FollowPath/Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_entered"]
 [connection signal="body_exited" from="PathForCamera/FollowPath/Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_exited"]
+[connection signal="body_entered" from="PathForCamera/FollowPath/Camera2D/player_slowdown" to="." method="_on_player_slowdown_body_entered"]

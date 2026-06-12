@@ -100,7 +100,7 @@ shape = SubResource("CircleShape2D_ual84")
 [node name="for_player" type="Area2D" parent="." unique_id=249342588]
 
 [node name="for_player_coll" type="CollisionShape2D" parent="for_player" unique_id=125974196]
-position = Vector2(-492, -2.25)
+position = Vector2(-376, -2.25)
 shape = SubResource("RectangleShape2D_ual84")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

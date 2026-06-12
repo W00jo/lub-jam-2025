@@ -12,7 +12,7 @@ extends CharacterBody2D
 var tween: Tween
 var tween_dymek: Tween
 
-const TRAIL = preload("uid://cfaybs4amf5c1")
+const TRAIL = preload("res://Scenes/trail.tscn")
 
 @onready var shake: ColorRect = $"../PathForCamera/FollowPath/Camera2D/Shake"
 

@@ -389,7 +389,7 @@ texture = ExtResource("11_35tmu")
 [node name="AlgaePurple" type="Sprite2D" parent="Sprites" unique_id=670423594]
 modulate = Color(1, 0.9843137, 0, 1)
 z_index = 1
-position = Vector2(2738, 1277)
+position = Vector2(3244, 951)
 texture = ExtResource("13_mrfmo")
 
 [node name="AlgaeRed1" type="Sprite2D" parent="Sprites" unique_id=1334162536]
@@ -1438,6 +1438,28 @@ position = Vector2(50.99944, 0)
 
 [node name="CollisionShape2D" parent="WinDlaBubble/Win" index="0"]
 position = Vector2(-52.713726, 0.28578568)
+
+[node name="AlgaePurple" type="Sprite2D" parent="." unique_id=1194414086]
+modulate = Color(1, 0.9843137, 0, 1)
+z_index = 1
+position = Vector2(31354, 952)
+texture = ExtResource("13_mrfmo")
+
+[node name="Bones" type="Sprite2D" parent="." unique_id=1571805321]
+position = Vector2(32251.002, 349)
+scale = Vector2(4.421875, 4.421875)
+texture = ExtResource("7_td73l")
+
+[node name="Bones2" type="Sprite2D" parent="." unique_id=329079731]
+position = Vector2(31277, 107)
+scale = Vector2(5.859375, 5.859375)
+texture = ExtResource("7_td73l")
+
+[node name="Bones3" type="Sprite2D" parent="." unique_id=1544609371]
+position = Vector2(30538.002, 302.99896)
+rotation = 2.6717646
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("7_td73l")
 
 [connection signal="body_entered" from="ship_outside/ship_area" to="ship_outside" method="_on_ship_area_body_entered"]
 [connection signal="body_entered" from="boat/boat_area" to="boat" method="_on_area_2d_body_entered"]

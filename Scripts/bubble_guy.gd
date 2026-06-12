@@ -14,7 +14,7 @@ var close_to_death: bool = false
 @onready var shake: ColorRect = $"../PathForCamera/FollowPath/Camera2D/Shake"
 
 
-const TRAIL = preload("uid://cfaybs4amf5c1")
+const TRAIL = preload("res://Scenes/trail.tscn")
 
 func _ready() -> void:
 	guy_sprite.texture = Global.bubble_skin
@@ -137,3 +137,11 @@ func trail(number):
 		var new_trail = TRAIL.instantiate()
 		new_trail.global_position = Vector2(guy_sprite.global_position.x+rand_pos,guy_sprite.global_position.y+rand_pos1)
 		Global.add_child(new_trail)
+
+func death():
+	anim_tree["parameters/conditions/Break_Bubble"] = true
+	anim_tree["parameters/conditions/Close_To_Death"] = true
+	anim_tree["parameters/conditions/Death"] = true
+	Global.guy_dead = true
+	await get_tree().create_timer(2).timeout
+	Global.dolphin_win()

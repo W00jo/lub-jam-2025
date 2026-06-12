@@ -199,8 +199,8 @@ theme_override_font_sizes/font_size = 56
 
 [connection signal="pressed" from="VBoxContainer/1Level" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="VBoxContainer/2Level" to="." method="_on_level2_pressed"]
-[connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level3_pressed"]
 [connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level3_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="reset_score" to="." method="_on_reset_score_pressed"]
