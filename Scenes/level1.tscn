@@ -38,6 +38,7 @@ process_mode = 1
 script = ExtResource("1_bs12r")
 
 [node name="ParallaxBackground" parent="." unique_id=2018645508 instance=ExtResource("2_rqhku")]
+visible = false
 
 [node name="Floors" parent="." unique_id=2067477129 instance=ExtResource("3_cpkqv")]
 collision_mask = 1
@@ -45,7 +46,7 @@ collision_mask = 1
 [node name="darts" type="Node2D" parent="." unique_id=1631039573]
 
 [node name="CollectibleBullet" parent="darts" unique_id=1056659637 instance=ExtResource("4_d1mwp")]
-position = Vector2(1073, 540)
+position = Vector2(1804, 153)
 
 [node name="CollectibleBullet2" parent="darts" unique_id=1930457876 instance=ExtResource("4_d1mwp")]
 position = Vector2(2895, 200)
@@ -92,7 +93,7 @@ position = Vector2(34583, 948)
 [node name="stinky_bubbles" type="Node2D" parent="." unique_id=689855314]
 
 [node name="ShieldBubble" parent="stinky_bubbles" unique_id=206720843 instance=ExtResource("5_u1b78")]
-position = Vector2(1893, 741)
+position = Vector2(2277, 399)
 
 [node name="StinkyBubble" parent="stinky_bubbles" unique_id=1745118559 instance=ExtResource("6_bdr3p")]
 position = Vector2(7316, 969)
@@ -102,9 +103,6 @@ position = Vector2(10381, 560)
 
 [node name="StinkyBubble2" parent="stinky_bubbles" unique_id=1767326909 instance=ExtResource("6_bdr3p")]
 position = Vector2(12763, 739)
-
-[node name="StinkyBubble5" parent="stinky_bubbles" unique_id=919177387 instance=ExtResource("6_bdr3p")]
-position = Vector2(1994, 602)
 
 [node name="ShieldBubble4" parent="stinky_bubbles" unique_id=40370348 instance=ExtResource("5_u1b78")]
 position = Vector2(15132, 225)
@@ -187,9 +185,6 @@ position = Vector2(31912, 688)
 [node name="StinkyBubble27" parent="stinky_bubbles" unique_id=1126331337 instance=ExtResource("6_bdr3p")]
 position = Vector2(34156, 845)
 
-[node name="StinkyBubble28" parent="stinky_bubbles" unique_id=2550320 instance=ExtResource("6_bdr3p")]
-position = Vector2(2016, 762)
-
 [node name="StinkyBubble29" parent="stinky_bubbles" unique_id=209012242 instance=ExtResource("6_bdr3p")]
 position = Vector2(2110, 738)
 
@@ -206,15 +201,16 @@ grow_vertical = 2
 color = Color(0.13333334, 0.30980393, 0.56078434, 0.05490196)
 
 [node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("9_esggg")]
-position = Vector2(937, 338)
+position = Vector2(970, 241)
 collision_mask = 15
 
 [node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("10_nolpu")]
-position = Vector2(737, 530)
+position = Vector2(471, 674)
 scale = Vector2(2, 2)
 collision_mask = 15
 
 [node name="PathForCamera" type="Path2D" parent="." unique_id=538014896]
+visible = false
 position = Vector2(-2, -19)
 scale = Vector2(1, 1.0606654)
 curve = SubResource("Curve2D_bs12r")
