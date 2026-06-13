@@ -277,6 +277,7 @@ offset_bottom = 602.9519
 script = ExtResource("12_r8hce")
 
 [node name="Label" type="Label" parent="PathForCamera/FollowPath/Camera2D" unique_id=1188273033]
+visible = false
 offset_left = -763.06494
 offset_top = -424.55634
 offset_right = -615.2924

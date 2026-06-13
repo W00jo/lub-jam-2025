@@ -16,7 +16,7 @@ const LEVEL_2 = preload("uid://b8cumjm4mkugu")
 @onready var label_status: Label = $ReadyUp/LabelStatus
 @onready var ready_up: Control = $ReadyUp
 
-
+@onready var back_btn = $Back
 
 var bubble_aktualny_skin : int = 0
 var bubble_max_skin : int = 1
@@ -24,9 +24,8 @@ var bubble_max_skin : int = 1
 var dolphine_aktualny_skin : int = 0
 var dolphine_max_skin : int = 1
 
-
-
-
+func _ready() -> void:
+	back_btn.popped.connect(_on_back_pressed)
 
 func _on_level1_pressed() -> void:
 	Global.choosedLevel = LEVEL_1
@@ -43,8 +42,6 @@ func _on_level3_pressed() -> void:
 func _on_back_pressed() -> void:
 	closed.emit()
 	visible = false
-
-
 
 
 func _on_play_pressed() -> void:

@@ -2,10 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://buk3j3hyeayy1" path="res://Assets/Sprites/Menu/menu_sheet.png" id="1_els47"]
 [ext_resource type="Script" uid="uid://c7bb3xedfme4t" path="res://Scripts/menu.gd" id="1_id2h2"]
-[ext_resource type="Texture2D" uid="uid://b2pa8uiptnl6m" path="res://Assets/Sprites/Menu/button_play.png" id="3_6swd7"]
-[ext_resource type="Texture2D" uid="uid://brya0rnq02d3" path="res://Assets/Sprites/Menu/button_options.png" id="3_je75w"]
-[ext_resource type="Texture2D" uid="uid://c4y5iwp5kgegb" path="res://Assets/Sprites/Menu/button_credits.png" id="4_xysjh"]
-[ext_resource type="Texture2D" uid="uid://irlwesee0wd0" path="res://Assets/Sprites/Menu/button_exit.png" id="5_2rcsb"]
+[ext_resource type="Theme" uid="uid://bv3lnxn0vbmo8" path="res://Assets/Fonts/ui.tres" id="3_7qvly"]
+[ext_resource type="Script" uid="uid://i2vgmuxqiav8" path="res://Scenes/bubble_button.gd" id="3_rfqti"]
+[ext_resource type="Texture2D" uid="uid://cqs3hwogt56to" path="res://bubble_button_sheet.png" id="4_g8i7c"]
 [ext_resource type="Texture2D" uid="uid://bpnrb0n1h16c8" path="res://Assets/Sprites/Menu/title_screen.png" id="7_6ulg6"]
 [ext_resource type="Texture2D" uid="uid://3tukb0wu60td" path="res://Assets/Sprites/Interactive/konduktorzy_logo.png" id="8_2iteq"]
 [ext_resource type="Texture2D" uid="uid://4dvieleexkaf" path="res://Assets/Sprites/Menu/credits_transitions.png" id="9_7qvly"]
@@ -178,6 +177,61 @@ animations = [{
 }],
 "loop": true,
 "name": &"menu",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnxmk"]
+atlas = ExtResource("4_g8i7c")
+region = Rect2(0, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si6xj"]
+atlas = ExtResource("4_g8i7c")
+region = Rect2(32, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3jot"]
+atlas = ExtResource("4_g8i7c")
+region = Rect2(64, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q3u6"]
+atlas = ExtResource("4_g8i7c")
+region = Rect2(96, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgrl2"]
+atlas = ExtResource("4_g8i7c")
+region = Rect2(128, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjkiu"]
+atlas = ExtResource("4_g8i7c")
+region = Rect2(160, 0, 32, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ph6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnxmk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si6xj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3jot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q3u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgrl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjkiu")
+}],
+"loop": false,
+"name": &"pop",
 "speed": 10.0
 }]
 
@@ -894,33 +948,64 @@ animation = &"menu"
 autoplay = "menu"
 frame_progress = 0.29152066
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1267186108]
+[node name="Buttons" type="Control" parent="." unique_id=1706631865]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="Buttons" unique_id=696362461]
 layout_mode = 0
-offset_left = 800.0
-offset_top = 275.0
-offset_right = 922.0
-offset_bottom = 452.0
-scale = Vector2(3, 3)
+offset_left = 792.0
+offset_top = 192.0
+offset_right = 964.0
+offset_bottom = 264.0
+theme = ExtResource("3_7qvly")
+text = "START"
+flat = true
+script = ExtResource("3_rfqti")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1058288660]
-layout_mode = 2
+[node name="BubbleButton" type="AnimatedSprite2D" parent="Buttons/Play" unique_id=499664793]
+position = Vector2(84, 32)
+scale = Vector2(10.322799, 10.322799)
+sprite_frames = SubResource("SpriteFrames_8ph6h")
+animation = &"pop"
 
-[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1279126649]
-layout_mode = 2
-icon = ExtResource("3_6swd7")
+[node name="Credits" type="Button" parent="Buttons" unique_id=1214158971]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 496.0
+offset_right = 1228.0
+offset_bottom = 568.0
+theme = ExtResource("3_7qvly")
+theme_override_colors/font_color = Color(1, 0.9098039, 0.16078432, 1)
+theme_override_font_sizes/font_size = 48
+text = "CREDITS"
+flat = true
+script = ExtResource("3_rfqti")
 
-[node name="Options" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1060973649]
-layout_mode = 2
-disabled = true
-icon = ExtResource("3_je75w")
+[node name="BubbleButton" type="AnimatedSprite2D" parent="Buttons/Credits" unique_id=994262317]
+position = Vector2(104, 32)
+scale = Vector2(10.322799, 10.322799)
+sprite_frames = SubResource("SpriteFrames_8ph6h")
+animation = &"pop"
 
-[node name="Credits" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1455827436]
-layout_mode = 2
-icon = ExtResource("4_xysjh")
+[node name="Exit" type="Button" parent="Buttons" unique_id=318903131]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 792.0
+offset_right = 988.0
+offset_bottom = 864.0
+theme = ExtResource("3_7qvly")
+theme_override_colors/font_color = Color(1, 0.2509804, 0.16078432, 1)
+text = "EXIT"
+flat = true
+script = ExtResource("3_rfqti")
 
-[node name="Exit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=507114255]
-layout_mode = 2
-icon = ExtResource("5_2rcsb")
+[node name="BubbleButton" type="AnimatedSprite2D" parent="Buttons/Exit" unique_id=2035521278]
+position = Vector2(84, 32)
+scale = Vector2(10.322799, 10.322799)
+sprite_frames = SubResource("SpriteFrames_8ph6h")
+animation = &"pop"
 
 [node name="bubble_flee_splashart" type="CanvasLayer" parent="." unique_id=1928229765]
 
@@ -976,7 +1061,7 @@ sprite_frames = SubResource("SpriteFrames_g8i7c")
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Buttons/Play" to="Buttons/Play" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="Buttons/Credits" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]
 [connection signal="pressed" from="Creditsy" to="." method="_on_creditsy_pressed"]

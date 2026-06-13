@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://bv3lnxn0vbmo8"]
+
+[ext_resource type="FontFile" uid="uid://ci32fy1yayfy0" path="res://Assets/Fonts/GrapeSoda.ttf" id="1_fqoam"]
+
+[resource]
+default_font = ExtResource("1_fqoam")
+default_font_size = 32
+Button/colors/font_color = Color(0.4509804, 0.9098039, 0.16078432, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1_fqoam")

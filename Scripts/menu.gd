@@ -7,42 +7,42 @@ extends Control
 @onready var shader_canvas = get_tree().root.get_node('Game/ShaderLayer')
 @onready var menu = get_tree().root.get_node('Game/MenuLayer')
 @onready var platform_ten_splashart: AnimatedSprite2D = $platform_ten_splashart/TextureRect2
-var option_button : bool = false
 @onready var credits: AnimatedSprite2D = $Creditsy/credits
 @onready var choose_level: Control = $choose_level
 
+@onready var play_btn = $Buttons/Play
+@onready var credits_btn = $Buttons/Credits
+@onready var exit_btn = $Buttons/Exit
 
 func _ready() -> void:
 	get_tree().paused = true
 	anim.play("splashscreen_fadeout")
-	$CenterContainer/VBoxContainer/Play.grab_focus()
-
-func _on_play_pressed() -> void:
+	
+	play_btn.popped.connect(_on_play_popped)
+	credits_btn.popped.connect(_on_credits_popped)
+	exit_btn.popped.connect(_on_exit_popped)
+	
+	choose_level.closed.connect(_on_choose_level_closed)
+	
+func _on_play_popped() -> void:
 	choose_level.visible = true
 	choose_level.score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
-	
-	
-#	if Global.bubble_score == 0 or Global.bubble_score == 0:
-#		instruction_layer.visible = true
-#		instructions.get_node('Ok').grab_focus()
-#	#shader_canvas.visible = true
-#	menu.queue_free()
-#	Audio.game_music = preload("res://Assets/Sounds/Banger.mp3")
-#	Audio.play_music()
 
+func _on_choose_level_closed() -> void:
+	choose_level.visible = false
+	
+	play_btn.disabled = false
+	play_btn.bubble_anim.play("idle")
+	play_btn.start_floating()
 
-func _on_credits_pressed() -> void:
+func _on_credits_popped() -> void:
 	$Creditsy.visible = true
 	$Creditsy.disabled = false
-	$Creditsy.grab_focus()
 	credits.play("Credits_start")
 	
-func _on_exit_pressed() -> void:
+func _on_exit_popped() -> void:
 	get_tree().quit()
 
-
-
-#To jest do animacji 
 func remove_splash():
 	canvas.queue_free()
 
@@ -50,8 +50,11 @@ func remove_conductors():
 	$platform_ten_splashart.queue_free()
 
 func _on_creditsy_pressed() -> void:
-	$CenterContainer/VBoxContainer/Credits.grab_focus()
 	credits.play("Credits_end")
 	await get_tree().create_timer(0.5).timeout
 	$Creditsy.visible = false
 	$Creditsy.disabled = true
+	
+	credits_btn.disabled = false
+	credits_btn.bubble_anim.play("idle")
+	credits_btn.start_floating()
