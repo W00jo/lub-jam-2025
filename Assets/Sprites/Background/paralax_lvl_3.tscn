@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://7gp3lg3d2gh3"]
+
+[ext_resource type="Texture2D" uid="uid://cxplsepb4l3u3" path="res://Assets/Sprites/Background/lvl3behind.png" id="1_gcq27"]
+[ext_resource type="Texture2D" uid="uid://bmvas54dbpgkw" path="res://Assets/Sprites/Background/lvl3paralaxa1.png" id="2_qyciy"]
+[ext_resource type="Texture2D" uid="uid://cropxonjxhdou" path="res://Assets/Sprites/Background/lvl3paralaxa2.png" id="3_tuwp8"]
+
+[node name="paralax_lvl3" type="Node2D" unique_id=467630603]
+
+[node name="Sea" type="Parallax2D" parent="." unique_id=1982825252]
+scroll_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sea" unique_id=2074388099]
+position = Vector2(3500, 270)
+texture = ExtResource("1_gcq27")
+
+[node name="leaves" type="Parallax2D" parent="." unique_id=1109475016]
+scroll_scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="leaves" unique_id=1881638622]
+position = Vector2(3500, 270)
+texture = ExtResource("2_qyciy")
+
+[node name="leaves2" type="Parallax2D" parent="." unique_id=1644654172]
+scroll_scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="leaves2" unique_id=1288885014]
+position = Vector2(3500, 270)
+texture = ExtResource("3_tuwp8")

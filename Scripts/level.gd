@@ -25,13 +25,11 @@ func _process(delta: float) -> void:
 
 func _on_camera_speed_up_body_entered(body: Node2D) -> void:
 	if body.is_in_group("BubbleGuy") or body.is_in_group("Dolphin"):
-		print("x")
 		speed_up += 0.2
 
 
 func _on_camera_speed_up_body_exited(body: Node2D) -> void:
 	if body.is_in_group("BubbleGuy") or body.is_in_group("Dolphin"):
-		print("obszczazlaemsie")
 		speed_up -= 0.2
 
 

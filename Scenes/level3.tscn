@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://rmdletm6lx02"]
+
+[ext_resource type="Script" uid="uid://kfx6hfmpu4ng" path="res://Scripts/level.gd" id="1_vn7r1"]
+[ext_resource type="PackedScene" uid="uid://7gp3lg3d2gh3" path="res://Assets/Sprites/Background/paralax_lvl_3.tscn" id="2_h3ll2"]
+[ext_resource type="PackedScene" uid="uid://31sgm2m6coed" path="res://Scenes/bubble_guy.tscn" id="7_tg0qr"]
+[ext_resource type="PackedScene" uid="uid://svv1o72461p0" path="res://Scenes/floors3.tscn" id="8_1x0xh"]
+[ext_resource type="PackedScene" uid="uid://gvfdf4fim2n0" path="res://Scenes/dolphin.tscn" id="8_p2sx0"]
+[ext_resource type="PackedScene" uid="uid://brsj11mvkc6fj" path="res://Scenes/side.tscn" id="9_tc3ri"]
+[ext_resource type="Shader" path="res://Scenes/flash.gdshader" id="10_3nkac"]
+[ext_resource type="Script" path="res://Scripts/shake.gd" id="11_eqm1k"]
+[ext_resource type="PackedScene" uid="uid://cjg7mmc0teprh" path="res://Scenes/parallax_foreground.tscn" id="12_d08tm"]
+
+[sub_resource type="Curve2D" id="Curve2D_bs12r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2, 18.35977, 0, 0, 0, 0, 14002, 19.798893)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqgf2"]
+size = Vector2(272.7334, 1215)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpkqv"]
+size = Vector2(303.9394, 1263.0082)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bdr3p"]
+shader = ExtResource("10_3nkac")
+shader_parameter/hit_effect = 0.0
+shader_parameter/shake_intensity = 5.0
+shader_parameter/blink_color = Color(0.29411766, 1, 0.90588236, 1)
+shader_parameter/blink_intensity = 0.0
+shader_parameter/base_modulate = Color(1, 1, 1, 1)
+
+[node name="Level1" type="Node2D" unique_id=188927186]
+process_mode = 1
+script = ExtResource("1_vn7r1")
+
+[node name="paralax_lvl3" parent="." unique_id=467630603 instance=ExtResource("2_h3ll2")]
+scale = Vector2(2, 2)
+
+[node name="darts" type="Node2D" parent="." unique_id=1631039573]
+
+[node name="stinky_bubbles" type="Node2D" parent="." unique_id=689855314]
+
+[node name="Sharks" type="Node2D" parent="." unique_id=1544872362]
+
+[node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("7_tg0qr")]
+position = Vector2(970, 241)
+collision_mask = 15
+
+[node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("8_p2sx0")]
+position = Vector2(471, 674)
+scale = Vector2(2, 2)
+collision_mask = 15
+
+[node name="PathForCamera" type="Path2D" parent="." unique_id=538014896]
+position = Vector2(-2, -19)
+scale = Vector2(1, 1.0606654)
+curve = SubResource("Curve2D_bs12r")
+
+[node name="FollowPath" type="PathFollow2D" parent="PathForCamera" unique_id=1776467713]
+position = Vector2(2, 18.35977)
+rotation = 0.05583852
+scale = Vector2(1, 0.9428044)
+rotates = false
+
+[node name="Camera2D" type="Camera2D" parent="PathForCamera/FollowPath" unique_id=1866845073]
+position = Vector2(990.911, 482.09424)
+rotation = -0.059218295
+scale = Vector2(1.0003892, 0.9996107)
+
+[node name="side_bubbles" parent="PathForCamera/FollowPath/Camera2D" unique_id=1169848261 instance=ExtResource("9_tc3ri")]
+z_index = 2
+position = Vector2(-960, -540)
+
+[node name="camera_speed_up" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=879184771]
+position = Vector2(-960, -540)
+collision_layer = 255
+collision_mask = 255
+
+[node name="camera_speed_up_collision" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/camera_speed_up" unique_id=798272550]
+position = Vector2(1872.367, 539.5)
+shape = SubResource("RectangleShape2D_oqgf2")
+
+[node name="player_slowdown" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=1528770175]
+collision_layer = 255
+collision_mask = 255
+
+[node name="player_slowodwn_coll" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/player_slowdown" unique_id=1991962678]
+position = Vector2(1203.8477, -12.476082)
+shape = SubResource("RectangleShape2D_cpkqv")
+debug_color = Color(0.95075256, 4.6205523e-06, 0.5694639, 0.41960785)
+
+[node name="Shake" type="ColorRect" parent="PathForCamera/FollowPath/Camera2D" unique_id=340898322]
+material = SubResource("ShaderMaterial_bdr3p")
+offset_left = -1018.1382
+offset_top = -577.44824
+offset_right = 1013.95654
+offset_bottom = 602.9519
+script = ExtResource("11_eqm1k")
+
+[node name="Label" type="Label" parent="PathForCamera/FollowPath/Camera2D" unique_id=1819362766]
+visible = false
+offset_left = -763.06494
+offset_top = -424.55634
+offset_right = -615.2924
+offset_bottom = -312.3521
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+
+[node name="ParallaxForeground" parent="." unique_id=1029255194 instance=ExtResource("12_d08tm")]
+
+[node name="Floors" parent="." unique_id=704215020 instance=ExtResource("8_1x0xh")]
+position = Vector2(7001, 540)
+scale = Vector2(2, 2)
+
+[connection signal="body_entered" from="PathForCamera/FollowPath/Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_entered"]
+[connection signal="body_exited" from="PathForCamera/FollowPath/Camera2D/camera_speed_up" to="." method="_on_camera_speed_up_body_exited"]
+[connection signal="body_entered" from="PathForCamera/FollowPath/Camera2D/player_slowdown" to="." method="_on_player_slowdown_body_entered"]

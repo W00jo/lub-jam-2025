@@ -38,7 +38,6 @@ process_mode = 1
 script = ExtResource("1_bs12r")
 
 [node name="ParallaxBackground" parent="." unique_id=2018645508 instance=ExtResource("2_rqhku")]
-visible = false
 
 [node name="Floors" parent="." unique_id=2067477129 instance=ExtResource("3_cpkqv")]
 collision_mask = 1
@@ -210,7 +209,6 @@ scale = Vector2(2, 2)
 collision_mask = 15
 
 [node name="PathForCamera" type="Path2D" parent="." unique_id=538014896]
-visible = false
 position = Vector2(-2, -19)
 scale = Vector2(1, 1.0606654)
 curve = SubResource("Curve2D_bs12r")
@@ -257,6 +255,7 @@ offset_bottom = 602.9519
 script = ExtResource("12_u1b78")
 
 [node name="Label" type="Label" parent="PathForCamera/FollowPath/Camera2D" unique_id=1819362766]
+visible = false
 offset_left = -763.06494
 offset_top = -424.55634
 offset_right = -615.2924

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://svv1o72461p0"]
+
+[ext_resource type="Texture2D" uid="uid://2onsgf8is6o4" path="res://Assets/Sprites/Background/lvl3floors.png" id="1_kfo18"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wrfcv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfo18"]
+radius = 51.999985
+height = 752.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u2nyn"]
+
+[node name="Floors" type="StaticBody2D" unique_id=704215020 groups=["Floor"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=439044606]
+texture = ExtResource("1_kfo18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214900420]
+position = Vector2(-3465, -264)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_wrfcv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=65271682]
+position = Vector2(-1880, -275)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_kfo18")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1559726928]
+position = Vector2(-1, 233)
+shape = SubResource("WorldBoundaryShape2D_u2nyn")

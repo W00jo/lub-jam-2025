@@ -23,6 +23,9 @@ point_count = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtqcm"]
 size = Vector2(519.3259, 1215)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vn460"]
+size = Vector2(303.9394, 1263.0082)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ca0bt"]
 shader = ExtResource("11_vn460")
 shader_parameter/hit_effect = 0.0
@@ -30,9 +33,6 @@ shader_parameter/shake_intensity = 5.0
 shader_parameter/blink_color = Color(0.29411766, 1, 0.90588236, 1)
 shader_parameter/blink_intensity = 0.0
 shader_parameter/base_modulate = Color(1, 1, 1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vn460"]
-size = Vector2(303.9394, 1263.0082)
 
 [node name="Level2" type="Node2D" unique_id=188927186]
 process_mode = 1
@@ -258,6 +258,15 @@ collision_mask = 255
 position = Vector2(1814.3379, 539.5001)
 shape = SubResource("RectangleShape2D_mtqcm")
 
+[node name="player_slowdown" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=2095439188]
+collision_layer = 255
+collision_mask = 255
+
+[node name="player_slowodwn_coll" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/player_slowdown" unique_id=742506908]
+position = Vector2(1203.8477, -12.476082)
+shape = SubResource("RectangleShape2D_vn460")
+debug_color = Color(0.95075256, 4.6205523e-06, 0.5694639, 0.41960785)
+
 [node name="Shake" type="ColorRect" parent="PathForCamera/FollowPath/Camera2D" unique_id=1804360149]
 visible = false
 material = SubResource("ShaderMaterial_ca0bt")
@@ -276,15 +285,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Test"
-
-[node name="player_slowdown" type="Area2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=2095439188]
-collision_layer = 255
-collision_mask = 255
-
-[node name="player_slowodwn_coll" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/player_slowdown" unique_id=742506908]
-position = Vector2(1203.8477, -12.476082)
-shape = SubResource("RectangleShape2D_vn460")
-debug_color = Color(0.95075256, 4.6205523e-06, 0.5694639, 0.41960785)
 
 [node name="Boosters" type="Node2D" parent="." unique_id=1748179096]
 

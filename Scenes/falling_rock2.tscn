@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://483ql24i5gx7" path="res://Scripts/falling_rock.gd" id="1_cft5b"]
 [ext_resource type="Texture2D" uid="uid://doexcj0ro03pu" path="res://Assets/Sprites/Interactive/stalactice_1.png" id="2_8opli"]
 [ext_resource type="AudioStream" uid="uid://b63csh2eai25m" path="res://Assets/Sounds/Underwater rock cracking up soundeffect.mp3" id="3_jxpgp"]
-[ext_resource type="Texture2D" uid="uid://dtnhi7rhpfs5t" path="res://icon.svg" id="4_e7bri"]
+[ext_resource type="Texture2D" uid="uid://dqmm23jgqaaip" path="res://Assets/Sprites/Interactive/falling.png" id="4_e7bri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8exj8"]
 size = Vector2(126, 1136)
@@ -39,8 +39,8 @@ stream = ExtResource("3_jxpgp")
 volume_db = 1.0
 
 [node name="Granica" type="Sprite2D" parent="." unique_id=1405385717]
-position = Vector2(0, 1060.5)
-scale = Vector2(1, 0.17968692)
+position = Vector2(3, 1067)
+scale = Vector2(1.3783784, 1.3783784)
 texture = ExtResource("4_e7bri")
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
