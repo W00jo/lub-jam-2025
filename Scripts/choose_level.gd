@@ -1,10 +1,9 @@
 extends Control
 
-const LEVEL_1 = preload("res://Scenes/level1.tscn")
-const LEVEL_2 = preload("res://Scenes/level2.tscn")
-const LEVEL_3 = preload("res://Scenes/level3.tscn")
+signal closed
 
-
+const LEVEL_1 = preload("uid://dycaivlgy07q")
+const LEVEL_2 = preload("uid://b8cumjm4mkugu")
 
 @onready var menu: Control = $".."
 
@@ -39,10 +38,10 @@ func _on_level2_pressed() -> void:
 	
 func _on_level3_pressed() -> void:
 	#Global.choosedLevel = LEVEL_3
-	#ready_up.sprawdz_czy_start()
-	pass
-	
+	ready_up.sprawdz_czy_start()
+
 func _on_back_pressed() -> void:
+	closed.emit()
 	visible = false
 
 
