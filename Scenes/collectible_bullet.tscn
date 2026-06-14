@@ -10,11 +10,18 @@ height = 82.0
 [node name="CollectibleBullet" type="Node2D" unique_id=1705626712]
 script = ExtResource("1_vge8v")
 
+[node name="behind" type="Sprite2D" parent="." unique_id=1888834856]
+modulate = Color(18.892157, 18.892157, 18.892157, 0.40392157)
+position = Vector2(9, 0)
+scale = Vector2(1.7150164, 1.7150164)
+texture = ExtResource("2_7de4c")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1403776236]
-scale = Vector2(0.8842591, 0.8842593)
+scale = Vector2(1.0100442, 1.0100443)
 texture = ExtResource("2_7de4c")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=981164930]
+scale = Vector2(1.1422491, 1.1422491)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1155990358]

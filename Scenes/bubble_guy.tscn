@@ -439,11 +439,11 @@ parameters/conditions/Idle = false
 parameters/conditions/Swim = false
 
 [node name="ShortOnAir" type="Timer" parent="." unique_id=942669739]
-wait_time = 7.0
+wait_time = 3.0
 one_shot = true
 
 [node name="DieNoAir" type="Timer" parent="." unique_id=2137353962]
-wait_time = 7.0
+wait_time = 3.0
 one_shot = true
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1178913011]

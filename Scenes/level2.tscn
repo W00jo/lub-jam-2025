@@ -34,6 +34,8 @@ shader_parameter/blink_color = Color(0.29411766, 1, 0.90588236, 1)
 shader_parameter/blink_intensity = 0.0
 shader_parameter/base_modulate = Color(1, 1, 1, 1)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vn460"]
+
 [node name="Level2" type="Node2D" unique_id=188927186]
 process_mode = 1
 script = ExtResource("1_vn2uo")
@@ -221,16 +223,16 @@ position = Vector2(12685, 318)
 position = Vector2(7130, 864)
 
 [node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("9_5flq6")]
-position = Vector2(3069, 683)
+position = Vector2(2604, 79)
 collision_mask = 15
 
 [node name="Delfin" parent="." unique_id=1155833937 instance=ExtResource("10_051s1")]
-position = Vector2(2651, 550)
+position = Vector2(2374, 737)
 scale = Vector2(2, 2)
 collision_mask = 15
 
 [node name="PathForCamera" type="Path2D" parent="." unique_id=1504750307]
-position = Vector2(1627, -19)
+position = Vector2(2024, -19)
 scale = Vector2(1, 1.0606654)
 curve = SubResource("Curve2D_vn2uo")
 
@@ -287,11 +289,21 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Test"
 
+[node name="TooFar" type="StaticBody2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=935946849]
+position = Vector2(-1729.1183, -540.10516)
+scale = Vector2(0.9998055, 1.0002162)
+skew = 0.006562233
+
+[node name="TooFar_coll" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/TooFar" unique_id=664795887]
+position = Vector2(2838, 656)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_vn460")
+
 [node name="Boosters" type="Node2D" parent="." unique_id=1748179096]
 
 [node name="booster11" parent="Boosters" unique_id=832800389 instance=ExtResource("11_mtqcm")]
-position = Vector2(5079.9995, 521)
-rotation = -2.1379287
+position = Vector2(5101, 590.0001)
+rotation = -1.6482289
 
 [node name="booster12" parent="Boosters" unique_id=819653272 instance=ExtResource("11_mtqcm")]
 position = Vector2(9247.999, 150)

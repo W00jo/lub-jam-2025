@@ -38,6 +38,10 @@ func _physics_process(delta: float) -> void:
 			#trail(5)
 
 		guy_sprite.flip_h = direction.x < 0
+		if direction.x < 0:
+			guy_sprite.rotation += -1 * delta
+		else:
+			guy_sprite.rotation += 1 * delta
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed * delta * 1)
 		anim_tree["parameters/conditions/Swim"] = false
@@ -100,13 +104,13 @@ func on_stinky():
 
 func turn_green():
 	guy_sprite.set_modulate(Color.WEB_GREEN)
-	Global.guy_speed -= 100
+	Global.guy_speed -= 133
 	await get_tree().create_timer(4).timeout
 	tween = create_tween()
 	tween.tween_property(guy_sprite, "modulate" , Color.WHITE, 0.5)
 	await tween.finished
 	guy_sprite.set_modulate(Color.WHITE)
-	Global.guy_speed += 100
+	Global.guy_speed += 133
 
 
 func dymek_show():

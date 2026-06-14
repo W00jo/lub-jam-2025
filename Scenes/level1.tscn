@@ -33,6 +33,8 @@ shader_parameter/blink_color = Color(0.29411766, 1, 0.90588236, 1)
 shader_parameter/blink_intensity = 0.0
 shader_parameter/base_modulate = Color(1, 1, 1, 1)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cpkqv"]
+
 [node name="Level1" type="Node2D" unique_id=188927186]
 process_mode = 1
 script = ExtResource("1_bs12r")
@@ -264,6 +266,16 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Test"
+
+[node name="TooFar" type="StaticBody2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=1468036065]
+position = Vector2(-1814.4556, -638.59796)
+scale = Vector2(0.9998055, 1.0002162)
+skew = 0.006562233
+
+[node name="TooFar_coll" type="CollisionShape2D" parent="PathForCamera/FollowPath/Camera2D/TooFar" unique_id=1465747763]
+position = Vector2(2866, 656)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_cpkqv")
 
 [node name="ParallaxForeground" parent="." unique_id=1029255194 instance=ExtResource("11_rqhku")]
 
