@@ -24,6 +24,7 @@ func _ready() -> void:
 	
 	choose_level.closed.connect(_on_choose_level_closed)
 	
+## Funkcja
 func _on_play_popped() -> void:
 	choose_level.visible = true
 	choose_level.score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c10e4kd8e6o3g"]
 
-[ext_resource type="Texture2D" uid="uid://buk3j3hyeayy1" path="res://Assets/Sprites/Menu/menu_sheet.png" id="1_els47"]
+[ext_resource type="Texture2D" uid="uid://cvuib8x87g3vw" path="res://Assets/Sprites/Menu/menu_sheet.png" id="1_els47"]
 [ext_resource type="Script" uid="uid://c7bb3xedfme4t" path="res://Scripts/menu.gd" id="1_id2h2"]
 [ext_resource type="Theme" uid="uid://bv3lnxn0vbmo8" path="res://Assets/Fonts/ui.tres" id="3_7qvly"]
 [ext_resource type="Script" uid="uid://i2vgmuxqiav8" path="res://Scenes/bubble_button.gd" id="3_rfqti"]
 [ext_resource type="Texture2D" uid="uid://cqs3hwogt56to" path="res://bubble_button_sheet.png" id="4_g8i7c"]
-[ext_resource type="Texture2D" uid="uid://bpnrb0n1h16c8" path="res://Assets/Sprites/Menu/title_screen.png" id="7_6ulg6"]
-[ext_resource type="Texture2D" uid="uid://3tukb0wu60td" path="res://Assets/Sprites/Interactive/konduktorzy_logo.png" id="8_2iteq"]
-[ext_resource type="Texture2D" uid="uid://4dvieleexkaf" path="res://Assets/Sprites/Menu/credits_transitions.png" id="9_7qvly"]
+[ext_resource type="Texture2D" uid="uid://db31ot8pmrljf" path="res://Assets/Sprites/Menu/title_screen.png" id="7_6ulg6"]
+[ext_resource type="Texture2D" uid="uid://cojhd0w5ajqd6" path="res://Assets/Sprites/Interactive/konduktorzy_logo.png" id="8_2iteq"]
+[ext_resource type="Texture2D" uid="uid://csff8dm7nxa0f" path="res://Assets/Sprites/Menu/credits_transitions.png" id="9_7qvly"]
 [ext_resource type="Texture2D" uid="uid://dljj0cch0awhf" path="res://Assets/Sprites/Interactive/bubbles_transition.png" id="10_rfqti"]
 [ext_resource type="PackedScene" uid="uid://dfsauewsnkka" path="res://Scenes/choose_level.tscn" id="11_rfqti"]
 
@@ -1051,6 +1051,7 @@ frame = 7
 frame_progress = 1.0
 
 [node name="bubbles_transition" type="CanvasLayer" parent="." unique_id=1375224256]
+visible = false
 
 [node name="bubbles_transition" type="AnimatedSprite2D" parent="bubbles_transition" unique_id=1627498344]
 position = Vector2(962, 541)

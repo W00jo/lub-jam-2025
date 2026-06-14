@@ -1,19 +1,23 @@
 [gd_scene format=3 uid="uid://dfsauewsnkka"]
 
-[ext_resource type="Texture2D" uid="uid://ckogurke6303n" path="res://Assets/Sprites/Menu/levels_splasharts/1level.png" id="1_tyk5r"]
+[ext_resource type="Texture2D" uid="uid://ph5yo63mbw6d" path="res://Assets/Sprites/Menu/levels_splasharts/1level.png" id="1_tyk5r"]
 [ext_resource type="Script" uid="uid://def70hve6jpwd" path="res://Scripts/choose_level.gd" id="1_y8wla"]
-[ext_resource type="Texture2D" uid="uid://gaujy2r4ye6g" path="res://Assets/Sprites/Background/MorzeTlo.png" id="2_jbd2j"]
-[ext_resource type="Texture2D" uid="uid://c66qtxem05tgf" path="res://Assets/Sprites/Menu/levels_splasharts/2level.png" id="2_yise3"]
+[ext_resource type="Texture2D" uid="uid://bnxrg7robth1j" path="res://Assets/Sprites/Background/MorzeTlo.png" id="2_jbd2j"]
+[ext_resource type="Texture2D" uid="uid://dke33gdodeia1" path="res://Assets/Sprites/Menu/levels_splasharts/2level.png" id="2_yise3"]
 [ext_resource type="Texture2D" uid="uid://mk5uhqgt564w" path="res://Assets/Sprites/Characters/Bubble_guy/bubble_normal.png" id="5_bji3q"]
-[ext_resource type="Texture2D" uid="uid://cndn0gvk5pdc5" path="res://Assets/Sprites/Menu/levels_splasharts/3level.png" id="5_sfpaf"]
+[ext_resource type="Texture2D" uid="uid://b2xqlvwy1mxut" path="res://Assets/Sprites/Menu/levels_splasharts/3level.png" id="5_sfpaf"]
 [ext_resource type="Texture2D" uid="uid://cqqgpjh1v41s3" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="6_jbd2j"]
-[ext_resource type="FontFile" uid="uid://ci32fy1yayfy0" path="res://Assets/Fonts/GrapeSoda.ttf" id="6_m5jrk"]
+[ext_resource type="FontFile" uid="uid://cy6pde7bq75qs" path="res://Assets/Fonts/GrapeSoda.ttf" id="6_m5jrk"]
 [ext_resource type="Script" uid="uid://i2vgmuxqiav8" path="res://Scenes/bubble_button.gd" id="7_nw6su"]
-[ext_resource type="FontFile" uid="uid://dat77hi8xiw80" path="res://Assets/Fonts/ari-w9500-condensed-display.ttf" id="7_qs2gy"]
+[ext_resource type="FontFile" uid="uid://ksfmiksa16am" path="res://Assets/Fonts/ari-w9500-condensed-display.ttf" id="7_qs2gy"]
 [ext_resource type="Texture2D" uid="uid://cqs3hwogt56to" path="res://bubble_button_sheet.png" id="8_gflyu"]
-[ext_resource type="FontFile" uid="uid://jhevv75oplm1" path="res://Assets/Fonts/ari-w9500-display.ttf" id="8_qnqc6"]
+[ext_resource type="FontFile" uid="uid://cmnt172sh48dg" path="res://Assets/Fonts/ari-w9500-display.ttf" id="8_qnqc6"]
 [ext_resource type="Script" uid="uid://dx7o30kjgs5vk" path="res://Scripts/lobby.gd" id="8_sfpaf"]
 [ext_resource type="Theme" uid="uid://bv3lnxn0vbmo8" path="res://Assets/Fonts/ui.tres" id="9_nw6su"]
+
+[sub_resource type="Theme" id="Theme_nw6su"]
+HBoxContainer/constants/separation = 125
+VBoxContainer/constants/separation = 50
 
 [sub_resource type="Theme" id="Theme_28mbj"]
 Button/colors/font_color = Color(0.4509804, 0.9098039, 0.16078432, 1)
@@ -79,6 +83,12 @@ animations = [{
 
 [sub_resource type="Theme" id="Theme_gflyu"]
 
+[sub_resource type="Environment" id="Environment_nw6su"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.05
+glow_blend_mode = 0
+
 [node name="choose_level" type="Control" unique_id=198497191]
 layout_mode = 3
 anchors_preset = 15
@@ -99,8 +109,8 @@ layout_mode = 0
 offset_left = 40.0
 offset_top = 760.0
 offset_right = 1880.0
-offset_bottom = 1833.0
-theme_override_constants/separation = 200
+offset_bottom = 1030.0
+theme = SubResource("Theme_nw6su")
 alignment = 1
 
 [node name="1Level" type="TextureButton" parent="VBoxContainer" unique_id=456784971]
@@ -294,11 +304,13 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("7_qs2gy")
 theme_override_font_sizes/font_size = 56
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2122515163]
+environment = SubResource("Environment_nw6su")
+
 [connection signal="pressed" from="VBoxContainer/1Level" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="VBoxContainer/2Level" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level_pressed"]
 [connection signal="pressed" from="VBoxContainer/3Level" to="." method="_on_level3_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="reset_score" to="." method="_on_reset_score_pressed"]
 [connection signal="pressed" from="ChangeSkin/Bubble/BubbleSkinLeft" to="." method="_on_bubble_skin_left_pressed"]
