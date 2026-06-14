@@ -12,7 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://caemcxcccavne" path="res://Scenes/booster.tscn" id="11_mtqcm"]
 [ext_resource type="Shader" path="res://Scenes/flash.gdshader" id="11_vn460"]
 [ext_resource type="Script" path="res://Scripts/shake.gd" id="12_r8hce"]
+[ext_resource type="Script" uid="uid://b43vgjsmyj0o8" path="res://Scenes/how_far.gd" id="12_yj6rp"]
+[ext_resource type="Texture2D" uid="uid://dtnhi7rhpfs5t" path="res://icon.svg" id="13_orbd0"]
 [ext_resource type="PackedScene" uid="uid://50myi8bhx5rm" path="res://Scenes/parallax_foreground2.tscn" id="13_vn460"]
+[ext_resource type="Texture2D" uid="uid://doeyt58prrsqk" path="res://Assets/Sprites/logo.png" id="14_5flq6"]
 
 [sub_resource type="Curve2D" id="Curve2D_vn2uo"]
 _data = {
@@ -35,6 +38,12 @@ shader_parameter/blink_intensity = 0.0
 shader_parameter/base_modulate = Color(1, 1, 1, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vn460"]
+
+[sub_resource type="Curve2D" id="Curve2D_051s1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -770.48584, -512.5735, 0, 0, 0, 0, 793.2099, -512.5735)
+}
+point_count = 2
 
 [node name="Level2" type="Node2D" unique_id=188927186]
 process_mode = 1
@@ -107,13 +116,16 @@ position = Vector2(29826, 549)
 position = Vector2(32190, 595)
 
 [node name="CollectibleBullet15" parent="darts" unique_id=1007401028 instance=ExtResource("4_vn460")]
-position = Vector2(34584, 886.5038)
+position = Vector2(33990, 606)
 
 [node name="CollectibleBullet16" parent="darts" unique_id=1705626712 instance=ExtResource("4_vn460")]
 position = Vector2(24316, 650)
 
 [node name="CollectibleBullet17" parent="darts" unique_id=358750985 instance=ExtResource("4_vn460")]
 position = Vector2(27052, 139)
+
+[node name="CollectibleBullet24" parent="darts" unique_id=1999323306 instance=ExtResource("4_vn460")]
+position = Vector2(18106, 743)
 
 [node name="stinky_bubbles" type="Node2D" parent="." unique_id=689855314]
 
@@ -136,7 +148,7 @@ position = Vector2(1428, 563)
 position = Vector2(15009, 499)
 
 [node name="StinkyBubble3" parent="stinky_bubbles" unique_id=1749397201 instance=ExtResource("6_ca0bt")]
-position = Vector2(20174, 937)
+position = Vector2(20091, 802)
 
 [node name="ShieldBubble6" parent="stinky_bubbles" unique_id=499799899 instance=ExtResource("5_r8hce")]
 position = Vector2(25946, 572)
@@ -145,7 +157,7 @@ position = Vector2(25946, 572)
 position = Vector2(30916, 227)
 
 [node name="StinkyBubble4" parent="stinky_bubbles" unique_id=1909018363 instance=ExtResource("6_ca0bt")]
-position = Vector2(34198, 575)
+position = Vector2(33219, 592)
 
 [node name="CollectibleBullet" parent="stinky_bubbles" unique_id=1904015588 instance=ExtResource("4_vn460")]
 position = Vector2(12535, 229)
@@ -159,38 +171,20 @@ position = Vector2(16484, 434)
 [node name="StinkyBubble6" parent="stinky_bubbles" unique_id=956967720 instance=ExtResource("6_ca0bt")]
 position = Vector2(5055, 947)
 
-[node name="StinkyBubble7" parent="stinky_bubbles" unique_id=2052918821 instance=ExtResource("6_ca0bt")]
-position = Vector2(6638, 886)
-
-[node name="StinkyBubble8" parent="stinky_bubbles" unique_id=1265783678 instance=ExtResource("6_ca0bt")]
-position = Vector2(9412, 650)
-
 [node name="StinkyBubble9" parent="stinky_bubbles" unique_id=855625805 instance=ExtResource("6_ca0bt")]
-position = Vector2(11767, 652)
+position = Vector2(10927, 530)
 
 [node name="StinkyBubble10" parent="stinky_bubbles" unique_id=622516128 instance=ExtResource("6_ca0bt")]
 position = Vector2(14278, 328)
 
-[node name="StinkyBubble11" parent="stinky_bubbles" unique_id=1446149956 instance=ExtResource("6_ca0bt")]
-position = Vector2(15227, 827)
-
 [node name="StinkyBubble12" parent="stinky_bubbles" unique_id=725854001 instance=ExtResource("6_ca0bt")]
 position = Vector2(18098, 749)
-
-[node name="StinkyBubble13" parent="stinky_bubbles" unique_id=1853777581 instance=ExtResource("6_ca0bt")]
-position = Vector2(22252, 502)
-
-[node name="StinkyBubble14" parent="stinky_bubbles" unique_id=1194478844 instance=ExtResource("6_ca0bt")]
-position = Vector2(22089, 760)
 
 [node name="StinkyBubble15" parent="stinky_bubbles" unique_id=367027243 instance=ExtResource("6_ca0bt")]
 position = Vector2(23680, 673)
 
 [node name="StinkyBubble16" parent="stinky_bubbles" unique_id=1274385617 instance=ExtResource("6_ca0bt")]
-position = Vector2(24979, 236)
-
-[node name="StinkyBubble17" parent="stinky_bubbles" unique_id=371721208 instance=ExtResource("6_ca0bt")]
-position = Vector2(26745, 719)
+position = Vector2(25142, 249)
 
 [node name="StinkyBubble18" parent="stinky_bubbles" unique_id=471648858 instance=ExtResource("6_ca0bt")]
 position = Vector2(28158, 730)
@@ -202,16 +196,10 @@ position = Vector2(28944, 851)
 position = Vector2(30968, 893)
 
 [node name="StinkyBubble21" parent="stinky_bubbles" unique_id=490768578 instance=ExtResource("6_ca0bt")]
-position = Vector2(34393, 551)
-
-[node name="StinkyBubble22" parent="stinky_bubbles" unique_id=1088510131 instance=ExtResource("6_ca0bt")]
-position = Vector2(35012, 662)
+position = Vector2(33231, 513)
 
 [node name="shield_bubble" parent="stinky_bubbles" unique_id=1085672759 instance=ExtResource("5_r8hce")]
-position = Vector2(36254, 286)
-
-[node name="shield_bubble2" parent="stinky_bubbles" unique_id=2094290760 instance=ExtResource("5_r8hce")]
-position = Vector2(27341, 255)
+position = Vector2(35992, 430)
 
 [node name="shield_bubble3" parent="stinky_bubbles" unique_id=450830999 instance=ExtResource("5_r8hce")]
 position = Vector2(17125, 827)
@@ -220,7 +208,7 @@ position = Vector2(17125, 827)
 position = Vector2(12685, 318)
 
 [node name="shield_bubble5" parent="stinky_bubbles" unique_id=359305293 instance=ExtResource("5_r8hce")]
-position = Vector2(7130, 864)
+position = Vector2(7376, 740)
 
 [node name="BubbleGuy" parent="." unique_id=2060095041 instance=ExtResource("9_5flq6")]
 position = Vector2(2604, 79)
@@ -298,6 +286,24 @@ skew = 0.006562233
 position = Vector2(2838, 656)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_vn460")
+
+[node name="how_far" type="Path2D" parent="PathForCamera/FollowPath/Camera2D" unique_id=844978442]
+curve = SubResource("Curve2D_051s1")
+script = ExtResource("12_yj6rp")
+
+[node name="ramka" type="Sprite2D" parent="PathForCamera/FollowPath/Camera2D/how_far" unique_id=170271606]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1.5012817, -512.07336)
+scale = Vector2(12.374932, 0.090763025)
+texture = ExtResource("13_orbd0")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathForCamera/FollowPath/Camera2D/how_far" unique_id=1442247990]
+position = Vector2(-770.48584, -512.5735)
+
+[node name="znaczek" type="Sprite2D" parent="PathForCamera/FollowPath/Camera2D/how_far/PathFollow2D" unique_id=1003103500]
+position = Vector2(-9.011322, 2.000452)
+scale = Vector2(0.031378265, 0.031378265)
+texture = ExtResource("14_5flq6")
 
 [node name="Boosters" type="Node2D" parent="." unique_id=1748179096]
 
