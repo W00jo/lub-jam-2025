@@ -15,7 +15,7 @@ var is_falling: bool = false # Jeśli aktualnie spada
 func _physics_process(delta: float) -> void:
 	if is_falling:
 		global_position.y += fall_speed * delta
-		
+		$Granica.position.y -= 10
 # Funkcja wykrywająca ziutka w bąblu
 func _on_trigger_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("BubbleGuy"):

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://caemcxcccavne"]
 
-[ext_resource type="Script" path="res://Scripts/booster.gd" id="1_tf3vi"]
+[ext_resource type="Script" uid="uid://cyedn2tim8fjp" path="res://Scripts/booster.gd" id="1_tf3vi"]
 [ext_resource type="Texture2D" uid="uid://c33t222vookgf" path="res://Assets/Sprites/Interactive/boost.png" id="2_tf3vi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0tsq"]
@@ -73,6 +73,7 @@ scale = Vector2(3.777205, 3.777205)
 sprite_frames = SubResource("SpriteFrames_sirjk")
 autoplay = "default"
 frame_progress = 0.38193733
+speed_scale = 0.8
 
 [node name="Magnes_area" type="Area2D" parent="." unique_id=1674145971]
 position = Vector2(0, -65)

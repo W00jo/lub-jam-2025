@@ -5,5 +5,5 @@ extends Path2D
 @onready var follow_path: PathFollow2D = $"../.."
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	path.progress_ratio = follow_path.progress_ratio

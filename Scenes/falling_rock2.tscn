@@ -3,10 +3,109 @@
 [ext_resource type="Script" uid="uid://483ql24i5gx7" path="res://Scripts/falling_rock.gd" id="1_cft5b"]
 [ext_resource type="Texture2D" uid="uid://doexcj0ro03pu" path="res://Assets/Sprites/Interactive/stalactice_1.png" id="2_8opli"]
 [ext_resource type="AudioStream" uid="uid://b63csh2eai25m" path="res://Assets/Sounds/Underwater rock cracking up soundeffect.mp3" id="3_jxpgp"]
-[ext_resource type="Texture2D" uid="uid://dqmm23jgqaaip" path="res://Assets/Sprites/Interactive/falling.png" id="4_e7bri"]
+[ext_resource type="Texture2D" uid="uid://coe15faa5w1mp" path="res://Assets/Sprites/Interactive/stalactice_under.png" id="4_e7bri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8exj8"]
 size = Vector2(126, 1136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4qoo"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(0, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v203u"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(50, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12o3t"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(100, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c52b5"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(150, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyp8k"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(200, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h4an"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(250, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rg7ob"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(300, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sripg"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(350, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha5qf"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(400, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnmmu"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(450, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5w4p"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(500, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe3vg"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(550, 0, 50, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8c27"]
+atlas = ExtResource("4_e7bri")
+region = Rect2(600, 0, 50, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nkey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4qoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v203u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12o3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c52b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyp8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h4an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rg7ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sripg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha5qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnmmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5w4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe3vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8c27")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="FallingRock2" type="Node2D" unique_id=204301608 groups=["FallingRock"]]
 script = ExtResource("1_cft5b")
@@ -38,10 +137,12 @@ one_shot = true
 stream = ExtResource("3_jxpgp")
 volume_db = 1.0
 
-[node name="Granica" type="Sprite2D" parent="." unique_id=1405385717]
-position = Vector2(3, 1067)
-scale = Vector2(1.3783784, 1.3783784)
-texture = ExtResource("4_e7bri")
+[node name="Granica" type="AnimatedSprite2D" parent="." unique_id=604210552]
+position = Vector2(-3.0574365, 499.56998)
+scale = Vector2(2.0822973, 2.7667446)
+sprite_frames = SubResource("SpriteFrames_1nkey")
+autoplay = "default"
+frame_progress = 0.21384184
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
 [connection signal="body_entered" from="kill_box" to="." method="_on_killbox_body_entered"]
