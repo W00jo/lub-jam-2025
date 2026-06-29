@@ -39,3 +39,5 @@ func _on_button_pressed() -> void:
 func _on_animation_finished() -> void:
 	if bubble_anim.animation == "pop":
 		popped.emit()
+		bubble_anim.play("idle")
+		disabled = false
