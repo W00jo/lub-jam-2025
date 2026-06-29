@@ -8,7 +8,7 @@ extends Control
 @onready var bubble: Sprite2D = $WygranyZiutek/bubble
 
 func _ready() -> void:
-	punktacja.text = "Dolphine : " + str(Global.save_data.dolphin_score) + " 
+	punktacja.text = "Dolphin : " + str(Global.save_data.dolphin_score) + " 
 	Bubble : " + str(Global.save_data.bubble_score)
 	if Global.dolphin_dead == true or Global.guy_saved == true:
 		w_delfin.visible = false

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dfsauewsnkka"]
 
-[ext_resource type="Texture2D" uid="uid://ph5yo63mbw6d" path="res://Assets/Sprites/Menu/levels_splasharts/1level.png" id="1_tyk5r"]
+[ext_resource type="Texture2D" uid="uid://ckogurke6303n" path="res://Assets/Sprites/Menu/levels_splasharts/1level.png" id="1_tyk5r"]
 [ext_resource type="Script" uid="uid://def70hve6jpwd" path="res://Scripts/choose_level.gd" id="1_y8wla"]
-[ext_resource type="Texture2D" uid="uid://bnxrg7robth1j" path="res://Assets/Sprites/Background/MorzeTlo.png" id="2_jbd2j"]
-[ext_resource type="Texture2D" uid="uid://dke33gdodeia1" path="res://Assets/Sprites/Menu/levels_splasharts/2level.png" id="2_yise3"]
+[ext_resource type="Texture2D" uid="uid://gaujy2r4ye6g" path="res://Assets/Sprites/Background/MorzeTlo.png" id="2_jbd2j"]
+[ext_resource type="Texture2D" uid="uid://c66qtxem05tgf" path="res://Assets/Sprites/Menu/levels_splasharts/2level.png" id="2_yise3"]
 [ext_resource type="Texture2D" uid="uid://mk5uhqgt564w" path="res://Assets/Sprites/Characters/Bubble_guy/bubble_normal.png" id="5_bji3q"]
-[ext_resource type="Texture2D" uid="uid://b2xqlvwy1mxut" path="res://Assets/Sprites/Menu/levels_splasharts/3level.png" id="5_sfpaf"]
+[ext_resource type="Texture2D" uid="uid://cndn0gvk5pdc5" path="res://Assets/Sprites/Menu/levels_splasharts/3level.png" id="5_sfpaf"]
 [ext_resource type="Texture2D" uid="uid://cqqgpjh1v41s3" path="res://Assets/Sprites/Characters/Dolphin/dolphine_normal.png" id="6_jbd2j"]
-[ext_resource type="FontFile" uid="uid://cy6pde7bq75qs" path="res://Assets/Fonts/GrapeSoda.ttf" id="6_m5jrk"]
+[ext_resource type="FontFile" uid="uid://ci32fy1yayfy0" path="res://Assets/Fonts/GrapeSoda.ttf" id="6_m5jrk"]
 [ext_resource type="Script" uid="uid://i2vgmuxqiav8" path="res://Scenes/bubble_button.gd" id="7_nw6su"]
-[ext_resource type="FontFile" uid="uid://ksfmiksa16am" path="res://Assets/Fonts/ari-w9500-condensed-display.ttf" id="7_qs2gy"]
+[ext_resource type="FontFile" uid="uid://dat77hi8xiw80" path="res://Assets/Fonts/ari-w9500-condensed-display.ttf" id="7_qs2gy"]
 [ext_resource type="Texture2D" uid="uid://cqs3hwogt56to" path="res://bubble_button_sheet.png" id="8_gflyu"]
-[ext_resource type="FontFile" uid="uid://cmnt172sh48dg" path="res://Assets/Fonts/ari-w9500-display.ttf" id="8_qnqc6"]
+[ext_resource type="FontFile" uid="uid://jhevv75oplm1" path="res://Assets/Fonts/ari-w9500-display.ttf" id="8_qnqc6"]
 [ext_resource type="Script" uid="uid://dx7o30kjgs5vk" path="res://Scripts/lobby.gd" id="8_sfpaf"]
 [ext_resource type="Theme" uid="uid://bv3lnxn0vbmo8" path="res://Assets/Fonts/ui.tres" id="9_nw6su"]
 
@@ -156,7 +156,7 @@ offset_left = 63.999996
 offset_top = 17.0
 offset_right = 179.0
 offset_bottom = 48.0
-text = "Resetuj wynik"
+text = "Restart score"
 
 [node name="score" type="Label" parent="." unique_id=1965018891]
 layout_mode = 0
@@ -189,7 +189,7 @@ text = "<"
 [node name="BubbleSkinName" type="Label" parent="ChangeSkin/Bubble" unique_id=1632312869]
 layout_mode = 2
 theme = ExtResource("9_nw6su")
-text = "Bubble Man"
+text = "Bubble Guy"
 
 [node name="BubbleSkinRight" type="Button" parent="ChangeSkin/Bubble" unique_id=777890379]
 layout_mode = 2
@@ -212,7 +212,7 @@ text = "<"
 [node name="DolphineSkinName" type="Label" parent="ChangeSkin/Dolphine" unique_id=522290461]
 layout_mode = 2
 theme = ExtResource("9_nw6su")
-text = "Dolphine"
+text = "Dolphin"
 
 [node name="DolphineSkinRight" type="Button" parent="ChangeSkin/Dolphine" unique_id=424316977]
 layout_mode = 2
@@ -233,9 +233,9 @@ anchor_left = 0.026041666
 anchor_top = 0.242
 anchor_right = 1.0040418
 anchor_bottom = 0.9968889
-offset_left = -420.04166
+offset_left = -476.04166
 offset_top = 71.32
-offset_right = 326.83832
+offset_right = 270.83832
 offset_bottom = 356.19595
 grow_horizontal = 2
 grow_vertical = 2
@@ -254,7 +254,7 @@ theme_override_font_sizes/font_size = 70
 text = "Player 1 "
 
 [node name="TextureRect1" type="Sprite2D" parent="ReadyUp/Ready/PanelGracz1" unique_id=1400931919]
-position = Vector2(158, 216.22554)
+position = Vector2(148.26894, 216.22554)
 scale = Vector2(2.328125, 2.328125)
 texture = ExtResource("5_bji3q")
 hframes = 60
@@ -276,7 +276,7 @@ theme_override_font_sizes/font_size = 70
 text = "Player 2 "
 
 [node name="TextureRect2" type="Sprite2D" parent="ReadyUp/Ready/PanelGracz2" unique_id=604332977]
-position = Vector2(127.250015, 212)
+position = Vector2(186.85437, 212)
 scale = Vector2(1.964844, 1.8945313)
 texture = ExtResource("6_jbd2j")
 hframes = 94

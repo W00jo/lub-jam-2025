@@ -18,7 +18,7 @@ config/name="Bubble Flee"
 config/version="0.3.2"
 run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
-boot_splash/image="uid://rolo85ad1aai"
+boot_splash/image="uid://ne34uo032b3p"
 config/icon="uid://doeyt58prrsqk"
 
 [autoload]

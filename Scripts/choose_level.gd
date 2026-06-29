@@ -98,7 +98,7 @@ func _on_reset_score_pressed() -> void:
 	Global.save_data.bubble_score = 0
 	Global.save_data.dolphin_score = 0
 	Global.save_data.save()
-	score.text = "Dolphine " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
+	score.text = "Dolphin " + str(Global.save_data.dolphin_score) + " : " + str(Global.save_data.bubble_score) + " Bubble"
 
 
 func bubble_skin_change():

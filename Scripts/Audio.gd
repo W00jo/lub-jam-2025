@@ -2,7 +2,8 @@ extends Node
 
 
 @onready var audio = get_tree().root.get_node('Game/AudioStreamPlayer')
-@onready var game_music = preload("res://Assets/Sounds/Choochoo_spedup.mp3")
+@onready var game_music = preload("res://Assets/Sounds/BubblePopSound.mp3")
+
 
 func _ready() -> void:
 	play_music_queue()
