@@ -1168,7 +1168,6 @@ sprite_frames = SubResource("SpriteFrames_8ph6h")
 animation = &"pop"
 
 [node name="bubble_flee_splashart" type="CanvasLayer" parent="." unique_id=1928229765]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="bubble_flee_splashart" unique_id=2076959772]
 anchors_preset = 15
@@ -1206,8 +1205,8 @@ stretch_mode = 0
 position = Vector2(318.66666, 173.66666)
 scale = Vector2(1.2401874, 1.2401874)
 sprite_frames = SubResource("SpriteFrames_1qf5m")
-animation = &"Credits_end"
-frame = 7
+animation = &"Credits_start"
+frame = 21
 frame_progress = 1.0
 
 [node name="bubbles_transition" type="CanvasLayer" parent="." unique_id=1375224256]

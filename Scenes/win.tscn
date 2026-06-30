@@ -59,7 +59,6 @@ hframes = 94
 frame = 82
 
 [node name="WygranyZiutek" type="Label" parent="." unique_id=618250622]
-visible = false
 layout_mode = 0
 offset_left = 8.0
 offset_top = -384.0
@@ -70,7 +69,6 @@ text = "Bubble Guy"
 horizontal_alignment = 1
 
 [node name="bubble" type="Sprite2D" parent="WygranyZiutek" unique_id=1706965890]
-visible = false
 position = Vector2(483, 502.5)
 scale = Vector2(7.046875, 7.046875)
 texture = ExtResource("5_ru4ub")
