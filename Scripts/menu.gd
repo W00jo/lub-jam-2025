@@ -59,3 +59,15 @@ func _on_creditsy_pressed() -> void:
 	credits_btn.disabled = false
 	credits_btn.bubble_anim.play("idle")
 	credits_btn.start_floating()
+
+
+
+func _on_tutorial_button_pressed() -> void:
+	$Tutorial.visible = true
+	$Tutorial.disabled = false
+
+
+func _on_tutorial_image_pressed() -> void:
+	$Tutorial.visible = false
+	$Tutorial.disabled = true
+	$Buttons/Tutorial.start_floating()

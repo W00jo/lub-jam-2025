@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bkbqyxcdx28t7" path="res://Assets/Sprites/Interactive/platform_ten_intro.png" id="7_7qvly"]
 [ext_resource type="Texture2D" uid="uid://4dvieleexkaf" path="res://Assets/Sprites/Menu/credits_transitions.png" id="9_7qvly"]
 [ext_resource type="Texture2D" uid="uid://dljj0cch0awhf" path="res://Assets/Sprites/Interactive/bubbles_transition.png" id="10_rfqti"]
+[ext_resource type="Texture2D" uid="uid://bnjersvnkxhqh" path="res://Assets/Sprites/Menu/tutorial.png" id="11_g8i7c"]
 [ext_resource type="PackedScene" uid="uid://dfsauewsnkka" path="res://Scenes/choose_level.tscn" id="11_rfqti"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qvly"]
@@ -1112,10 +1113,10 @@ animation = &"pop"
 
 [node name="Credits" type="Button" parent="Buttons" unique_id=1214158971]
 layout_mode = 0
-offset_left = 1008.0
-offset_top = 496.0
-offset_right = 1228.0
-offset_bottom = 568.0
+offset_left = 703.0
+offset_top = 580.0
+offset_right = 923.0
+offset_bottom = 652.0
 theme = ExtResource("3_7qvly")
 theme_override_colors/font_color = Color(1, 0.9098039, 0.16078432, 1)
 theme_override_font_sizes/font_size = 48
@@ -1129,12 +1130,31 @@ scale = Vector2(10.322799, 10.322799)
 sprite_frames = SubResource("SpriteFrames_8ph6h")
 animation = &"pop"
 
+[node name="Tutorial" type="Button" parent="Buttons" unique_id=979758877]
+layout_mode = 0
+offset_left = 1035.0
+offset_top = 439.0
+offset_right = 1255.0
+offset_bottom = 511.0
+theme = ExtResource("3_7qvly")
+theme_override_colors/font_color = Color(1, 0.9098039, 0.16078432, 1)
+theme_override_font_sizes/font_size = 48
+text = "TUTORIAL"
+flat = true
+script = ExtResource("3_rfqti")
+
+[node name="BubbleButton" type="AnimatedSprite2D" parent="Buttons/Tutorial" unique_id=1860804872]
+position = Vector2(104, 32)
+scale = Vector2(10.322799, 10.322799)
+sprite_frames = SubResource("SpriteFrames_8ph6h")
+animation = &"pop"
+
 [node name="Exit" type="Button" parent="Buttons" unique_id=318903131]
 layout_mode = 0
-offset_left = 816.0
-offset_top = 792.0
-offset_right = 988.0
-offset_bottom = 864.0
+offset_left = 1022.0
+offset_top = 856.0
+offset_right = 1194.0
+offset_bottom = 928.0
 theme = ExtResource("3_7qvly")
 theme_override_colors/font_color = Color(1, 0.2509804, 0.16078432, 1)
 text = "EXIT"
@@ -1148,6 +1168,7 @@ sprite_frames = SubResource("SpriteFrames_8ph6h")
 animation = &"pop"
 
 [node name="bubble_flee_splashart" type="CanvasLayer" parent="." unique_id=1928229765]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="bubble_flee_splashart" unique_id=2076959772]
 anchors_preset = 15
@@ -1200,7 +1221,25 @@ sprite_frames = SubResource("SpriteFrames_g8i7c")
 visible = false
 layout_mode = 1
 
+[node name="Tutorial" type="TextureButton" parent="." unique_id=2032359577]
+visible = false
+layout_mode = 0
+offset_left = 4.9999695
+offset_top = 5.9999924
+offset_right = 644.0
+offset_bottom = 362.6667
+scale = Vector2(3, 3)
+disabled = true
+stretch_mode = 0
+
+[node name="tutorial" type="Sprite2D" parent="Tutorial" unique_id=138598099]
+position = Vector2(318.66666, 173.66666)
+scale = Vector2(0.22347237, 0.22347237)
+texture = ExtResource("11_g8i7c")
+
 [connection signal="pressed" from="Buttons/Play" to="Buttons/Play" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Credits" to="Buttons/Credits" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Tutorial" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]
 [connection signal="pressed" from="Creditsy" to="." method="_on_creditsy_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_image_pressed"]
